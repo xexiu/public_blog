@@ -1,4 +1,5 @@
 Rails.application.configure do
+  config.serve_static_assets = false
   # Add the fonts path
   config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   # Precompile additional assets
