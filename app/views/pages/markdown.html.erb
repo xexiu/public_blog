@@ -1,0 +1,15 @@
+<h1>The following extensions are accepted:</h1>
+<div>
+  <ol>
+    <li><code>:no_intra_emphasis:</code> do not parse emphasis inside of words. Strings such as foo_bar_baz will not generate <em> tags.</li>
+    <li><code>:tables:</code> parse tables, PHP-Markdown style.</li>
+    <li><code>:fenced_code_blocks:</code> parse fenced code blocks, PHP-Markdown style. Blocks delimited with 3 or more ~ or backticks will be considered as code, without the need to be indented. An optional language name may be added at the end of the opening fence for the code block.
+    <p>eg: <mark>```code goes here ```</mark></p></li>
+    <li><code>:autolink:</code> parse links even when they are not enclosed in <> characters. Autolinks for the http, https and ftp protocols will be automatically detected. Email addresses and http links without protocol, but starting with <mark>www</mark> are also handled.</li>
+    <li><code>:strikethrough:</code> parse strikethrough, PHP-Markdown style. Two ~ characters mark the start of a strikethrough, e.g. this is <mark>~~good~~ bad</mark>.</li>
+    <li><code>:superscript:</code> parse superscripts after the ^ character; contiguous superscripts are nested together, and complex values can be enclosed in parenthesis, e.g. <mark>this is the 2^(nd) time</mark>.</li>
+    <li><code>:highlight:</code> parse highlights. This is <q>==highlighted==</q>. It looks like this: <mark>highlighted</mark></li>
+    <li><code>:quote:</code> parse quotes. This is a <mark>"quote"</mark>. It looks like this: <q>quote</q></li>
+    <li><code>:footnotes:</code> parse footnotes, PHP-Markdown style. A footnote works very much like a reference-style link: it consists of a marker next to the text (e.g. This is a sentence.<mard>[^1]</mard>) and a footnote definition on its own line anywhere within the document.</li>
+    <li>Visit <a href="https://github.com/vmg/redcarpet#and-its-like-really-simple-to-use" target="_blank" rel="nofollow">Github Redcarpet for more info</a></li>
+  </ol>

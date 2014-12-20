@@ -1,0 +1,29 @@
+<% provide(:title, @post.title ) %>
+<!-- Title -->
+<h1 class="title-show">
+  <%= @post.title %>
+</h1>
+<!-- Date -->
+<p class="date-show">
+  Submitted <%= time_ago_in_words(@post.created_at) %> ago
+  <% if logged_in? && current_user.admin? %>
+  | <%= link_to 'Edit', edit_post_path(@post) %>
+  | <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</p>
+<p class="category-show">
+  Category: <strong><%= @post.categories %></strong>
+</p>
+<!-- BODY -->
+<p class="body">
+  <%= markdown(@post.body).html_safe %>
+</p>
+
+<div id="comments">
+    <h2 class="comment-count"><%= pluralize(@post.comments.count, "Comment") %></h2>
+    <%= render @post.comments %>
+    <h3 class="add-comment">Add a comment:</h3>
+    <span class="md-page">Markdown is <%= link_to 'allowed', markdown_path, target: '_blank', rel: 'nofollow' %></span>
+    <%= render "comments/form" %>
+  </div>
+</div>

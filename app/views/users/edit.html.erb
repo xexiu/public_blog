@@ -1,0 +1,19 @@
+<% provide(:title, "Edit user") %>
+<h1>Update your profile</h1>
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages' %>
+
+  <%= f.label :name %><br />
+  <%= f.text_field :name, class: 'form-control', autofocus: 'autofocus' %><br />
+
+  <%= f.label :email %><br />
+  <%= f.text_field :email, class: 'form-control' %><br />
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.label :password_confirmation, "Confirmation" %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %><br /><br />
+
+  <%= f.submit "Save changes" %>
+<% end %>

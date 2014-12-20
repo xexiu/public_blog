@@ -1,0 +1,14 @@
+<% provide(:title, "Log in") %>
+<h1>Log in</h1>
+<%= form_for(:session, url: login_path) do |f| %>
+  <%= f.label :email %><br />
+  <%= f.text_field :email, class: 'form-control', autofocus: 'autofocus', style: 'margin-top: -5px; margin-bottom: 5px' %>
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control', style: 'margin-top: -5px;' %>
+  <%= f.label :remember_me, class: "checkbox inline" do %>
+    <%= f.check_box :remember_me, checked: 'checked', style: "margin-left: 0px" %>
+    <span style="margin-left: 20px">Remember me on this computer</span>
+  <% end %>
+  <%= f.submit "Log in" %>
+<% end %>
+<p style="margin-top: 10px">New user? <%= link_to "Sign up now!", signup_path, style: "color: darkgreen" %></p>

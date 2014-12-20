@@ -1,0 +1,42 @@
+  <aside id="sidebar">
+    <div id="logo">
+      <%= link_to root_path do %>
+      <%= image_tag "logo.png", width: '100px', height: '100px' %>
+      <% end %>
+    </div>
+    <nav class="sidebar-menu">
+      <ul>
+        <li class="category">Home</li>
+        <% if current_page?(root_url) %>
+        <li><%= link_to 'All Posts', root_path, class: 'active-sb' %></li>
+        <% else %>
+        <li><%= link_to 'All Posts', root_path %></li>
+        <% end %>
+        <% if logged_in? %>
+        <% if current_page?(user_path(current_user)) %>
+        <li><%= link_to "Profile", current_user, class: 'active-sb' %></li>
+        <% else %>
+        <li><%= link_to "Profile", current_user %></li>
+        <% end %>
+        <% if current_page?(edit_user_path(current_user)) %>
+        <li><%= link_to "Settings", edit_user_path(current_user), class: 'active-sb' %></li>
+        <% else %>
+        <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+        <% end %>
+        <% end %>
+        <% if current_page?(about_url) %>
+        <li><%= link_to "About Me", about_path, class: 'active-sb' %></li>
+        <% else %>
+        <li><%= link_to "About Me", about_path %></li>
+        <% end %>
+      </ul>
+      <ul>
+        <li class="category">Social</li>
+        <li><a href="https://twitter.com/smironescu" target="_blank">Twitter</a></li>
+        <li><a href="https://github.com/xexiu" target="_blank">Github</a></li>
+        <li><a href="https://es.linkedin.com/in/smironescu/" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:sergiu.mironescu@gmail.com" target="_blank">Email Me</a></li>
+      </ul>
+    </nav>
+    <div style="color: #ddd; text-align: center; position: absolute; bottom: 0px; margin-left: 30px">&copy Copyright <%= Time.now.year %></div>
+  </aside>

@@ -1,0 +1,8 @@
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <div class="label-name"><%= f.label 'Your Name' %></div>
+  <div class="text-name"><%= f.text_field :name %></div>
+  <div class="label-body"><%= f.label :body %></div>
+  <div class="text-body"><%= f.text_area :body %></div>
+  <div><%= show_simple_captcha %><br /></div>
+  <%= f.submit %>
+<% end %>

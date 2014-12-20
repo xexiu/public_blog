@@ -1,0 +1,20 @@
+<% provide(:title, 'Sign up') %>
+<h1>Admin has disabled new registrations for the moment!!</h1>
+<% if false %><!-- Remove if condition to enable registrations -->
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <%= f.label :name %><br />
+  <%= f.text_field :name, autofocus: "autofocus", class: 'form-control' %><br />
+
+  <%= f.label :email %><br />
+  <%= f.text_field :email, class: 'form-control' %><br />
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.label :password_confirmation, "Confirmation" %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %><br /><br />
+
+  <%= f.submit "Create my account" %>
+<% end %>
+<% end %>

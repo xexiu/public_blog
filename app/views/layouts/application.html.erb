@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= base_title(yield(:title)) %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="description" content="<%= meta_description %>">
+  <meta name="Keywords" content="<%= meta_keywords %>">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
+  <link rel="canonical" href="<%= request.original_url %>">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <%= render 'layouts/header' %>
+  <%= render 'layouts/sidebar' %>
+  <main id="main_content">
+    <div class="wrapper">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+      <%= yield %>
+    </div>
+  </main>
+  <script>
+  $(document.header).ready(function() {
+    var url = window.location.pathname;
+    var id = parseInt(url.substring(url.lastIndexOf('/') + 1));
+    var arr = ['/html_css/', '/javascript/', '/ruby/'];
+    if (url == '/html_css/'+id) {
+      $('.noactive-html').addClass('active-html');
+    }
+    if (url == '/javascript/'+id) {
+      $('.noactive-js').addClass('active-js');
+    }
+    if (url == '/ruby/'+id) {
+      $('.noactive-ruby').addClass('active-ruby');
+    }
+  });
+  </script>
+</body>
+</html>
