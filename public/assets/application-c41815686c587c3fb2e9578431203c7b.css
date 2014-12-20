@@ -1,0 +1,6069 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 10, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 20, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 44, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 56, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 66, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 77, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 88, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 97, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 108, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 117, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 125, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 134, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 143, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 152, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 161, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 168, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 172, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 183, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 191, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 202, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 210, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 220, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 231, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 255, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 265, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 277, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 292, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 302, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 311, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 321, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 334, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 346, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 356, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 370, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 378, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 389, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 398, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 407, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 418, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 424, /home/ubuntu/workspace/app/assets/stylesheets/_normalize.css.scss */
+td,
+th {
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("glyphicons-halflings-regular.eot");
+  src: url("glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("glyphicons-halflings-regular.woff") format("woff"), url("glyphicons-halflings-regular.ttf") format("truetype"), url("glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+}
+
+/* line 6, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 17, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-asterisk:before {
+  content: "\2a";
+}
+
+/* line 20, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-plus:before {
+  content: "\2b";
+}
+
+/* line 24, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-euro:before,
+.glyphicon-eur:before {
+  content: "\20ac";
+}
+
+/* line 27, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-minus:before {
+  content: "\2212";
+}
+
+/* line 30, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-cloud:before {
+  content: "\2601";
+}
+
+/* line 33, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-envelope:before {
+  content: "\2709";
+}
+
+/* line 36, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-pencil:before {
+  content: "\270f";
+}
+
+/* line 39, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-glass:before {
+  content: "\e001";
+}
+
+/* line 42, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-music:before {
+  content: "\e002";
+}
+
+/* line 45, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-search:before {
+  content: "\e003";
+}
+
+/* line 48, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-heart:before {
+  content: "\e005";
+}
+
+/* line 51, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-star:before {
+  content: "\e006";
+}
+
+/* line 54, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-star-empty:before {
+  content: "\e007";
+}
+
+/* line 57, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-user:before {
+  content: "\e008";
+}
+
+/* line 60, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-film:before {
+  content: "\e009";
+}
+
+/* line 63, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-th-large:before {
+  content: "\e010";
+}
+
+/* line 66, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-th:before {
+  content: "\e011";
+}
+
+/* line 69, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-th-list:before {
+  content: "\e012";
+}
+
+/* line 72, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-ok:before {
+  content: "\e013";
+}
+
+/* line 75, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-remove:before {
+  content: "\e014";
+}
+
+/* line 78, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-zoom-in:before {
+  content: "\e015";
+}
+
+/* line 81, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-zoom-out:before {
+  content: "\e016";
+}
+
+/* line 84, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-off:before {
+  content: "\e017";
+}
+
+/* line 87, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-signal:before {
+  content: "\e018";
+}
+
+/* line 90, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-cog:before {
+  content: "\e019";
+}
+
+/* line 93, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-trash:before {
+  content: "\e020";
+}
+
+/* line 96, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-home:before {
+  content: "\e021";
+}
+
+/* line 99, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-file:before {
+  content: "\e022";
+}
+
+/* line 102, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-time:before {
+  content: "\e023";
+}
+
+/* line 105, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-road:before {
+  content: "\e024";
+}
+
+/* line 108, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-download-alt:before {
+  content: "\e025";
+}
+
+/* line 111, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-download:before {
+  content: "\e026";
+}
+
+/* line 114, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-upload:before {
+  content: "\e027";
+}
+
+/* line 117, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-inbox:before {
+  content: "\e028";
+}
+
+/* line 120, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-play-circle:before {
+  content: "\e029";
+}
+
+/* line 123, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-repeat:before {
+  content: "\e030";
+}
+
+/* line 126, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-refresh:before {
+  content: "\e031";
+}
+
+/* line 129, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-list-alt:before {
+  content: "\e032";
+}
+
+/* line 132, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-lock:before {
+  content: "\e033";
+}
+
+/* line 135, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-flag:before {
+  content: "\e034";
+}
+
+/* line 138, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-headphones:before {
+  content: "\e035";
+}
+
+/* line 141, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-volume-off:before {
+  content: "\e036";
+}
+
+/* line 144, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-volume-down:before {
+  content: "\e037";
+}
+
+/* line 147, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-volume-up:before {
+  content: "\e038";
+}
+
+/* line 150, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-qrcode:before {
+  content: "\e039";
+}
+
+/* line 153, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-barcode:before {
+  content: "\e040";
+}
+
+/* line 156, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-tag:before {
+  content: "\e041";
+}
+
+/* line 159, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-tags:before {
+  content: "\e042";
+}
+
+/* line 162, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-book:before {
+  content: "\e043";
+}
+
+/* line 165, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-bookmark:before {
+  content: "\e044";
+}
+
+/* line 168, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-print:before {
+  content: "\e045";
+}
+
+/* line 171, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-camera:before {
+  content: "\e046";
+}
+
+/* line 174, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-font:before {
+  content: "\e047";
+}
+
+/* line 177, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-bold:before {
+  content: "\e048";
+}
+
+/* line 180, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-italic:before {
+  content: "\e049";
+}
+
+/* line 183, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-text-height:before {
+  content: "\e050";
+}
+
+/* line 186, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-text-width:before {
+  content: "\e051";
+}
+
+/* line 189, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-align-left:before {
+  content: "\e052";
+}
+
+/* line 192, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-align-center:before {
+  content: "\e053";
+}
+
+/* line 195, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-align-right:before {
+  content: "\e054";
+}
+
+/* line 198, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-align-justify:before {
+  content: "\e055";
+}
+
+/* line 201, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-list:before {
+  content: "\e056";
+}
+
+/* line 204, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-indent-left:before {
+  content: "\e057";
+}
+
+/* line 207, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-indent-right:before {
+  content: "\e058";
+}
+
+/* line 210, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-facetime-video:before {
+  content: "\e059";
+}
+
+/* line 213, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-picture:before {
+  content: "\e060";
+}
+
+/* line 216, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-map-marker:before {
+  content: "\e062";
+}
+
+/* line 219, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-adjust:before {
+  content: "\e063";
+}
+
+/* line 222, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-tint:before {
+  content: "\e064";
+}
+
+/* line 225, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-edit:before {
+  content: "\e065";
+}
+
+/* line 228, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-share:before {
+  content: "\e066";
+}
+
+/* line 231, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-check:before {
+  content: "\e067";
+}
+
+/* line 234, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-move:before {
+  content: "\e068";
+}
+
+/* line 237, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-step-backward:before {
+  content: "\e069";
+}
+
+/* line 240, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-fast-backward:before {
+  content: "\e070";
+}
+
+/* line 243, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-backward:before {
+  content: "\e071";
+}
+
+/* line 246, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-play:before {
+  content: "\e072";
+}
+
+/* line 249, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-pause:before {
+  content: "\e073";
+}
+
+/* line 252, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-stop:before {
+  content: "\e074";
+}
+
+/* line 255, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-forward:before {
+  content: "\e075";
+}
+
+/* line 258, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-fast-forward:before {
+  content: "\e076";
+}
+
+/* line 261, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-step-forward:before {
+  content: "\e077";
+}
+
+/* line 264, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-eject:before {
+  content: "\e078";
+}
+
+/* line 267, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-chevron-left:before {
+  content: "\e079";
+}
+
+/* line 270, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-chevron-right:before {
+  content: "\e080";
+}
+
+/* line 273, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-plus-sign:before {
+  content: "\e081";
+}
+
+/* line 276, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-minus-sign:before {
+  content: "\e082";
+}
+
+/* line 279, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-remove-sign:before {
+  content: "\e083";
+}
+
+/* line 282, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-ok-sign:before {
+  content: "\e084";
+}
+
+/* line 285, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-question-sign:before {
+  content: "\e085";
+}
+
+/* line 288, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-info-sign:before {
+  content: "\e086";
+}
+
+/* line 291, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-screenshot:before {
+  content: "\e087";
+}
+
+/* line 294, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-remove-circle:before {
+  content: "\e088";
+}
+
+/* line 297, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-ok-circle:before {
+  content: "\e089";
+}
+
+/* line 300, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-ban-circle:before {
+  content: "\e090";
+}
+
+/* line 303, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-arrow-left:before {
+  content: "\e091";
+}
+
+/* line 306, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-arrow-right:before {
+  content: "\e092";
+}
+
+/* line 309, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-arrow-up:before {
+  content: "\e093";
+}
+
+/* line 312, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-arrow-down:before {
+  content: "\e094";
+}
+
+/* line 315, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-share-alt:before {
+  content: "\e095";
+}
+
+/* line 318, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-resize-full:before {
+  content: "\e096";
+}
+
+/* line 321, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-resize-small:before {
+  content: "\e097";
+}
+
+/* line 324, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-exclamation-sign:before {
+  content: "\e101";
+}
+
+/* line 327, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-gift:before {
+  content: "\e102";
+}
+
+/* line 330, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-leaf:before {
+  content: "\e103";
+}
+
+/* line 333, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-fire:before {
+  content: "\e104";
+}
+
+/* line 336, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-eye-open:before {
+  content: "\e105";
+}
+
+/* line 339, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-eye-close:before {
+  content: "\e106";
+}
+
+/* line 342, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-warning-sign:before {
+  content: "\e107";
+}
+
+/* line 345, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-plane:before {
+  content: "\e108";
+}
+
+/* line 348, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-calendar:before {
+  content: "\e109";
+}
+
+/* line 351, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-random:before {
+  content: "\e110";
+}
+
+/* line 354, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-comment:before {
+  content: "\e111";
+}
+
+/* line 357, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-magnet:before {
+  content: "\e112";
+}
+
+/* line 360, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-chevron-up:before {
+  content: "\e113";
+}
+
+/* line 363, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-chevron-down:before {
+  content: "\e114";
+}
+
+/* line 366, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-retweet:before {
+  content: "\e115";
+}
+
+/* line 369, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-shopping-cart:before {
+  content: "\e116";
+}
+
+/* line 372, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-folder-close:before {
+  content: "\e117";
+}
+
+/* line 375, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-folder-open:before {
+  content: "\e118";
+}
+
+/* line 378, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-resize-vertical:before {
+  content: "\e119";
+}
+
+/* line 381, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-resize-horizontal:before {
+  content: "\e120";
+}
+
+/* line 384, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-hdd:before {
+  content: "\e121";
+}
+
+/* line 387, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-bullhorn:before {
+  content: "\e122";
+}
+
+/* line 390, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-bell:before {
+  content: "\e123";
+}
+
+/* line 393, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-certificate:before {
+  content: "\e124";
+}
+
+/* line 396, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-thumbs-up:before {
+  content: "\e125";
+}
+
+/* line 399, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-thumbs-down:before {
+  content: "\e126";
+}
+
+/* line 402, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-hand-right:before {
+  content: "\e127";
+}
+
+/* line 405, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-hand-left:before {
+  content: "\e128";
+}
+
+/* line 408, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-hand-up:before {
+  content: "\e129";
+}
+
+/* line 411, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-hand-down:before {
+  content: "\e130";
+}
+
+/* line 414, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-circle-arrow-right:before {
+  content: "\e131";
+}
+
+/* line 417, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-circle-arrow-left:before {
+  content: "\e132";
+}
+
+/* line 420, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-circle-arrow-up:before {
+  content: "\e133";
+}
+
+/* line 423, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-circle-arrow-down:before {
+  content: "\e134";
+}
+
+/* line 426, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-globe:before {
+  content: "\e135";
+}
+
+/* line 429, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-wrench:before {
+  content: "\e136";
+}
+
+/* line 432, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-tasks:before {
+  content: "\e137";
+}
+
+/* line 435, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-filter:before {
+  content: "\e138";
+}
+
+/* line 438, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-briefcase:before {
+  content: "\e139";
+}
+
+/* line 441, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-fullscreen:before {
+  content: "\e140";
+}
+
+/* line 444, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-dashboard:before {
+  content: "\e141";
+}
+
+/* line 447, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-paperclip:before {
+  content: "\e142";
+}
+
+/* line 450, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-heart-empty:before {
+  content: "\e143";
+}
+
+/* line 453, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-link:before {
+  content: "\e144";
+}
+
+/* line 456, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-phone:before {
+  content: "\e145";
+}
+
+/* line 459, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-pushpin:before {
+  content: "\e146";
+}
+
+/* line 462, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-usd:before {
+  content: "\e148";
+}
+
+/* line 465, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-gbp:before {
+  content: "\e149";
+}
+
+/* line 468, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sort:before {
+  content: "\e150";
+}
+
+/* line 471, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sort-by-alphabet:before {
+  content: "\e151";
+}
+
+/* line 474, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sort-by-alphabet-alt:before {
+  content: "\e152";
+}
+
+/* line 477, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sort-by-order:before {
+  content: "\e153";
+}
+
+/* line 480, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sort-by-order-alt:before {
+  content: "\e154";
+}
+
+/* line 483, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sort-by-attributes:before {
+  content: "\e155";
+}
+
+/* line 486, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sort-by-attributes-alt:before {
+  content: "\e156";
+}
+
+/* line 489, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-unchecked:before {
+  content: "\e157";
+}
+
+/* line 492, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-expand:before {
+  content: "\e158";
+}
+
+/* line 495, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-collapse-down:before {
+  content: "\e159";
+}
+
+/* line 498, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-collapse-up:before {
+  content: "\e160";
+}
+
+/* line 501, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-log-in:before {
+  content: "\e161";
+}
+
+/* line 504, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-flash:before {
+  content: "\e162";
+}
+
+/* line 507, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-log-out:before {
+  content: "\e163";
+}
+
+/* line 510, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-new-window:before {
+  content: "\e164";
+}
+
+/* line 513, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-record:before {
+  content: "\e165";
+}
+
+/* line 516, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-save:before {
+  content: "\e166";
+}
+
+/* line 519, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-open:before {
+  content: "\e167";
+}
+
+/* line 522, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-saved:before {
+  content: "\e168";
+}
+
+/* line 525, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-import:before {
+  content: "\e169";
+}
+
+/* line 528, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-export:before {
+  content: "\e170";
+}
+
+/* line 531, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-send:before {
+  content: "\e171";
+}
+
+/* line 534, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-floppy-disk:before {
+  content: "\e172";
+}
+
+/* line 537, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-floppy-saved:before {
+  content: "\e173";
+}
+
+/* line 540, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-floppy-remove:before {
+  content: "\e174";
+}
+
+/* line 543, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-floppy-save:before {
+  content: "\e175";
+}
+
+/* line 546, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-floppy-open:before {
+  content: "\e176";
+}
+
+/* line 549, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-credit-card:before {
+  content: "\e177";
+}
+
+/* line 552, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-transfer:before {
+  content: "\e178";
+}
+
+/* line 555, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-cutlery:before {
+  content: "\e179";
+}
+
+/* line 558, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-header:before {
+  content: "\e180";
+}
+
+/* line 561, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-compressed:before {
+  content: "\e181";
+}
+
+/* line 564, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-earphone:before {
+  content: "\e182";
+}
+
+/* line 567, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-phone-alt:before {
+  content: "\e183";
+}
+
+/* line 570, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-tower:before {
+  content: "\e184";
+}
+
+/* line 573, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-stats:before {
+  content: "\e185";
+}
+
+/* line 576, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sd-video:before {
+  content: "\e186";
+}
+
+/* line 579, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-hd-video:before {
+  content: "\e187";
+}
+
+/* line 582, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-subtitles:before {
+  content: "\e188";
+}
+
+/* line 585, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sound-stereo:before {
+  content: "\e189";
+}
+
+/* line 588, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sound-dolby:before {
+  content: "\e190";
+}
+
+/* line 591, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sound-5-1:before {
+  content: "\e191";
+}
+
+/* line 594, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sound-6-1:before {
+  content: "\e192";
+}
+
+/* line 597, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-sound-7-1:before {
+  content: "\e193";
+}
+
+/* line 600, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-copyright-mark:before {
+  content: "\e194";
+}
+
+/* line 603, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-registration-mark:before {
+  content: "\e195";
+}
+
+/* line 606, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-cloud-download:before {
+  content: "\e197";
+}
+
+/* line 609, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-cloud-upload:before {
+  content: "\e198";
+}
+
+/* line 612, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-tree-conifer:before {
+  content: "\e199";
+}
+
+/* line 615, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.glyphicon-tree-deciduous:before {
+  content: "\e200";
+}
+
+/* line 618, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 624, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* line 632, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* line 637, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+/* line 642, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+/* line 646, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* line 651, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+figure {
+  margin: 0;
+}
+
+/* line 654, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 661, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 666, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.img-rounded {
+  border-radius: 6px;
+}
+
+/* line 669, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.img-thumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 682, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.img-circle {
+  border-radius: 50%;
+}
+
+/* line 685, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+
+/* line 691, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* line 702, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+/* line 710, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+table {
+  background-color: transparent;
+}
+
+/* line 713, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+caption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #777777;
+  text-align: left;
+}
+
+/* line 719, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+th {
+  text-align: left;
+}
+
+/* line 722, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 732, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+
+/* line 738, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dddddd;
+}
+
+/* line 747, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+
+/* line 750, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table > tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+/* line 753, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table .table {
+  background-color: #ffffff;
+}
+
+/* line 761, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+  padding: 5px;
+}
+
+/* line 764, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table-bordered {
+  border: 1px solid #dddddd;
+}
+
+/* line 772, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #dddddd;
+}
+
+/* line 776, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+  border-bottom-width: 2px;
+}
+
+/* line 779, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table-striped > tbody > tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* line 782, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table-hover > tbody > tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* line 785, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+table col[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-column;
+}
+
+/* line 791, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+table td[class*="col-"],
+table th[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-cell;
+}
+
+/* line 807, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table > thead > tr > td.active,
+.table > tbody > tr > td.active,
+.table > tfoot > tr > td.active,
+.table > thead > tr > th.active,
+.table > tbody > tr > th.active,
+.table > tfoot > tr > th.active,
+.table > thead > tr.active > td,
+.table > tbody > tr.active > td,
+.table > tfoot > tr.active > td,
+.table > thead > tr.active > th,
+.table > tbody > tr.active > th,
+.table > tfoot > tr.active > th {
+  background-color: #f5f5f5;
+}
+
+/* line 814, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table-hover > tbody > tr > td.active:hover,
+.table-hover > tbody > tr > th.active:hover,
+.table-hover > tbody > tr.active:hover > td,
+.table-hover > tbody > tr:hover > .active,
+.table-hover > tbody > tr.active:hover > th {
+  background-color: #e8e8e8;
+}
+
+/* line 828, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table > thead > tr > td.success,
+.table > tbody > tr > td.success,
+.table > tfoot > tr > td.success,
+.table > thead > tr > th.success,
+.table > tbody > tr > th.success,
+.table > tfoot > tr > th.success,
+.table > thead > tr.success > td,
+.table > tbody > tr.success > td,
+.table > tfoot > tr.success > td,
+.table > thead > tr.success > th,
+.table > tbody > tr.success > th,
+.table > tfoot > tr.success > th {
+  background-color: #dff0d8;
+}
+
+/* line 835, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table-hover > tbody > tr > td.success:hover,
+.table-hover > tbody > tr > th.success:hover,
+.table-hover > tbody > tr.success:hover > td,
+.table-hover > tbody > tr:hover > .success,
+.table-hover > tbody > tr.success:hover > th {
+  background-color: #d0e9c6;
+}
+
+/* line 849, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info,
+.table > tfoot > tr > td.info,
+.table > thead > tr > th.info,
+.table > tbody > tr > th.info,
+.table > tfoot > tr > th.info,
+.table > thead > tr.info > td,
+.table > tbody > tr.info > td,
+.table > tfoot > tr.info > td,
+.table > thead > tr.info > th,
+.table > tbody > tr.info > th,
+.table > tfoot > tr.info > th {
+  background-color: #d9edf7;
+}
+
+/* line 856, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table-hover > tbody > tr > td.info:hover,
+.table-hover > tbody > tr > th.info:hover,
+.table-hover > tbody > tr.info:hover > td,
+.table-hover > tbody > tr:hover > .info,
+.table-hover > tbody > tr.info:hover > th {
+  background-color: #c4e3f3;
+}
+
+/* line 870, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table > thead > tr > td.warning,
+.table > tbody > tr > td.warning,
+.table > tfoot > tr > td.warning,
+.table > thead > tr > th.warning,
+.table > tbody > tr > th.warning,
+.table > tfoot > tr > th.warning,
+.table > thead > tr.warning > td,
+.table > tbody > tr.warning > td,
+.table > tfoot > tr.warning > td,
+.table > thead > tr.warning > th,
+.table > tbody > tr.warning > th,
+.table > tfoot > tr.warning > th {
+  background-color: #fcf8e3;
+}
+
+/* line 877, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table-hover > tbody > tr > td.warning:hover,
+.table-hover > tbody > tr > th.warning:hover,
+.table-hover > tbody > tr.warning:hover > td,
+.table-hover > tbody > tr:hover > .warning,
+.table-hover > tbody > tr.warning:hover > th {
+  background-color: #faf2cc;
+}
+
+/* line 891, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table > thead > tr > td.danger,
+.table > tbody > tr > td.danger,
+.table > tfoot > tr > td.danger,
+.table > thead > tr > th.danger,
+.table > tbody > tr > th.danger,
+.table > tfoot > tr > th.danger,
+.table > thead > tr.danger > td,
+.table > tbody > tr.danger > td,
+.table > tfoot > tr.danger > td,
+.table > thead > tr.danger > th,
+.table > tbody > tr.danger > th,
+.table > tfoot > tr.danger > th {
+  background-color: #f2dede;
+}
+
+/* line 898, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table-hover > tbody > tr > td.danger:hover,
+.table-hover > tbody > tr > th.danger:hover,
+.table-hover > tbody > tr.danger:hover > td,
+.table-hover > tbody > tr:hover > .danger,
+.table-hover > tbody > tr.danger:hover > th {
+  background-color: #ebcccc;
+}
+
+/* line 901, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.table-responsive {
+  overflow-x: auto;
+  min-height: 0.01%;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 906, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #dddddd;
+  }
+
+  /* line 913, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .table-responsive > .table {
+    margin-bottom: 0;
+  }
+
+  /* line 921, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .table-responsive > .table > thead > tr > th,
+  .table-responsive > .table > tbody > tr > th,
+  .table-responsive > .table > tfoot > tr > th,
+  .table-responsive > .table > thead > tr > td,
+  .table-responsive > .table > tbody > tr > td,
+  .table-responsive > .table > tfoot > tr > td {
+    white-space: nowrap;
+  }
+
+  /* line 924, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .table-responsive > .table-bordered {
+    border: 0;
+  }
+
+  /* line 932, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .table-responsive > .table-bordered > thead > tr > th:first-child,
+  .table-responsive > .table-bordered > tbody > tr > th:first-child,
+  .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+  .table-responsive > .table-bordered > thead > tr > td:first-child,
+  .table-responsive > .table-bordered > tbody > tr > td:first-child,
+  .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+    border-left: 0;
+  }
+
+  /* line 940, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .table-responsive > .table-bordered > thead > tr > th:last-child,
+  .table-responsive > .table-bordered > tbody > tr > th:last-child,
+  .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+  .table-responsive > .table-bordered > thead > tr > td:last-child,
+  .table-responsive > .table-bordered > tbody > tr > td:last-child,
+  .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+    border-right: 0;
+  }
+
+  /* line 946, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .table-responsive > .table-bordered > tbody > tr:last-child > th,
+  .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+  .table-responsive > .table-bordered > tbody > tr:last-child > td,
+  .table-responsive > .table-bordered > tfoot > tr:last-child > td {
+    border-bottom: 0;
+  }
+}
+/* line 950, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+
+/* line 956, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* line 967, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* line 973, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+/* line 979, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+
+/* line 984, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+input[type="file"] {
+  display: block;
+}
+
+/* line 987, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+/* line 992, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+/* line 997, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* line 1002, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+output {
+  display: block;
+  padding-top: 7px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+}
+
+/* line 1009, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+/* line 1027, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+/* line 1033, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-control::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+
+/* line 1037, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-control:-ms-input-placeholder {
+  color: #999999;
+}
+
+/* line 1040, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+
+/* line 1045, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+
+/* line 1050, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+textarea.form-control {
+  height: auto;
+}
+
+/* line 1053, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* line 1060, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"] {
+    line-height: 34px;
+  }
+
+  /* line 1066, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  input[type="date"].input-sm,
+  input[type="time"].input-sm,
+  input[type="datetime-local"].input-sm,
+  input[type="month"].input-sm {
+    line-height: 30px;
+  }
+
+  /* line 1072, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  input[type="date"].input-lg,
+  input[type="time"].input-lg,
+  input[type="datetime-local"].input-lg,
+  input[type="month"].input-lg {
+    line-height: 46px;
+  }
+}
+/* line 1076, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* line 1080, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 1087, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.radio label,
+.checkbox label {
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+/* line 1097, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px \9;
+}
+
+/* line 1103, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: -5px;
+}
+
+/* line 1107, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.radio-inline,
+.checkbox-inline {
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+/* line 1116, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+/* line 1125, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"].disabled,
+input[type="checkbox"].disabled,
+fieldset[disabled] input[type="radio"],
+fieldset[disabled] input[type="checkbox"] {
+  cursor: not-allowed;
+}
+
+/* line 1131, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.radio-inline.disabled,
+.checkbox-inline.disabled,
+fieldset[disabled] .radio-inline,
+fieldset[disabled] .checkbox-inline {
+  cursor: not-allowed;
+}
+
+/* line 1137, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.radio.disabled label,
+.checkbox.disabled label,
+fieldset[disabled] .radio label,
+fieldset[disabled] .checkbox label {
+  cursor: not-allowed;
+}
+
+/* line 1140, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-control-static {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
+}
+
+/* line 1146, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-control-static.input-lg,
+.form-control-static.input-sm {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 1151, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-sm,
+.form-group-sm .form-control {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+/* line 1159, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+select.input-sm,
+select.form-group-sm .form-control {
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 1166, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+textarea.input-sm,
+textarea.form-group-sm .form-control,
+select[multiple].input-sm,
+select[multiple].form-group-sm .form-control {
+  height: auto;
+}
+
+/* line 1170, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-lg,
+.form-group-lg .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+/* line 1178, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+select.input-lg,
+select.form-group-lg .form-control {
+  height: 46px;
+  line-height: 46px;
+}
+
+/* line 1185, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+textarea.input-lg,
+textarea.form-group-lg .form-control,
+select[multiple].input-lg,
+select[multiple].form-group-lg .form-control {
+  height: auto;
+}
+
+/* line 1188, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-feedback {
+  position: relative;
+}
+
+/* line 1191, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-feedback .form-control {
+  padding-right: 42.5px;
+}
+
+/* line 1194, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-control-feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* line 1206, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-lg + .form-control-feedback {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+}
+
+/* line 1211, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-sm + .form-control-feedback {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 1225, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline,
+.has-success.radio label,
+.has-success.checkbox label,
+.has-success.radio-inline label,
+.has-success.checkbox-inline label {
+  color: #3c763d;
+}
+
+/* line 1228, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-success .form-control {
+  border-color: #3c763d;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+/* line 1233, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-success .form-control:focus {
+  border-color: #2b542c;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+}
+
+/* line 1238, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-success .input-group-addon {
+  color: #3c763d;
+  border-color: #3c763d;
+  background-color: #dff0d8;
+}
+
+/* line 1243, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-success .form-control-feedback {
+  color: #3c763d;
+}
+
+/* line 1255, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline,
+.has-warning.radio label,
+.has-warning.checkbox label,
+.has-warning.radio-inline label,
+.has-warning.checkbox-inline label {
+  color: #8a6d3b;
+}
+
+/* line 1258, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-warning .form-control {
+  border-color: #8a6d3b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+/* line 1263, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-warning .form-control:focus {
+  border-color: #66512c;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+}
+
+/* line 1268, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-warning .input-group-addon {
+  color: #8a6d3b;
+  border-color: #8a6d3b;
+  background-color: #fcf8e3;
+}
+
+/* line 1273, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-warning .form-control-feedback {
+  color: #8a6d3b;
+}
+
+/* line 1285, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label {
+  color: #a94442;
+}
+
+/* line 1288, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-error .form-control {
+  border-color: #a94442;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+/* line 1293, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-error .form-control:focus {
+  border-color: #843534;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+
+/* line 1298, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-error .input-group-addon {
+  color: #a94442;
+  border-color: #a94442;
+  background-color: #f2dede;
+}
+
+/* line 1303, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-error .form-control-feedback {
+  color: #a94442;
+}
+
+/* line 1306, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-feedback label ~ .form-control-feedback {
+  top: 25px;
+}
+
+/* line 1309, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.has-feedback label.sr-only ~ .form-control-feedback {
+  top: 0;
+}
+
+/* line 1312, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
+
+@media (min-width: 768px) {
+  /* line 1319, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  /* line 1324, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  /* line 1329, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-inline .form-control-static {
+    display: inline-block;
+  }
+
+  /* line 1332, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+
+  /* line 1338, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-inline .input-group .input-group-addon,
+  .form-inline .input-group .input-group-btn,
+  .form-inline .input-group .form-control {
+    width: auto;
+  }
+
+  /* line 1341, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-inline .input-group > .form-control {
+    width: 100%;
+  }
+
+  /* line 1344, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  /* line 1349, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-inline .radio,
+  .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  /* line 1356, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-inline .radio label,
+  .form-inline .checkbox label {
+    padding-left: 0;
+  }
+
+  /* line 1360, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-inline .radio input[type="radio"],
+  .form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+
+  /* line 1364, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-inline .has-feedback .form-control-feedback {
+    top: 0;
+  }
+}
+/* line 1371, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+
+/* line 1377, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-horizontal .radio,
+.form-horizontal .checkbox {
+  min-height: 27px;
+}
+
+/* line 1380, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-horizontal .form-group {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+@media (min-width: 768px) {
+  /* line 1385, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+/* line 1391, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.form-horizontal .has-feedback .form-control-feedback {
+  right: 15px;
+}
+
+@media (min-width: 768px) {
+  /* line 1395, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-horizontal .form-group-lg .control-label {
+    padding-top: 14.3px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 1400, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;
+  }
+}
+/* line 1404, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 1430, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* line 1437, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* line 1442, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn:active,
+.btn.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+/* line 1450, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+
+/* line 1458, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-default {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+
+/* line 1468, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: #333333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+/* line 1475, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  background-image: none;
+}
+
+/* line 1495, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+
+/* line 1499, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-default .badge {
+  color: #ffffff;
+  background-color: #333333;
+}
+
+/* line 1503, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-primary {
+  color: #ffffff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+/* line 1513, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #ffffff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+/* line 1520, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+
+/* line 1540, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+/* line 1544, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-primary .badge {
+  color: #337ab7;
+  background-color: #ffffff;
+}
+
+/* line 1548, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-success {
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+/* line 1558, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-success:hover,
+.btn-success:focus,
+.btn-success.focus,
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  color: #ffffff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+
+/* line 1565, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  background-image: none;
+}
+
+/* line 1585, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled.focus,
+.btn-success[disabled].focus,
+fieldset[disabled] .btn-success.focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+/* line 1589, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-success .badge {
+  color: #5cb85c;
+  background-color: #ffffff;
+}
+
+/* line 1593, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-info {
+  color: #ffffff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+/* line 1603, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-info:hover,
+.btn-info:focus,
+.btn-info.focus,
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+
+/* line 1610, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+  background-image: none;
+}
+
+/* line 1630, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled.focus,
+.btn-info[disabled].focus,
+fieldset[disabled] .btn-info.focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+/* line 1634, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-info .badge {
+  color: #5bc0de;
+  background-color: #ffffff;
+}
+
+/* line 1638, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-warning {
+  color: #ffffff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+/* line 1648, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning.focus,
+.btn-warning:active,
+.btn-warning.active,
+.open > .dropdown-toggle.btn-warning {
+  color: #ffffff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+
+/* line 1655, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-warning:active,
+.btn-warning.active,
+.open > .dropdown-toggle.btn-warning {
+  background-image: none;
+}
+
+/* line 1675, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-warning.disabled,
+.btn-warning[disabled],
+fieldset[disabled] .btn-warning,
+.btn-warning.disabled:hover,
+.btn-warning[disabled]:hover,
+fieldset[disabled] .btn-warning:hover,
+.btn-warning.disabled:focus,
+.btn-warning[disabled]:focus,
+fieldset[disabled] .btn-warning:focus,
+.btn-warning.disabled.focus,
+.btn-warning[disabled].focus,
+fieldset[disabled] .btn-warning.focus,
+.btn-warning.disabled:active,
+.btn-warning[disabled]:active,
+fieldset[disabled] .btn-warning:active,
+.btn-warning.disabled.active,
+.btn-warning[disabled].active,
+fieldset[disabled] .btn-warning.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+/* line 1679, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-warning .badge {
+  color: #f0ad4e;
+  background-color: #ffffff;
+}
+
+/* line 1683, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-danger {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+/* line 1693, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger.focus,
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+
+/* line 1700, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  background-image: none;
+}
+
+/* line 1720, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-danger.disabled,
+.btn-danger[disabled],
+fieldset[disabled] .btn-danger,
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled.focus,
+.btn-danger[disabled].focus,
+fieldset[disabled] .btn-danger.focus,
+.btn-danger.disabled:active,
+.btn-danger[disabled]:active,
+fieldset[disabled] .btn-danger:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger.active {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+/* line 1724, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-danger .badge {
+  color: #d9534f;
+  background-color: #ffffff;
+}
+
+/* line 1728, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-link {
+  color: #337ab7;
+  font-weight: normal;
+  border-radius: 0;
+}
+
+/* line 1737, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-link,
+.btn-link:active,
+.btn-link.active,
+.btn-link[disabled],
+fieldset[disabled] .btn-link {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* line 1745, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-link,
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active {
+  border-color: transparent;
+}
+
+/* line 1749, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-link:hover,
+.btn-link:focus {
+  color: #23527c;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+/* line 1757, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-link[disabled]:hover,
+fieldset[disabled] .btn-link:hover,
+.btn-link[disabled]:focus,
+fieldset[disabled] .btn-link:focus {
+  color: #777777;
+  text-decoration: none;
+}
+
+/* line 1762, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+/* line 1769, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-sm,
+.btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+/* line 1776, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-xs,
+.btn-group-xs > .btn {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+/* line 1782, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* line 1786, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+/* line 1791, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+}
+
+/* line 1794, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+
+/* line 1800, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.fade.in {
+  opacity: 1;
+}
+
+/* line 1803, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.collapse {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 1807, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.collapse.in {
+  display: block;
+  visibility: visible;
+}
+
+/* line 1811, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+tr.collapse.in {
+  display: table-row;
+}
+
+/* line 1814, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+tbody.collapse.in {
+  display: table-row-group;
+}
+
+/* line 1817, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height, visibility;
+  transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+/* line 1831, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+/* line 1841, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown {
+  position: relative;
+}
+
+/* line 1844, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+/* line 1847, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+
+/* line 1869, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+
+/* line 1873, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+/* line 1879, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+
+/* line 1889, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+}
+
+/* line 1896, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #337ab7;
+}
+
+/* line 1904, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  color: #777777;
+}
+
+/* line 1908, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
+}
+
+/* line 1915, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.open > .dropdown-menu {
+  display: block;
+}
+
+/* line 1918, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.open > a {
+  outline: 0;
+}
+
+/* line 1921, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
+
+/* line 1925, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-menu-left {
+  left: 0;
+  right: auto;
+}
+
+/* line 1929, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #777777;
+  white-space: nowrap;
+}
+
+/* line 1937, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 990;
+}
+
+/* line 1945, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+/* line 1950, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+  border-top: 0;
+  border-bottom: 4px solid;
+  content: "";
+}
+
+/* line 1956, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropup .dropdown-menu,
+.navbar-fixed-bottom .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 1px;
+}
+
+@media (min-width: 768px) {
+  /* line 1962, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .navbar-right .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+
+  /* line 1966, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .navbar-right .dropdown-menu-left {
+    left: 0;
+    right: auto;
+  }
+}
+/* line 1972, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 1978, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group > .btn,
+.btn-group-vertical > .btn {
+  position: relative;
+  float: left;
+}
+
+/* line 1989, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group > .btn:hover,
+.btn-group-vertical > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group-vertical > .btn:focus,
+.btn-group > .btn:active,
+.btn-group-vertical > .btn:active,
+.btn-group > .btn.active,
+.btn-group-vertical > .btn.active {
+  z-index: 2;
+}
+
+/* line 1995, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group .btn + .btn,
+.btn-group .btn + .btn-group,
+.btn-group .btn-group + .btn,
+.btn-group .btn-group + .btn-group {
+  margin-left: -1px;
+}
+
+/* line 1998, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-toolbar {
+  margin-left: -5px;
+}
+
+/* line 2002, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-toolbar .btn-group,
+.btn-toolbar .input-group {
+  float: left;
+}
+
+/* line 2007, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-toolbar > .btn,
+.btn-toolbar > .btn-group,
+.btn-toolbar > .input-group {
+  margin-left: 5px;
+}
+
+/* line 2010, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+
+/* line 2013, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group > .btn:first-child {
+  margin-left: 0;
+}
+
+/* line 2016, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 2021, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .dropdown-toggle:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 2025, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group > .btn-group {
+  float: left;
+}
+
+/* line 2028, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+
+/* line 2032, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group > .btn-group:first-child > .btn:last-child,
+.btn-group > .btn-group:first-child > .dropdown-toggle {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 2036, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group > .btn-group:last-child > .btn:first-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 2041, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group .dropdown-toggle:active,
+.btn-group.open .dropdown-toggle {
+  outline: 0;
+}
+
+/* line 2044, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group > .btn + .dropdown-toggle {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 2048, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group > .btn-lg + .dropdown-toggle {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* line 2052, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group.open .dropdown-toggle {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+/* line 2056, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group.open .dropdown-toggle.btn-link {
+  box-shadow: none;
+}
+
+/* line 2060, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn .caret {
+  margin-left: 0;
+}
+
+/* line 2063, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-lg .caret {
+  border-width: 5px 5px 0;
+  border-bottom-width: 0;
+}
+
+/* line 2067, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.dropup .btn-lg .caret {
+  border-width: 0 5px 5px;
+}
+
+/* line 2072, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-vertical > .btn,
+.btn-group-vertical > .btn-group,
+.btn-group-vertical > .btn-group > .btn {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* line 2078, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-vertical > .btn-group > .btn {
+  float: none;
+}
+
+/* line 2084, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-vertical > .btn + .btn,
+.btn-group-vertical > .btn + .btn-group,
+.btn-group-vertical > .btn-group + .btn,
+.btn-group-vertical > .btn-group + .btn-group {
+  margin-top: -1px;
+  margin-left: 0;
+}
+
+/* line 2088, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+/* line 2091, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-vertical > .btn:first-child:not(:last-child) {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* line 2096, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-vertical > .btn:last-child:not(:first-child) {
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 2101, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+
+/* line 2105, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* line 2109, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 2113, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-justified {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+}
+
+/* line 2120, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-justified > .btn,
+.btn-group-justified > .btn-group {
+  float: none;
+  display: table-cell;
+  width: 1%;
+}
+
+/* line 2125, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-justified > .btn-group .btn {
+  width: 100%;
+}
+
+/* line 2128, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-group-justified > .btn-group .dropdown-menu {
+  left: auto;
+}
+
+/* line 2134, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+[data-toggle="buttons"] > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+/* line 2139, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+
+/* line 2144, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group[class*="col-"] {
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 2149, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group .form-control {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* line 2158, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+/* line 2167, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+select.input-group-lg > .form-control,
+select.input-group-lg > .input-group-addon,
+select.input-group-lg > .input-group-btn > .btn {
+  height: 46px;
+  line-height: 46px;
+}
+
+/* line 2176, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+textarea.input-group-lg > .form-control,
+textarea.input-group-lg > .input-group-addon,
+textarea.input-group-lg > .input-group-btn > .btn,
+select[multiple].input-group-lg > .form-control,
+select[multiple].input-group-lg > .input-group-addon,
+select[multiple].input-group-lg > .input-group-btn > .btn {
+  height: auto;
+}
+
+/* line 2181, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-sm > .form-control,
+.input-group-sm > .input-group-addon,
+.input-group-sm > .input-group-btn > .btn {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+/* line 2190, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+select.input-group-sm > .form-control,
+select.input-group-sm > .input-group-addon,
+select.input-group-sm > .input-group-btn > .btn {
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 2199, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+textarea.input-group-sm > .form-control,
+textarea.input-group-sm > .input-group-addon,
+textarea.input-group-sm > .input-group-btn > .btn,
+select[multiple].input-group-sm > .form-control,
+select[multiple].input-group-sm > .input-group-addon,
+select[multiple].input-group-sm > .input-group-btn > .btn {
+  height: auto;
+}
+
+/* line 2204, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-addon,
+.input-group-btn,
+.input-group .form-control {
+  display: table-cell;
+}
+
+/* line 2209, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-addon:not(:first-child):not(:last-child),
+.input-group-btn:not(:first-child):not(:last-child),
+.input-group .form-control:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+/* line 2213, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-addon,
+.input-group-btn {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* line 2218, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555555;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+/* line 2229, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-addon.input-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+/* line 2234, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-addon.input-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+/* line 2240, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-addon input[type="radio"],
+.input-group-addon input[type="checkbox"] {
+  margin-top: 0;
+}
+
+/* line 2249, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group > .btn,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 2253, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-addon:first-child {
+  border-right: 0;
+}
+
+/* line 2262, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group > .btn,
+.input-group-btn:last-child > .dropdown-toggle,
+.input-group-btn:first-child > .btn:not(:first-child),
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 2266, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-addon:last-child {
+  border-left: 0;
+}
+
+/* line 2269, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-btn {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+/* line 2274, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-btn > .btn {
+  position: relative;
+}
+
+/* line 2277, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-btn > .btn + .btn {
+  margin-left: -1px;
+}
+
+/* line 2282, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-btn > .btn:hover,
+.input-group-btn > .btn:focus,
+.input-group-btn > .btn:active {
+  z-index: 2;
+}
+
+/* line 2286, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group {
+  margin-right: -1px;
+}
+
+/* line 2290, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group {
+  margin-left: -1px;
+}
+
+/* line 2293, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+/* line 2299, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination > li {
+  display: inline;
+}
+
+/* line 2303, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  text-decoration: none;
+  color: #337ab7;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  margin-left: -1px;
+}
+
+/* line 2315, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* line 2321, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* line 2328, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #23527c;
+  background-color: #eeeeee;
+  border-color: #dddddd;
+}
+
+/* line 2338, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #ffffff;
+  background-color: #337ab7;
+  border-color: #337ab7;
+  cursor: default;
+}
+
+/* line 2350, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #777777;
+  background-color: #ffffff;
+  border-color: #dddddd;
+  cursor: not-allowed;
+}
+
+/* line 2357, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination-lg > li > a,
+.pagination-lg > li > span {
+  padding: 10px 16px;
+  font-size: 18px;
+}
+
+/* line 2362, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+/* line 2367, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span {
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* line 2372, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/* line 2377, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+/* line 2382, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+/* line 2386, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+/* line 2399, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+a.label:hover,
+a.label:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 2404, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label:empty {
+  display: none;
+}
+
+/* line 2407, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn .label {
+  position: relative;
+  top: -1px;
+}
+
+/* line 2411, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label-default {
+  background-color: #777777;
+}
+
+/* line 2415, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label-default[href]:hover,
+.label-default[href]:focus {
+  background-color: #5e5e5e;
+}
+
+/* line 2418, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label-primary {
+  background-color: #337ab7;
+}
+
+/* line 2422, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label-primary[href]:hover,
+.label-primary[href]:focus {
+  background-color: #286090;
+}
+
+/* line 2425, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label-success {
+  background-color: #5cb85c;
+}
+
+/* line 2429, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label-success[href]:hover,
+.label-success[href]:focus {
+  background-color: #449d44;
+}
+
+/* line 2432, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label-info {
+  background-color: #5bc0de;
+}
+
+/* line 2436, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label-info[href]:hover,
+.label-info[href]:focus {
+  background-color: #31b0d5;
+}
+
+/* line 2439, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label-warning {
+  background-color: #f0ad4e;
+}
+
+/* line 2443, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label-warning[href]:hover,
+.label-warning[href]:focus {
+  background-color: #ec971f;
+}
+
+/* line 2446, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label-danger {
+  background-color: #d9534f;
+}
+
+/* line 2450, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.label-danger[href]:hover,
+.label-danger[href]:focus {
+  background-color: #c9302c;
+}
+
+/* line 2453, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #777777;
+  border-radius: 10px;
+}
+
+/* line 2467, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.badge:empty {
+  display: none;
+}
+
+/* line 2470, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+/* line 2474, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.btn-xs .badge {
+  top: 0;
+  padding: 1px 5px;
+}
+
+/* line 2479, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+a.badge:hover,
+a.badge:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 2485, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.list-group-item.active > .badge,
+.nav-pills > .active > a > .badge {
+  color: #337ab7;
+  background-color: #ffffff;
+}
+
+/* line 2489, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.list-group-item > .badge {
+  float: right;
+}
+
+/* line 2492, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.list-group-item > .badge + .badge {
+  margin-right: 5px;
+}
+
+/* line 2495, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.nav-pills > li > a > .badge {
+  margin-left: 3px;
+}
+
+/* line 2498, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+
+/* line 2511, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.thumbnail > img,
+.thumbnail a > img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 2517, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #337ab7;
+}
+
+/* line 2520, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.thumbnail .caption {
+  padding: 9px;
+  color: #333333;
+}
+
+/* line 2524, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+/* line 2530, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert h4 {
+  margin-top: 0;
+  color: inherit;
+}
+
+/* line 2534, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert .alert-link {
+  font-weight: bold;
+}
+
+/* line 2538, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert > p,
+.alert > ul {
+  margin-bottom: 0;
+}
+
+/* line 2541, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert > p + p {
+  margin-top: 5px;
+}
+
+/* line 2545, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-dismissable,
+.alert-dismissible {
+  padding-right: 35px;
+}
+
+/* line 2549, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-dismissable .close,
+.alert-dismissible .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  color: inherit;
+}
+
+/* line 2555, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+
+/* line 2560, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-success hr {
+  border-top-color: #c9e2b3;
+}
+
+/* line 2563, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-success .alert-link {
+  color: #2b542c;
+}
+
+/* line 2566, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+
+/* line 2571, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-info hr {
+  border-top-color: #a6e1ec;
+}
+
+/* line 2574, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-info .alert-link {
+  color: #245269;
+}
+
+/* line 2577, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+
+/* line 2582, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-warning hr {
+  border-top-color: #f7e1b5;
+}
+
+/* line 2585, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-warning .alert-link {
+  color: #66512c;
+}
+
+/* line 2588, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+/* line 2593, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-danger hr {
+  border-top-color: #e4b9c0;
+}
+
+/* line 2596, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.alert-danger .alert-link {
+  color: #843534;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  /* line 2600, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  from {
+    background-position: 40px 0;
+  }
+
+  /* line 2603, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes progress-bar-stripes {
+  /* line 2616, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  from {
+    background-position: 40px 0;
+  }
+
+  /* line 2619, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  to {
+    background-position: 0 0;
+  }
+}
+
+/* line 2623, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.progress {
+  overflow: hidden;
+  height: 20px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* line 2632, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.progress-bar {
+  float: left;
+  width: 0%;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #337ab7;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+
+/* line 2648, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.progress-striped .progress-bar,
+.progress-bar-striped {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+
+/* line 2656, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.progress.active .progress-bar,
+.progress-bar.active {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+}
+
+/* line 2661, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.progress-bar-success {
+  background-color: #5cb85c;
+}
+
+/* line 2664, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.progress-striped .progress-bar-success {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+/* line 2669, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.progress-bar-info {
+  background-color: #5bc0de;
+}
+
+/* line 2672, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.progress-striped .progress-bar-info {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+/* line 2677, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.progress-bar-warning {
+  background-color: #f0ad4e;
+}
+
+/* line 2680, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.progress-striped .progress-bar-warning {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+/* line 2685, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.progress-bar-danger {
+  background-color: #d9534f;
+}
+
+/* line 2688, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.progress-striped .progress-bar-danger {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+/* line 2693, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* line 2703, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.well blockquote {
+  border-color: #ddd;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* line 2707, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.well-lg {
+  padding: 24px;
+  border-radius: 6px;
+}
+
+/* line 2711, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.well-sm {
+  padding: 9px;
+  border-radius: 3px;
+}
+
+/* line 2715, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
+/* line 2726, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.close:hover,
+.close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+/* line 2733, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+/* line 2740, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-open {
+  overflow: hidden;
+}
+
+/* line 2743, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+/* line 2755, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+/* line 2764, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+/* line 2770, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* line 2774, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+/* line 2779, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  outline: 0;
+}
+
+/* line 2791, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #000000;
+}
+
+/* line 2798, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* line 2802, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-backdrop.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+/* line 2806, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42857143px;
+}
+
+/* line 2811, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-header .close {
+  margin-top: -2px;
+}
+
+/* line 2814, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+
+/* line 2818, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+
+/* line 2822, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* line 2827, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+
+/* line 2831, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+
+/* line 2834, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+/* line 2837, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+@media (min-width: 768px) {
+  /* line 2845, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+
+  /* line 2849, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  /* line 2853, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 2858, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .modal-lg {
+    width: 900px;
+  }
+}
+/* line 2862, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  visibility: visible;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.4;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* line 2874, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.in {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+/* line 2878, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+
+/* line 2882, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+
+/* line 2886, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+
+/* line 2890, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+
+/* line 2894, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+/* line 2903, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+/* line 2910, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+
+/* line 2917, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+
+/* line 2924, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+
+/* line 2931, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000000;
+}
+
+/* line 2938, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000000;
+}
+
+/* line 2945, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+
+/* line 2952, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+
+/* line 2959, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+
+/* line 2966, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  max-width: 276px;
+  padding: 1px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: left;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  white-space: normal;
+}
+
+/* line 2989, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover.top {
+  margin-top: -10px;
+}
+
+/* line 2992, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover.right {
+  margin-left: 10px;
+}
+
+/* line 2995, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover.bottom {
+  margin-top: 10px;
+}
+
+/* line 2998, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover.left {
+  margin-left: -10px;
+}
+
+/* line 3001, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover-title {
+  margin: 0;
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 5px 5px 0 0;
+}
+
+/* line 3009, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover-content {
+  padding: 9px 14px;
+}
+
+/* line 3013, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover > .arrow,
+.popover > .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+/* line 3021, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover > .arrow {
+  border-width: 11px;
+}
+
+/* line 3024, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover > .arrow:after {
+  border-width: 10px;
+  content: "";
+}
+
+/* line 3028, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover.top > .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-bottom-width: 0;
+  border-top-color: #999999;
+  border-top-color: rgba(0, 0, 0, 0.25);
+  bottom: -11px;
+}
+
+/* line 3036, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover.top > .arrow:after {
+  content: " ";
+  bottom: 1px;
+  margin-left: -10px;
+  border-bottom-width: 0;
+  border-top-color: #ffffff;
+}
+
+/* line 3043, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover.right > .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-left-width: 0;
+  border-right-color: #999999;
+  border-right-color: rgba(0, 0, 0, 0.25);
+}
+
+/* line 3051, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover.right > .arrow:after {
+  content: " ";
+  left: 1px;
+  bottom: -10px;
+  border-left-width: 0;
+  border-right-color: #ffffff;
+}
+
+/* line 3058, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover.bottom > .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999999;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  top: -11px;
+}
+
+/* line 3066, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover.bottom > .arrow:after {
+  content: " ";
+  top: 1px;
+  margin-left: -10px;
+  border-top-width: 0;
+  border-bottom-color: #ffffff;
+}
+
+/* line 3073, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover.left > .arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: #999999;
+  border-left-color: rgba(0, 0, 0, 0.25);
+}
+
+/* line 3081, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.popover.left > .arrow:after {
+  content: " ";
+  right: 1px;
+  border-right-width: 0;
+  border-left-color: #ffffff;
+  bottom: -10px;
+}
+
+/* line 3088, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel {
+  position: relative;
+}
+
+/* line 3091, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 3096, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+
+/* line 3104, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  line-height: 1;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  /* line 3108, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .carousel-inner > .item {
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+  }
+
+  /* line 3118, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .carousel-inner > .item.next,
+  .carousel-inner > .item.active.right {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    left: 0;
+  }
+
+  /* line 3124, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    left: 0;
+  }
+
+  /* line 3131, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .carousel-inner > .item.next.left,
+  .carousel-inner > .item.prev.right,
+  .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    left: 0;
+  }
+}
+/* line 3139, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+
+/* line 3142, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-inner > .active {
+  left: 0;
+}
+
+/* line 3146, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* line 3151, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-inner > .next {
+  left: 100%;
+}
+
+/* line 3154, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-inner > .prev {
+  left: -100%;
+}
+
+/* line 3158, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+
+/* line 3161, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-inner > .active.left {
+  left: -100%;
+}
+
+/* line 3164, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-inner > .active.right {
+  left: 100%;
+}
+
+/* line 3167, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 15%;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* line 3180, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+}
+
+/* line 3188, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-control.right {
+  left: auto;
+  right: 0;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+}
+
+/* line 3199, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-control:hover,
+.carousel-control:focus {
+  outline: 0;
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+/* line 3209, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+}
+
+/* line 3216, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-control .icon-prev,
+.carousel-control .glyphicon-chevron-left {
+  left: 50%;
+  margin-left: -10px;
+}
+
+/* line 3221, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-right {
+  right: 50%;
+  margin-right: -10px;
+}
+
+/* line 3226, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  font-family: serif;
+}
+
+/* line 3232, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-control .icon-prev:before {
+  content: '\2039';
+}
+
+/* line 3235, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-control .icon-next:before {
+  content: '\203a';
+}
+
+/* line 3238, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+/* line 3249, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* line 3261, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-indicators .active {
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+}
+
+/* line 3267, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-caption {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 20px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* line 3279, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.carousel-caption .btn {
+  text-shadow: none;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 3286, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    font-size: 30px;
+  }
+
+  /* line 3293, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .icon-prev {
+    margin-left: -15px;
+  }
+
+  /* line 3297, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-next {
+    margin-right: -15px;
+  }
+
+  /* line 3300, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .carousel-caption {
+    left: 20%;
+    right: 20%;
+    padding-bottom: 30px;
+  }
+
+  /* line 3305, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+  .carousel-indicators {
+    bottom: 20px;
+  }
+}
+/* line 3318, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.clearfix:before,
+.clearfix:after,
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after,
+.btn-toolbar:before,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:before,
+.btn-group-vertical > .btn-group:after,
+.modal-footer:before,
+.modal-footer:after {
+  content: " ";
+  display: table;
+}
+
+/* line 3326, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.clearfix:after,
+.form-horizontal .form-group:after,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:after,
+.modal-footer:after {
+  clear: both;
+}
+
+/* line 3329, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 3334, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pull-right {
+  float: right !important;
+}
+
+/* line 3337, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.pull-left {
+  float: left !important;
+}
+
+/* line 3340, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.hide {
+  display: none !important;
+}
+
+/* line 3343, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.show {
+  display: block !important;
+}
+
+/* line 3346, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 3349, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 3356, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* line 3360, /home/ubuntu/workspace/app/assets/stylesheets/_bootstrap.css.scss */
+.affix {
+  position: fixed;
+}
+
+/* Style */
+/* line 5, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 10, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+html, body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* line 14, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+/* line 18, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+a {
+  text-decoration: none;
+  color: #33acb7;
+}
+
+/* line 23, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+q {
+  background-color: #f9f9f9;
+  font-size: .8em;
+  font-style: italic;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+/* line 28, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+q:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 2em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+  margin-right: 5px;
+}
+/* line 36, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+q:after {
+  color: #ccc;
+  content: open-quote;
+  font-size: 2em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+
+/* line 45, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+code {
+  margin: .5rem 0 .2rem 0;
+  font-size: .75rem;
+  background: #fbfaf8;
+  padding: .5rem;
+  word-break: normal;
+  display: block;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+/* line 56, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+code br {
+  display: none;
+}
+
+/* line 62, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+div#content h1 {
+  margin-top: -10px;
+}
+
+/* line 67, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+.md-page {
+  font-style: italic;
+  color: grey;
+  font-size: .7em;
+}
+
+/* line 73, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+.active-html {
+  color: #33acb7 !important;
+  border-bottom: 4px solid #33acb7 !important;
+  height: 49px !important;
+}
+
+/* line 79, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+.active-js {
+  color: #39d350 !important;
+  border-bottom: 4px solid #39d350 !important;
+  height: 49px !important;
+}
+
+/* line 85, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+.active-ruby {
+  color: #e1121e !important;
+  border-bottom: 4px solid #e1121e !important;
+  height: 49px !important;
+}
+
+/* line 91, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+.active-sb {
+  color: #fff !important;
+  border-right: 4px solid #fff;
+}
+
+/* line 96, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#header {
+  height: 50px;
+  padding: 0em 3em;
+  margin-left: 200px;
+  border-bottom: 1px solid #d6dce0;
+  background: #333;
+  color: #9eafba;
+}
+/* line 103, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#header nav {
+  height: 50px;
+  display: inline-block;
+}
+/* line 106, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#header nav ul {
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+/* line 112, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#header nav ul li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.4em;
+}
+/* line 116, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#header nav ul li a {
+  color: #9eafba;
+  text-decoration: none;
+  -webkit-transition: all .4s ease;
+          transition: all .4s ease;
+  display: inline-block;
+}
+/* line 121, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#header nav ul li a:hover {
+  color: #fff;
+}
+/* line 128, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#header p {
+  display: inline;
+}
+/* line 131, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#header a {
+  color: #9eafba;
+  text-decoration: none;
+}
+/* line 135, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#header .buttons {
+  float: right;
+  margin: .6em 0em;
+}
+/* line 138, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#header .buttons .button {
+  font-size: .8em;
+  margin-left: .5em;
+}
+
+/* line 145, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#sidebar {
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #222;
+  padding: 7em 0 0 0;
+  box-shadow: inset -2px -10px 10px rgba(0, 0, 0, 0.2);
+}
+/* line 154, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#sidebar #logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 3.2em;
+  top: 1em;
+  -webkit-transition: all .9s ease;
+          transition: all .9s ease;
+  transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
+  -moz-transform: rotate(-360deg);
+  -o-transform: rotate(-360deg);
+  -ms-transform: rotate(-360deg);
+}
+/* line 166, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#sidebar #logo:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -webkit-transition: all .9s ease;
+          transition: all .9s ease;
+}
+/* line 175, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#sidebar nav.sidebar-menu {
+  margin-top: 20px;
+}
+/* line 178, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#sidebar ul {
+  list-style: none;
+  text-align: right;
+  width: 200px;
+}
+/* line 182, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#sidebar ul .category {
+  font-weight: 700;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #33acb7;
+}
+/* line 188, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#sidebar ul li {
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  width: 200px;
+}
+/* line 193, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#sidebar ul li a {
+  color: #9eafba;
+  text-decoration: none;
+  -webkit-transition: all .4s ease;
+          transition: all .4s ease;
+  display: inline-block;
+  height: 35px;
+  width: 200px;
+}
+/* line 200, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#sidebar ul li a:hover {
+  color: #fff;
+}
+/* line 206, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#sidebar .sign_in {
+  position: absolute;
+  right: 3em;
+  top: 80%;
+  font-size: .8em;
+  color: #9eafba;
+}
+
+/* line 215, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+.button {
+  outline: none;
+  background: transparent;
+  border: 1px solid #d6dce0;
+  padding: .5em 1.5em;
+  border-radius: 1.5em;
+  -webkit-transition: all .2s ease;
+          transition: all .2s ease;
+  cursor: pointer;
+  color: #ddd;
+}
+/* line 224, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+.button:focus {
+  box-shadow: inset 1px 1px 10px 0px rgba(0, 0, 0, 0.9);
+}
+/* line 227, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+.button:hover {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+      transform: scale(0.95);
+  border: 1px solid #33acb7;
+  color: #33acb7;
+}
+/* line 234, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+.button:hover a {
+  color: #33acb7 !important;
+}
+
+/* line 240, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* line 248, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content {
+  margin-left: 200px;
+}
+/* line 250, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .wrapper {
+  padding: 1em 3em;
+}
+/* line 253, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .title-show {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+}
+/* line 258, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .date-show {
+  float: right;
+  margin-top: -30px;
+  color: grey;
+  font-size: .7em;
+}
+/* line 264, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .category-show {
+  float: right;
+  margin-top: -15px;
+  color: grey;
+  font-size: .7em;
+}
+/* line 270, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .comment-count {
+  margin-top: 20px;
+  border-bottom: 1px solid #ddd;
+}
+/* line 274, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .comment_content {
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+/* line 279, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .comment_content:hover > p.comment {
+  display: block;
+}
+/* line 282, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .comment_name {
+  position: relative;
+  font-weight: bolder;
+}
+/* line 286, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .comment_time {
+  color: grey;
+  font-size: .6em;
+  float: right;
+  margin-top: -25px;
+}
+/* line 292, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .comment_name:after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 10px;
+  width: 30px;
+  margin-left: 40px;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+/* line 302, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .comment_name:before {
+  content: '▲';
+  position: absolute;
+  display: block;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  color: #ccc;
+  font-size: .7em;
+  -webkit-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  margin-left: 70px;
+  margin-top: 25px;
+}
+/* line 315, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .comment_body {
+  margin-left: 85px;
+}
+/* line 318, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .add-comment {
+  margin-top: 20px;
+  text-decoration: underline;
+}
+/* line 322, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .label-name {
+  margin-top: 5px;
+}
+/* line 325, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .text-name, #main_content .text-body {
+  margin-top: -10px;
+  margin-bottom: 4px;
+}
+/* line 329, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content p.comment {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 30px;
+  z-index: 3;
+  background-color: white;
+  display: none;
+}
+/* line 337, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content p.comment a {
+  color: darkred;
+  border: 1px solid darkred;
+}
+/* line 340, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content p.comment a:hover {
+  text-decoration: none;
+  color: red;
+}
+/* line 346, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content p.body {
+  margin-top: 10px;
+}
+/* line 349, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .form-control {
+  color: darkred;
+}
+/* line 352, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .post_wrapper {
+  padding-bottom: .2em;
+  border-bottom: 1px solid #d6dce0;
+}
+/* line 355, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .post_wrapper .date {
+  padding: 0;
+  margin: 0;
+  color: grey;
+  font-size: .9em;
+  font-style: italic;
+}
+/* line 362, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .post_wrapper .title {
+  font-size: 1em;
+  margin: 0;
+}
+/* line 365, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .post_wrapper .title a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #2a2f35;
+  font-size: 1.5em;
+}
+/* line 370, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .post_wrapper .title a:hover {
+  color: #33acb7;
+}
+/* line 375, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content .post_wrapper .date_and_author {
+  color: #9eafba;
+  margin: .5em 0 0 0;
+}
+/* line 380, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content {
+  padding: 1em 3em;
+}
+/* line 382, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content .title {
+  font-weight: 500;
+  text-decoration: none;
+  color: #2a2f35;
+  font-size: 2.5em;
+  margin-bottom: 0;
+}
+/* line 389, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content .body {
+  font-size: 1.1em;
+  line-height: 1.75;
+}
+/* line 393, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content .date_and_author {
+  color: #9eafba;
+  margin: .5em 0 2em 0;
+}
+/* line 398, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content #comments h2 {
+  margin: 3em 0 1em 0;
+  border-bottom: 1px solid #d6dce0;
+  padding-bottom: 0.5em;
+}
+/* line 403, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content #comments h3 {
+  margin-top: 2em;
+}
+/* line 406, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content #comments .comment {
+  border-bottom: 1px solid #d6dce0;
+  padding: 1.5em 2em;
+}
+/* line 410, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content #comments .comment_content {
+  float: left;
+}
+/* line 412, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content #comments .comment_content .comment_name {
+  margin: 1em 0 0 0;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+/* line 417, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content #comments .comment_content .comment_body {
+  font-size: 1.2em;
+  margin: 0.2em 0 0 0;
+}
+/* line 421, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content #comments .comment_content .comment_time {
+  margin-top: 1.2em;
+  font-size: .8em;
+}
+/* line 426, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content #comments .button {
+  float: right;
+}
+/* line 430, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#main_content #post_content input[type="text"], #main_content #post_content textarea {
+  width: 50%;
+}
+
+/* line 435, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#page_wrapper {
+  padding: 3em;
+}
+/* line 437, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#page_wrapper #profile_image {
+  width: 300px;
+  float: left;
+  margin-right: 2em;
+}
+/* line 441, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#page_wrapper #profile_image img {
+  width: 100%;
+  border-radius: 0.35em;
+}
+/* line 447, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#page_wrapper #content h1 {
+  font-weight: 500;
+}
+/* line 450, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#page_wrapper #content p {
+  font-size: 1.1em;
+  line-height: 1.75;
+}
+/* line 454, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+#page_wrapper #content a {
+  color: #33acb7;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* line 461, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+.links {
+  margin: 2em 0;
+}
+
+/* line 464, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  width: 90%;
+  border: 1px solid #d6dce0;
+  border-radius: .35em;
+  margin-top: 10px;
+  padding: .5em 1em;
+  line-height: 1.75;
+}
+
+/* line 472, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+input[type="text"] {
+  height: 35px;
+}
+
+/* line 475, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+textarea {
+  min-height: 180px;
+}
+
+/* line 478, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+input[type="submit"] {
+  outline: none;
+  background: transparent;
+  border: 1px solid #d6dce0;
+  padding: .5em 1.5em;
+  font-size: 1.1em;
+  border-radius: 1.5em;
+  margin-left: .5em;
+}
+/* line 486, /home/ubuntu/workspace/app/assets/stylesheets/style.css.scss */
+input[type="submit"]:hover {
+  border: 1px solid #33acb7;
+  color: #33acb7;
+}
+/*
+  Bootstrap-submenu
+*/
+
+
+.dropdown-submenu {
+  position:relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display:block;
+}
+
+.dropdown-submenu > a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover > a:after {
+  border-left-color: #ffffff;
+}
+
+.dropdown-submenu.pull-left {
+  float:none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+
+/*
+  Bootstrap-wysihtml5
+*/
+
+ul.wysihtml5-toolbar {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+ul.wysihtml5-toolbar::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+ul.wysihtml5-toolbar > li {
+  float: left;
+  display: list-item;
+  list-style: none;
+  margin: 0 5px 10px 0;
+}
+
+ul.wysihtml5-toolbar a[data-wysihtml5-command=bold] {
+  font-weight: bold;
+}
+
+ul.wysihtml5-toolbar a[data-wysihtml5-command=italic] {
+  font-style: italic;
+}
+
+ul.wysihtml5-toolbar a[data-wysihtml5-command=underline] {
+  text-decoration: underline;
+}
+
+ul.wysihtml5-toolbar a.btn.wysihtml5-command-active {
+  background-image: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15),0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #E6E6E6;
+  background-color: #D9D9D9;
+  outline: 0;
+}
+
+ul.wysihtml5-commands-disabled .dropdown-menu {
+  display: none !important;
+}
+
+ul.wysihtml5-toolbar div.wysihtml5-colors {
+  display:block;
+  width: 50px;
+  height: 20px;
+  margin-top: 2px;
+  margin-left: 5px;
+  position: absolute;
+  pointer-events: none;
+}
+
+ul.wysihtml5-toolbar a.wysihtml5-colors-title {
+  padding-left: 70px;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="black"] {
+  background: black !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="silver"] {
+  background: silver !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="gray"] {
+  background: gray !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="maroon"] {
+  background: maroon !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="red"] {
+  background: red !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="purple"] {
+  background: purple !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="green"] {
+  background: green !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="olive"] {
+  background: olive !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="navy"] {
+  background: navy !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="blue"] {
+  background: blue !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
+  background: orange !important;
+}
+
+/*
+  Bootsy
+*/
+
+.wysiwyg-color-black {
+  color: black;
+}
+
+.wysiwyg-color-silver {
+  color: silver;
+}
+
+.wysiwyg-color-gray {
+  color: gray;
+}
+
+.wysiwyg-color-white {
+  color: white;
+}
+
+.wysiwyg-color-maroon {
+  color: maroon;
+}
+
+.wysiwyg-color-red {
+  color: red;
+}
+
+.wysiwyg-color-purple {
+  color: purple;
+}
+
+.wysiwyg-color-fuchsia {
+  color: fuchsia;
+}
+
+.wysiwyg-color-green {
+  color: green;
+}
+
+.wysiwyg-color-lime {
+  color: lime;
+}
+
+.wysiwyg-color-olive {
+  color: olive;
+}
+
+.wysiwyg-color-orange {
+  color: orange;
+}
+
+.wysiwyg-color-yellow {
+  color: yellow;
+}
+
+.wysiwyg-color-navy {
+  color: navy;
+}
+
+.wysiwyg-color-blue {
+  color: blue;
+}
+
+.wysiwyg-color-teal {
+  color: teal;
+}
+
+.wysiwyg-color-aqua {
+  color: aqua;
+}
+
+.wysiwyg-float-left {
+  float: left;
+  margin: 0 8px 8px 0;
+}
+
+.wysiwyg-float-right {
+  float: right;
+  margin: 0 0 8px 8px;
+}
+
+.bootsy blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee;
+}
+.bootsy blockquote p:last-child,
+.bootsy blockquote ul:last-child,
+.bootsy blockquote ol:last-child {
+  margin-bottom: 0;
+}
+.bootsy blockquote footer,
+.bootsy blockquote small,
+.bootsy blockquote .small {
+  display: block;
+  font-size: 80%;
+  line-height: 1.42857143;
+  color: #777;
+}
+.bootsy blockquote footer:before,
+.bootsy blockquote small:before,
+.bootsy blockquote .small:before {
+  content: '\2014 \00A0';
+}
+.bootsy .blockquote-reverse,
+.bootsy blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  text-align: right;
+  border-right: 5px solid #eee;
+  border-left: 0;
+}
+.bootsy .blockquote-reverse footer:before,
+.bootsy blockquote.pull-right footer:before,
+.blockquote-reverse small:before,
+.bootsy blockquote.pull-right small:before,
+.bootsy .blockquote-reverse .small:before,
+.bootsy blockquote.pull-right .small:before {
+  content: '';
+}
+.bootsy .blockquote-reverse footer:after,
+.bootsy blockquote.pull-right footer:after,
+.bootsy .blockquote-reverse small:after,
+.bootsy blockquote.pull-right small:after,
+.bootsy .blockquote-reverse .small:after,
+.bootsy blockquote.pull-right .small:after {
+  content: '\00A0 \2014';
+}
+.bootsy blockquote:before,
+.bootsy blockquote:after {
+  content: "";
+}
+
+textarea.bootsy:required:invalid {
+  color: inherit;
+}
+
+/*Modal Design Styles*/
+
+.bootsy-modal .file-input-name {display: none;}  /*Hide the input file name from showing as it's not needed and ruins design*/
+
+/*Set a min-height on the modal body to prevent jumping up and down of modal when adding content*/
+.bootsy-modal .modal-body {
+  min-height: 120px;
+}
+
+.bootsy-image {
+  margin-bottom: 15px;
+}
+
+.bootsy-upload-loader {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.bootsy-gallery-loader {
+  display: block;
+  margin: 0 auto;
+}
+
+/*The below code is needed for capybara to be able to find the input, as it*/
+/*does not work*/
+.file-input-wrapper input[type=file], .file-input-wrapper input[type=file]:focus, .file-input-wrapper input[type=file]:hover {
+  opacity: .01;
+}
+
+/* Avoid Boostrap input borders */
+body.bootsy_text_area.form-control {
+  border: none;
+  box-shadow: none;
+}
+/* Make clicks pass-through */
+/* line 6, /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/nprogress-rails-0.1.6.3/app/assets/stylesheets/nprogress.css.scss */
+#nprogress {
+  pointer-events: none;
+}
+
+/* line 10, /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/nprogress-rails-0.1.6.3/app/assets/stylesheets/nprogress.css.scss */
+#nprogress .bar {
+  background: #2299dd;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+/* line 23, /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/nprogress-rails-0.1.6.3/app/assets/stylesheets/nprogress.css.scss */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #2299dd, 0 0 5px #2299dd;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+/* line 38, /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/nprogress-rails-0.1.6.3/app/assets/stylesheets/nprogress.css.scss */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  top: 15px;
+  right: 15px;
+}
+
+/* line 46, /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/nprogress-rails-0.1.6.3/app/assets/stylesheets/nprogress.css.scss */
+#nprogress .spinner-icon {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  border: solid 2px transparent;
+  border-top-color: #2299dd;
+  border-left-color: #2299dd;
+  border-radius: 50%;
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+  animation: nprogress-spinner 400ms linear infinite;
+}
+
+/* line 60, /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/nprogress-rails-0.1.6.3/app/assets/stylesheets/nprogress.css.scss */
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 66, /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/nprogress-rails-0.1.6.3/app/assets/stylesheets/nprogress.css.scss */
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  /* line 71, /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/nprogress-rails-0.1.6.3/app/assets/stylesheets/nprogress.css.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 72, /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/nprogress-rails-0.1.6.3/app/assets/stylesheets/nprogress.css.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes nprogress-spinner {
+  /* line 75, /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/nprogress-rails-0.1.6.3/app/assets/stylesheets/nprogress.css.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  /* line 76, /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/nprogress-rails-0.1.6.3/app/assets/stylesheets/nprogress.css.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+#nprogress .bar,
+#nprogress .spinner {
+  z-index: 999999;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+
+ */
+
