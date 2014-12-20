@@ -15,7 +15,6 @@ group :test do
 end
 
 group :production do
-  gem 'dumper'
   gem 'pg'
   gem 'rails_12factor'
 end
@@ -28,6 +27,7 @@ gem 'will_paginate', '3.0.7'
 gem 'bootsy'
 gem 'redcarpet'
 gem 'nprogress-rails'
+gem 'dumper'
 # Captcha
 gem 'simple_captcha2', require: 'simple_captcha'
 # gem 'bootstrap-wysihtml5-rails'
