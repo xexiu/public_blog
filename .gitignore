@@ -20,3 +20,6 @@ doc/app
 # /config/database.yml
 # Ignore Spring files.
 /spring/*.pid
+# Others
+pub
+pub.pub
