@@ -24,7 +24,7 @@ module ApplicationHelper
       highlight: true,
       strikethrough: true,
       quote: true,
-      no_images: true,
+      no_images: false,
       superscript: true,
       footnotes: true,
       tables: true
