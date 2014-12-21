@@ -46,7 +46,7 @@ Bootsy.setup do |config|
   #
   #
   # Whether user can destroy uploaded files
-  # config.allow_destroy = true
+  config.allow_destroy = true
   #
   #
   # Storage mode

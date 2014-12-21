@@ -42,6 +42,12 @@ q {
   }
 }
 
+textarea#post_body {
+  overflow: auto; // IE FIX
+  min-height: 250px;
+  resize: both !important;
+}
+
 code {
   margin: .5rem 0 .2rem 0;
   font-size: .75rem;

@@ -13,7 +13,7 @@
   <%= f.text_field :title, autofocus: 'autofocus' %><br>
   <br>
   <%= f.label :body %><br>
-  <%= f.bootsy_area(:body, class: 'bg-code').html_safe %><br>
+  <%= f.bootsy_area(:body, editor_options: { html: true}, class: 'bg-code').html_safe %><br>
   <%= f.select :categories, [ 'The Void', 'HTML + CSS', 'Javascript', 'Ruby' ], :prompt => 'Select One' %><br />
   <br>
   <%= f.submit %>
