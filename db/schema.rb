@@ -11,21 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141219201812) do
-
-  create_table "bootsy_image_galleries", force: true do |t|
-    t.integer  "bootsy_resource_id"
-    t.string   "bootsy_resource_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "bootsy_images", force: true do |t|
-    t.string   "image_file"
-    t.integer  "image_gallery_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20141221230951) do
 
   create_table "comments", force: true do |t|
     t.string   "name"

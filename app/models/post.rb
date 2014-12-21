@@ -1,5 +1,4 @@
 class Post < ActiveRecord::Base
-  include Bootsy::Container
   belongs_to :user
   has_many :comments, dependent: :destroy
   validates :categories, presence: true, :inclusion => { :in => ['The Void', 'HTML + CSS','Javascript','Ruby'] }

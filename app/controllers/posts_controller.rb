@@ -61,7 +61,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :categories, :bootsy_image_gallery_id)
+    params.require(:post).permit(:title, :body, :categories)
   end
 
   # Confirms an admin user.

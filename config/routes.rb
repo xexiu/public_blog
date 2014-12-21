@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   root "posts#index"
   get    'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
