@@ -10,7 +10,8 @@ module ApplicationHelper
   def markdown(text)
     options = {
       filter_html:     false,
-      hard_wrap:       false,
+      escape_html: false,
+      hard_wrap:       true,
       link_attributes: { rel: 'nofollow', target: "_blank" },
       space_after_headers: true,
       fenced_code_blocks: true
@@ -24,8 +25,6 @@ module ApplicationHelper
       strikethrough: true,
       quote: true,
       no_images: true,
-      no_styles: true,
-      prettify: true,
       superscript: true,
       footnotes: true,
       tables: true
