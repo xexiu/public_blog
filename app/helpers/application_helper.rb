@@ -10,7 +10,7 @@ module ApplicationHelper
   def markdown(text)
     options = {
       filter_html:     false,
-      escape_html: false,
+      escape_html: true, # se to false to allow html, eg: <div>test</div>
       hard_wrap:       true,
       link_attributes: { rel: 'nofollow', target: "_blank" },
       space_after_headers: true,
