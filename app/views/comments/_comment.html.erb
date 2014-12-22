@@ -13,12 +13,12 @@
   </div>
 
   <div class="comment_body"><%= markdown(comment.body).html_safe %><!-- Body Comment -->
-    <% if logged_in? && current_user.admin? %>
+  </div>
+  <% if logged_in? && current_user.admin? %>
     <p class="comment"><%= link_to 'Delete', [comment.post, comment],
                   method: :delete,
                   class: "button",
                   data: { confirm: 'Are you sure?' } %>
     </p>
-    <% end %>
-  </div>
+  <% end %>
 </div>

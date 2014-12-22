@@ -287,6 +287,7 @@ div#content {
     border-radius: 4px;
     padding: 5px;
     margin-bottom: 5px;
+    position: relative;
   }
   .comment_content {
     display: block;
@@ -294,7 +295,7 @@ div#content {
     position: relative;
     z-index: 2;
   }
-  .comment_content:hover > p.comment {
+  .comment-block:hover > p.comment {
     display: block;
   }
   .comment_name {
@@ -361,7 +362,7 @@ div#content {
     position: absolute;
     right: 0;
     top: 0;
-    margin-top: 30px;
+    margin-top: 20px;
     z-index: 3;
     background-color: white;
     display: none;
