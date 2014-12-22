@@ -26,6 +26,7 @@ gem 'faker', '1.4.2'
 gem 'will_paginate', '3.0.7'
 # gem 'bootsy'
 gem 'redcarpet'
+gem 'coderay'
 gem 'nprogress-rails'
 gem 'dumper'
 # Captcha

@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div class="comment_body"><%= markdown(comment.body).html_safe %><!-- Body Comment -->
+  <div class="comment_body"><%= markdown(comment.body) %><!-- Body Comment -->
   </div>
   <% if logged_in? && current_user.admin? %>
     <p class="comment"><%= link_to 'Delete', [comment.post, comment],

@@ -6,18 +6,24 @@ module ApplicationHelper
   def action?(*action)
     action.include?(params[:action])
   end
+  
+  class CodeRayify < Redcarpet::Render::HTML
+    def block_code(code, language)
+      CodeRay.scan(code, language).div(:line_numbers => :table)
+    end
+  end
 
   def markdown(text)
+    coderayified = CodeRayify.new(
+      filter_html: true, 
+      hard_wrap: true)
+      
     options = {
-      filter_html:     false,
-      escape_html: true, # se to false to allow html, eg: <div>test</div>
-      hard_wrap:       true,
+      # escape_html: true, # se to false to allow html, eg: <div>test</div>
       link_attributes: { rel: 'nofollow', target: "_blank" },
       space_after_headers: true,
-      fenced_code_blocks: true
-    }
-
-    extensions = {
+      prettify:        true,
+      fenced_code_blocks: true,
       autolink:           true,
       no_intra_emphasis: true,
       superscript:        true,
@@ -30,8 +36,7 @@ module ApplicationHelper
       tables: true
     }
 
-    renderer = Redcarpet::Render::HTML.new(options)
-    markdown = Redcarpet::Markdown.new(renderer, extensions)
+    markdown = Redcarpet::Markdown.new(coderayified, options)
     markdown.render(text).html_safe
   end
 

@@ -190,6 +190,7 @@ DEPENDENCIES
   autoprefixer-rails
   bcrypt (= 3.1.7)
   byebug
+  coderay
   coffee-rails (~> 4.0.0)
   dumper
   faker (= 1.4.2)
