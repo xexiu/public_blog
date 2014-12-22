@@ -282,7 +282,14 @@ div#content {
     margin-top: 20px;
     border-bottom: 1px solid #ddd;
   }
+  .comment-block {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
   .comment_content {
+    display: block;
     margin-top: 10px;
     position: relative;
     z-index: 2;
@@ -293,12 +300,25 @@ div#content {
   .comment_name {
     position: relative;
     font-weight: bolder;
+    float: left;
+    max-width: 300px;
+  }
+  .comment-single {
+    display: inline-block; 
+    float:left;
+    margin-top: 4px;
+    & a {
+      color: grey; 
+      font-size: .8em;
+      margin-left: 4px;
+      font-style: italic;
+    }
   }
   .comment_time {
     color: grey;
     font-size: .6em;
     float: right;
-    margin-top: -25px;
+    margin-top: 5px;
   }
   .comment_name:after {
     content: '';

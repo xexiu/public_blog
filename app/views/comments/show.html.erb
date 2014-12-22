@@ -1,0 +1,5 @@
+<%= link_to 'Back', :back %>
+<h1>Comment</h1>
+<% if @comment %>
+  <%= render 'comment', comment: @comment, from_reply_form: true %>
+<% end %>
