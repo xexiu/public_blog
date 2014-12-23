@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   get '/markdown', to: 'pages#markdown'
   resources :users
   resources :posts do
+    member do
+      put 'like', to: 'posts#upvote'
+      put 'dislike', to: 'posts#downvote'
+    end
     resources :comments
   end
 end

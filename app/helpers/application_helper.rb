@@ -1,11 +1,4 @@
 module ApplicationHelper
-  def controller?(*controller)
-    controller.include?(params[:controller])
-  end
-
-  def action?(*action)
-    action.include?(params[:action])
-  end
   
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)
@@ -15,18 +8,16 @@ module ApplicationHelper
 
   def markdown(text)
     coderayified = CodeRayify.new(
-      filter_html: true, 
+      filter_html: true,
       hard_wrap: true)
       
     options = {
       # escape_html: true, # se to false to allow html, eg: <div>test</div>
       link_attributes: { rel: 'nofollow', target: "_blank" },
       space_after_headers: true,
-      prettify:        true,
-      fenced_code_blocks: true,
+      fenced_code_blocks: false,
       autolink:           true,
       no_intra_emphasis: true,
-      superscript:        true,
       highlight: true,
       strikethrough: true,
       quote: true,
@@ -38,6 +29,14 @@ module ApplicationHelper
 
     markdown = Redcarpet::Markdown.new(coderayified, options)
     markdown.render(text).html_safe
+  end
+  
+  def controller?(*controller)
+    controller.include?(params[:controller])
+  end
+
+  def action?(*action)
+    action.include?(params[:action])
   end
 
   # Returns the full title on a per-page basis.

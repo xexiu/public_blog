@@ -27,6 +27,7 @@ gem 'will_paginate', '3.0.7'
 # gem 'bootsy'
 gem 'redcarpet'
 gem 'coderay'
+gem 'acts_as_votable', '~> 0.10.0'
 gem 'nprogress-rails'
 gem 'dumper'
 # Captcha

@@ -1,0 +1,4 @@
+$('.npos').bind('ajax:success', function() {
+$('.ncount-<%= @post.id %>').html('<%=escape_javascript @post.get_downvotes.size.to_s %>');
+});
+$("#notice").html("<%= escape_javascript(render :partial => 'layouts/flash' , :locals => { :flash => flash }).html_safe %>");

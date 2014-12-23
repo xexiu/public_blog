@@ -520,3 +520,30 @@ div#content {
       color: #33acb7;
     }
   }
+  
+  aside.vote-count {
+    text-align: center;
+    font-size: 2em;
+    a {
+      text-decoration: none;
+    }
+    .vpos {
+      margin-right: 5px;
+      color: darkgreen;
+      &:hover {
+        color: #33CC33;
+      }
+      & .vcount {
+        font-size: 1.5em;
+      }
+    }
+    .npos {
+      color: darkred;
+      &:hover {
+        color: red;
+      }
+      & .ncount {
+        font-size: 1.5em;
+      }
+    }
+  }

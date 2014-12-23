@@ -18,6 +18,18 @@
 <!-- BODY -->
 <p class="body">
   <%= markdown(@post.body) %>
+  <aside class="vote-count bind-<%= @post.id %>">
+    <!-- Positive Votes -->
+    <%= link_to like_post_path(@post), method: :put, class: 'vpos' do %>
+    <span class="glyphicon glyphicon-chevron-up"></span>
+    <span class="vcount vcount-<%= @post.id %>"><%= @post.get_upvotes.size %></span>
+    <% end %>
+    <!-- Negative Votes -->
+    <%= link_to dislike_post_path(@post), method: :put, class: 'npos' do %>
+    <span class="glyphicon glyphicon-chevron-down"></span>
+    <span class="ncount ncount-<%= @post.id %>"><%= @post.get_downvotes.size %></span>
+    <% end %>
+  </aside>
 </p>
 <div id="comments">
     <h2 class="comment-count"><%= pluralize(@post.comments.count, "Comment") %></h2>
