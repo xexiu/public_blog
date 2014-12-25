@@ -27,6 +27,29 @@ strong {
   color: #000;
 }
 
+table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+table th {
+  background-color: #f8f8f8;
+  font-family: "Interstate Bold"; font-weight: bold;
+}
+table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+table th, table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+
 q {
   background-color: #f9f9f9;
   font-size: .8em;
