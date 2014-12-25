@@ -17,12 +17,13 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = @parent.comments.create(comment_params)
-     
-    if @comment.save
+    if simple_captcha_valid? || current_user.admin?
+      @post = Post.find(params[:post_id])
+      @comment = @parent.comments.create(comment_params)
       redirect_to post_path(@comment.post), :notice => 'Thank you for your comment!'
     else
-      render :new
+      redirect_to :back
+      flash[:danger] = "Invalid Captcha!"
     end
   end
 

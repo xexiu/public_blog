@@ -318,6 +318,28 @@ div#content {
     position: relative;
     z-index: 2;
   }
+  .comment-block-reply:hover > p.comment-reply {
+    display: block;
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    & a {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    line-height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center; 
+    color: white;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+    }
+    }
+  }
   .comment-block:hover > p.comment {
     display: block;
   }
@@ -381,6 +403,16 @@ div#content {
   .text-name, .text-body {
     margin-top: -10px;
     margin-bottom: 4px;
+  }
+  p.comment-reply {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 20px;
+    margin-right: 4px;
+    z-index: 3;
+    background-color: white;
+    display: none;
   }
   p.comment {
     position: absolute;
