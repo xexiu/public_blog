@@ -9,13 +9,13 @@ module ApplicationHelper
     options = {
       # escape_html: true, # se to false to allow html, eg: <div>test</div>
       link_attributes: { rel: 'nofollow', target: "_blank" },
+      hard_wrap: true,
+      fenced_code_blocks: true,
       filter_html: true
     }
     
     extensions = {
-      hard_wrap: true,
       space_after_headers: true,
-      fenced_code_blocks: false,
       autolink:           true,
       no_intra_emphasis: true,
       highlight: true,
