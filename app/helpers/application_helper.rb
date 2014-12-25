@@ -3,21 +3,17 @@ module ApplicationHelper
   def indented_render(num, *args)
     render(*args).gsub("Add a Reply", "\t" * num).html_safe
   end
-  
-  class CodeRayify < Redcarpet::Render::HTML
-    def block_code(code, language)
-      CodeRay.scan(code, language).div(:line_numbers => :table)
-    end
-  end
 
   def markdown(text)
-    coderayified = CodeRayify.new(
-      filter_html: true,
-      hard_wrap: true)
-      
+
     options = {
       # escape_html: true, # se to false to allow html, eg: <div>test</div>
       link_attributes: { rel: 'nofollow', target: "_blank" },
+      filter_html: true
+    }
+    
+    extensions = {
+      hard_wrap: true,
       space_after_headers: true,
       fenced_code_blocks: false,
       autolink:           true,
@@ -31,7 +27,8 @@ module ApplicationHelper
       tables: true
     }
 
-    markdown = Redcarpet::Markdown.new(coderayified, options)
+    renderer = Redcarpet::Render::HTML.new(options)
+    markdown = Redcarpet::Markdown.new(renderer, extensions)
     markdown.render(text).html_safe
   end
   
