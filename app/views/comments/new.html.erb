@@ -1,0 +1,7 @@
+
+
+<% if current_page?(new_post_comment_path) %>
+<%= render 'comments/form_comments' %><!-- Form for Comment Post -->
+<% elsif current_page?(new_post_comment_comment_path) %>
+<%= render 'comments/form' %><!-- Form for Reply Comment -->
+<% end %>

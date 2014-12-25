@@ -1,4 +1,4 @@
-<%= link_to 'Back', :back %>
+<%= link_to 'Back', post_path(@comment.post) %>
 <h1>Comment</h1>
 <% if @comment %>
   <%= render 'comment', comment: @comment, from_reply_form: true %>

@@ -289,6 +289,29 @@ div#content {
     margin-bottom: 5px;
     position: relative;
   }
+  .comment-block-reply {
+    border-left: 3px solid #ddd;
+    background-color: #f1f1f1;
+    font-size: .9em;
+    padding: 5px;
+    margin-bottom: 5px;
+    position: relative;
+  }
+  .comment-content-reply {
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+  .reply-comment {
+    font-style: italic;
+    font-size: .8em;
+    display: inline-block;
+    float: left;
+    margin-top: 7px;
+    & a {
+      margin-top: 4px;
+    }
+  }
   .comment_content {
     display: block;
     margin-top: 10px;
@@ -308,6 +331,7 @@ div#content {
     display: inline-block; 
     float:left;
     margin-top: 4px;
+    margin-right: 5px;
     & a {
       color: grey; 
       font-size: .8em;
@@ -363,6 +387,7 @@ div#content {
     right: 0;
     top: 0;
     margin-top: 20px;
+    margin-right: 4px;
     z-index: 3;
     background-color: white;
     display: none;

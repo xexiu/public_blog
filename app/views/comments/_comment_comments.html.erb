@@ -1,25 +1,13 @@
-<div class="comment-block">
+<div class="comment-block-reply">
   <div class="comment clearfix">
-    <div class="comment_content"><!--Content -->
+    <div class="comment_content-reply"><!--Content -->
       <p class="comment_name"><%= image_tag "logo.png", width: '30px', height: '30px', style: 'margin-right: 5px' %><%= comment.name %>
-      <p class="comment-single">
-        <% from_reply_form ||= nil %>
-        <% unless from_reply_form %>
-        <%= link_to 'View single comment', post_comment_path(@post, comment) %>
-      <% end %>
-      </p>
-      <p class="reply-comment"><%= link_to 'Reply', new_post_comment_comment_path(@post, comment) %></p>
       <p class="comment_time"><%= time_ago_in_words(comment.created_at) %> Ago</p>
       <!--<p><%# l(comment.created_at, format: '%B, %d %Y %H:%M:%S') %></p> Comment Date: 23 december, 21:36:33-->
     </div>
   </div>
 
   <div class="comment_body"><%= markdown(comment.body) %><!-- Body Comment -->
-    <% unless comment.comments.empty? %>
-    <ul class="comment_list">
-      <%= render :partial => 'comments/comment_comments', :collection => comment.comments, :as => :comment %>
-    </ul>
-  <% end %>
   </div>
   <% if logged_in? && current_user.admin? %>
     <p class="comment"><%= link_to 'Delete', post_comment_path(@post, comment),
@@ -29,3 +17,4 @@
     </p>
   <% end %>
 </div>
+

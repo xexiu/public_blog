@@ -1,5 +1,5 @@
-<h1>New reply comment: </h1>
-<%= form_for [@post, @parent, @comment] do |f| %>
+<h1>New comment</h1>
+<%= form_for([@post, @post.comments.build]) do |f| %>
   <%= f.hidden_field :parent_id %>
   <div class="label-name"><%= f.label 'Your Name' %></div>
   <div class="text-name"><%= f.text_field :name %></div>

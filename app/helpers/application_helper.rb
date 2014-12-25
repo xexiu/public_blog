@@ -1,5 +1,9 @@
 module ApplicationHelper
   
+  def indented_render(num, *args)
+    render(*args).gsub("Add a Reply", "\t" * num).html_safe
+  end
+  
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)
       CodeRay.scan(code, language).div(:line_numbers => :table)

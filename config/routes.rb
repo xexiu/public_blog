@@ -13,13 +13,17 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/markdown', to: 'pages#markdown'
   resources :users
+  
   resources :posts do
     member do
       put 'like', to: 'posts#upvote'
       put 'dislike', to: 'posts#downvote'
     end
-    resources :comments
+    resources :comments do
+      resources :comments
+    end
   end
+  
 end
 
 # The priority is based upon order of creation: first created -> highest priority.
