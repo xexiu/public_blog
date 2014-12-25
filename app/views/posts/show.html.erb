@@ -38,8 +38,6 @@
     <ul class="comment_list"><!-- Render Partial List Comments -->
       <%= render :partial => 'comments/comment', :collection => @post.comments %>
     </ul>
-    <h3 class="add-comment">Add a comment:</h3>
-    <span class="md-page">Markdown is <%= link_to 'allowed', markdown_path, target: '_blank', rel: 'nofollow' %></span>
     <%= render "comments/form_comments" %>
 </div>
 

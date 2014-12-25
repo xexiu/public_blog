@@ -1,4 +1,5 @@
-<h1>New comment</h1>
+<h3>Add a comment:</h3>
+<span class="md-page">Markdown is <%= link_to 'allowed', markdown_path, target: '_blank', rel: 'nofollow' %></span>
 <%= form_for([@post, @post.comments.build]) do |f| %>
   <%= f.hidden_field :parent_id %>
   <div class="label-name"><%= f.label 'Your Name' %></div>
