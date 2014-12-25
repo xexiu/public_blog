@@ -1,6 +1,5 @@
 <h1>New reply comment: </h1>
 <%= form_for [@post, @parent, @comment] do |f| %>
-  <%= f.hidden_field :parent_id %>
   <div class="label-name"><%= f.label 'Your Name' %></div>
   <div class="text-name"><%= f.text_field :name, autofocus: true %></div>
   <div class="label-body"><%= f.label :body %></div>
