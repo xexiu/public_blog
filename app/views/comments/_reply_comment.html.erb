@@ -1,0 +1,13 @@
+<% if @comment.commentable_id %>
+  <div class="comment-block" style="width: 90%">
+  <div class="comment clearfix">
+    <div class="comment_content"><!--Content -->
+      <p class="comment_name"><%= image_tag "logo.png", width: '30px', height: '30px', style: 'margin-right: 5px' %><%= @parent.name %>
+      <p class="comment_time"><%= time_ago_in_words(@parent.created_at) %> Ago</p>
+    </div>
+  </div>
+
+  <div class="comment_body"><%= markdown(@parent.body) %><!-- Body Comment -->
+  </div>
+</div>
+<% end %>

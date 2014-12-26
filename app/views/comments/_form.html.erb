@@ -1,4 +1,7 @@
+<%= link_to 'Back', post_path(@comment.post) %>
 <h1>New reply comment: </h1>
+<%= render 'comments/reply_comment' %>
+
 <%= form_for [@post, @parent, @comment] do |f| %>
   <div class="label-name"><%= f.label 'Your Name' %></div>
   <div class="text-name"><%= f.text_field :name, autofocus: true %></div>

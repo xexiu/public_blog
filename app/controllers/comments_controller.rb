@@ -37,7 +37,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:name, :body, :parent_id, :captcha, :captcha_key)
+    params.require(:comment).permit(:name, :body, :captcha, :captcha_key)
   end
   
   def get_parent
