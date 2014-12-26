@@ -10,8 +10,8 @@
   <div class="comment_body"><%= markdown(comment.body) %><!-- Body Comment -->
   </div>
   <% if logged_in? && current_user.admin? %>
-    <p class="comment-reply"><%= link_to 'x', "#",
-                  #method: :delete,
+    <p class="comment-reply"><%= link_to 'x', post_comment_comment_path(@post, comment, comment.id),
+                  method: :delete,
                   class: "button-reply",
                   data: { confirm: 'Are you sure?' } %>
     </p>
