@@ -26,6 +26,21 @@ class CommentsController < ApplicationController
       flash[:danger] = "Invalid Captcha!"
     end
   end
+  
+  def edit
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+  end
+  
+  def update
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+    if @comment.update_attributes(comment_params)
+      redirect_to post_path(@comment.post)
+    else
+      render 'edit'
+    end
+  end
 
   def destroy
     @post = Post.find(params[:post_id]) # Redirect back to post

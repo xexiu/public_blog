@@ -1,0 +1,14 @@
+<h1>Edit Post</h1>
+<% if current_page?(edit_post_comment_path) %>
+
+<%= form_for([@post, @comment]) do |f| %>
+  <div class="label-name"><%= f.label 'Your Name' %></div>
+  <div class="text-name"><%= f.text_field :name %></div>
+  <div class="label-body"><%= f.label :body %></div>
+  <div class="text-body"><%= f.text_area :body %></div>
+  <%= f.submit %>
+<% end %>
+
+<% elsif current_page?(edit_post_comment_comment_path) %>
+<%= render 'comments/form' %><!-- Form for Reply Comment -->
+<% end %>
