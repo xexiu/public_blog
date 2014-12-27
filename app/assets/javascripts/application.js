@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap.min.js
+//= require custom.js
 //= require nprogress
 //= require nprogress-turbolinks
 //angular.module('myApp', [ 'nprogress-rails' ]);
