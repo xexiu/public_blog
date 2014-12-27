@@ -1,41 +1,41 @@
-<% @posts.each do |post| %>
-<% if post.categories == 'HTML + CSS' %>
-  <div class="post_wrapper">
-    <h2 class="title"><%= link_to post.title, html_css_show_path(post) %></h2>
-    <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-    <p class="category-show">
-      Category: <strong><%= post.categories %></strong>
-    </p>
-  </div>
-  <% end %>
-
-  <% if post.categories == 'Javascript' %>
-  <div class="post_wrapper">
-    <h2 class="title"><%= link_to post.title, javascript_show_path(post) %></h2>
-    <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-    <p class="category-show">
-      Category: <strong><%= post.categories %></strong>
-    </p>
-  </div>
-  <% end %>
-
-  <% if post.categories == 'Ruby' %>
-  <div class="post_wrapper">
-    <h2 class="title"><%= link_to post.title, ruby_show_path(post) %></h2>
-    <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-    <p class="category-show">
-      Category: <strong><%= post.categories %></strong>
-    </p>
-  </div>
-  <% end %>
-
-  <% if post.categories == 'The Void' %>
-  <div class="post_wrapper">
-    <h2 class="title"><%= link_to post.title, post %></h2>
-    <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-    <p class="category-show">
-      Category: <strong><%= post.categories %></strong>
-    </p>
-  </div>
-  <% end %>
-<% end %>
+    <% @posts.each do |post| %>
+    <% if post.categories == 'HTML + CSS' %>
+      <div class="post_wrapper">
+        <h2 class="title"><%= link_to post.title, html_css_show_path(post) %></h2>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+        <p class="category-show">
+          Category: <strong><%= post.categories %></strong>
+        </p>
+      </div>
+      <% end %>
+    
+      <% if post.categories == 'Javascript' %>
+      <div class="post_wrapper">
+        <h2 class="title"><%= link_to post.title, javascript_show_path(post) %></h2>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+        <p class="category-show">
+          Category: <strong><%= post.categories %></strong>
+        </p>
+      </div>
+      <% end %>
+    
+      <% if post.categories == 'Ruby' %>
+      <div class="post_wrapper">
+        <h2 class="title"><%= link_to post.title, ruby_show_path(post) %></h2>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+        <p class="category-show">
+          Category: <strong><%= post.categories %></strong>
+        </p>
+      </div>
+      <% end %>
+    
+      <% if post.categories == 'The Void' %>
+      <div class="post_wrapper">
+        <h2 class="title"><%= link_to post.title, post %></h2>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+        <p class="category-show">
+          Category: <strong><%= post.categories %></strong>
+        </p>
+      </div>
+      <% end %>
+    <% end %>

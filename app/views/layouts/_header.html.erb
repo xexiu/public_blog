@@ -1,42 +1,34 @@
-<header id="header">
-  <nav>
-    <ul>
-      <% if current_page?(html_css_path) %>
-      <li><%= link_to 'HTML+CSS', html_css_path, class: 'active-html' %></li>
-      <% else %>
-      <li><%= link_to 'HTML+CSS', html_css_path, class: 'noactive-html' %></li>
-      <% end %>
-
-      <% if current_page?(javascript_path) %>
-      <li><%= link_to 'Javascript', javascript_path, class: 'active-js' %></li>
-      <% else %>
-      <li><%= link_to 'Javascript', javascript_path, class: 'noactive-js' %></li>
-      <% end %>
-
-      <% if current_page?(ruby_path) %>
-      <li><%= link_to 'Ruby', ruby_path, class: 'active-ruby' %></li>
-      <% else %>
-      <li><%= link_to 'Ruby', ruby_path, class: 'noactive-ruby' %></li>
-      <% end %>
-    </ul>
-  </nav>
+  <header id="header">
+    <nav>
+      <ul>
+        <% if current_page?(html_css_path) %>
+        <li><%= link_to 'HTML+CSS', html_css_path, class: 'active-html' %></li>
+        <% else %>
+        <li><%= link_to 'HTML+CSS', html_css_path, class: 'noactive-html' %></li>
+        <% end %>
+  
+        <% if current_page?(javascript_path) %>
+        <li><%= link_to 'Javascript', javascript_path, class: 'active-js' %></li>
+        <% else %>
+        <li><%= link_to 'Javascript', javascript_path, class: 'noactive-js' %></li>
+        <% end %>
+  
+        <% if current_page?(ruby_path) %>
+        <li><%= link_to 'Ruby', ruby_path, class: 'active-ruby' %></li>
+        <% else %>
+        <li><%= link_to 'Ruby', ruby_path, class: 'noactive-ruby' %></li>
+        <% end %>
+      </ul>
+    </nav>
   <% if logged_in? %>
     <div class="buttons">
-      <%= link_to new_post_path do %>
-        <button class="button">New Post</button>
-      <% end %>
-      <%= link_to logout_path, method: :delete do %>
-        <button class="button">Log Out</button>
-      <% end %>
+      <%= link_to new_post_path do %><button class="button">New Post</button><% end %>
+      <%= link_to logout_path, method: :delete do %><button class="button">Log Out</button><% end %>
     </div>
     <% else %>
     <div class="buttons">
-      <%= link_to signup_path do %>
-      <button class="button">Sign Up</button>
-      <% end %>
-      <%= link_to login_path do %>
-      <button class="button">Log In</button>
-      <% end %>
+      <%= link_to signup_path do %><button class="button">Sign Up</button><% end %>
+      <%= link_to login_path do %><button class="button">Log In</button><% end %>
     </div>
     <% end %>
-</header>
+  </header>

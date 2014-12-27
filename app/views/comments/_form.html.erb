@@ -17,6 +17,6 @@
   <div class="text-name"><%= f.text_field :name, autofocus: true %></div>
   <div class="label-body"><%= f.label :body %></div>
   <div class="text-body"><%= f.text_area :body %></div>
-  <div><%= show_simple_captcha %><br /></div>
+  <%= show_simple_captcha %><br />
   <%= f.submit %>
 <% end %>

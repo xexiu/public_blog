@@ -1,44 +1,39 @@
-<% provide(:title, @post.title ) %>
-<div>
-<!-- Title -->
-<h1 class="title-show">
-  <%= @post.title %>
-</h1>
-<!-- Date -->
-<p class="date-show">
-  Submitted <%= time_ago_in_words(@post.created_at) %> ago
-  <% if logged_in? && current_user.admin? %>
-  | <%= link_to 'Edit', edit_post_path(@post) %>
-  | <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
-</p>
-<p class="category-show">
-  Category: <strong><%= @post.categories %></strong>
-</p>
-<!-- BODY -->
-<p class="body">
-  <%= markdown(@post.body) %>
-  <aside class="vote-count bind-<%= @post.id %>">
-    <!-- Positive Votes -->
-    <%= link_to like_post_path(@post), method: :put, class: 'vpos' do %>
-    <span class="glyphicon glyphicon-chevron-up"></span>
-    <span class="vcount vcount-<%= @post.id %>"><%= @post.get_upvotes.size %></span>
-    <% end %>
-    <!-- Negative Votes -->
-    <%= link_to dislike_post_path(@post), method: :put, class: 'npos' do %>
-    <span class="glyphicon glyphicon-chevron-down"></span>
-    <span class="ncount ncount-<%= @post.id %>"><%= @post.get_downvotes.size %></span>
-    <% end %>
-  </aside>
-</p>
-<!--<p><%# link_to 'Add a Comment', new_post_comment_path(@post) %></p>-->
-
-<div id="comments">
-    <h2 class="comment-count"><%= pluralize(@post.comments.count, "Comment") %></h2>
-    <ul class="comment_list"><!-- Render Partial List Comments -->
-      <%= render :partial => 'comments/comment', :collection => @post.comments %>
-    </ul>
-    <%= render "comments/form_comments" %>
-</div>
-
-</div
+      <% provide(:title, @post.title ) %>
+<h1 class="title-show"><!-- Title -->
+        <%= @post.title %>
+      </h1>
+      <div class="date-show"><!-- Date -->
+        Submitted <%= time_ago_in_words(@post.created_at) %> ago
+        <% if logged_in? && current_user.admin? %>
+        | <%= link_to 'Edit', edit_post_path(@post) %>
+        | <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </div>
+      <div class="category-show">
+        Category: <strong><%= @post.categories %></strong>
+      </div>
+      <!-- BODY -->
+      <div class="body">
+        <%= markdown(@post.body) %>
+        <aside class="vote-count bind-<%= @post.id %>">
+          <!-- Positive Votes -->
+          <%= link_to like_post_path(@post), method: :put, class: 'vpos' do %>
+            <span class="glyphicon glyphicon-chevron-up"></span>
+            <span class="vcount vcount-<%= @post.id %>"><%= @post.get_upvotes.size %></span>
+          <% end %>
+          <!-- Negative Votes -->
+          <%= link_to dislike_post_path(@post), method: :put, class: 'npos' do %>
+            <span class="glyphicon glyphicon-chevron-down"></span>
+            <span class="ncount ncount-<%= @post.id %>"><%= @post.get_downvotes.size %></span>
+          <% end %>
+        </aside>
+      </div>
+      <%# link_to 'Add a Comment', new_post_comment_path(@post) %>
+      
+      <div id="comments">
+        <h2 class="comment-count"><%= pluralize(@post.comments.count, "Comment") %></h2>
+        <ul class="comment_list"><!-- Render Partial List Comments -->
+        <%= render :partial => 'comments/comment', :collection => @post.comments %>
+        </ul>
+        <%= render "comments/form_comments" %>
+      </div>
