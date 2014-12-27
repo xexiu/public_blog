@@ -1,0 +1,1 @@
+$(document.header).ready(function(){var a=window.location.pathname,t=parseInt(a.substring(a.lastIndexOf("/")+1));a=="/html_css/"+t&&$(".noactive-html").addClass("active-html"),a=="/javascript/"+t&&$(".noactive-js").addClass("active-js"),a=="/ruby/"+t&&$(".noactive-ruby").addClass("active-ruby")});
