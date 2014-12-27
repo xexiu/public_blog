@@ -20,7 +20,8 @@ class CommentsController < ApplicationController
     if simple_captcha_valid? || current_user.admin?
       @post = Post.find(params[:post_id])
       @comment = @parent.comments.create(comment_params)
-      redirect_to post_path(@comment.post), :notice => 'Thank you for your comment!'
+      redirect_to post_path(@comment.post)
+      flash[:success] = "Comment successfully created!"
     else
       redirect_to :back
       flash[:danger] = "Invalid Captcha!"
@@ -29,16 +30,20 @@ class CommentsController < ApplicationController
   
   def edit
     @post = Post.find(params[:post_id])
-    @comment = @post.comments.find(params[:id])
+    @comment = Comment.find(params[:comment_id]) if params[:comment_id] # Reply
+    @comment = Comment.find(params[:id]) if params[:id] # Comment
   end
   
   def update
     @post = Post.find(params[:post_id])
-    @comment = @post.comments.find(params[:id])
+    @comment = Comment.find(params[:comment_id]) if params[:comment_id] # Reply
+    @comment = Comment.find(params[:id]) if params[:id] # Comment
     if @comment.update_attributes(comment_params)
       redirect_to post_path(@comment.post)
+      flash[:success] = "Comment successfully updated!"
     else
       render 'edit'
+      flash[:danger] = "Oops!! Errors found!! Comment can't be updated!"
     end
   end
 
@@ -46,8 +51,12 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id]) # Redirect back to post
     @comment = Comment.find(params[:comment_id]) if params[:comment_id] # Reply
     @comment = Comment.find(params[:id]) if params[:id] # Comment
-    @comment.destroy
-    redirect_to post_path(@post)
+    if @comment.destroy
+      redirect_to post_path(@post)
+      flash[:success] = "Comment successful deleted!"
+    else
+      flash[:danger] = "Oops!! Errors found!! Comment can't be delete!"
+    end
   end
 
   private

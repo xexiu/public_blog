@@ -2,6 +2,13 @@
   <div class="comment clearfix">
     <div class="comment_content-reply"><!--Content -->
       <p class="comment_name"><%= image_tag "logo.png", width: '20px', height: '20px', style: 'margin-right: 5px' %><%= comment.name %>
+      <% if logged_in? && current_user.admin? || current_user %>
+        <p class="edit-comment-reply">
+          <%= link_to edit_post_comment_comment_path(@post, comment, comment.id) do %>
+            <span class="glyphicon glyphicon-pencil"></span>
+          <% end %>
+        </p>
+      <% end %>
       <p class="comment_time"><%= time_ago_in_words(comment.created_at) %> Ago</p>
       <!--<p><%# l(comment.created_at, format: '%B, %d %Y %H:%M:%S') %></p> Comment Date: 23 december, 21:36:33-->
     </div>
