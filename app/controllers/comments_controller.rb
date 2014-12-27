@@ -17,9 +17,9 @@ class CommentsController < ApplicationController
   end
 
   def create
-    if simple_captcha_valid? || current_user.admin?
-      @post = Post.find(params[:post_id])
-      @comment = @parent.comments.create(comment_params)
+    @post = Post.find(params[:post_id])
+    @comment = @parent.comments.create(comment_params)
+    if @comment.save && simple_captcha_valid? || current_user.admin?
       redirect_to post_path(@comment.post)
       flash[:success] = "Comment successfully created!"
     else

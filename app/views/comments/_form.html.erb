@@ -3,6 +3,16 @@
 <%= render 'comments/reply_comment' %>
 
 <%= form_for [@post, @parent, @comment] do |f| %>
+  <% if @comment.errors.any? %>
+    <div id="errors">
+      <h2><%= pluralize(@comment.errors.count, "error") %> prevented this post from saving:</h2>
+      <ul>
+        <% @comment.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="label-name"><%= f.label 'Your Name' %></div>
   <div class="text-name"><%= f.text_field :name, autofocus: true %></div>
   <div class="label-body"><%= f.label :body %></div>
