@@ -139,12 +139,14 @@ div#content {
     nav {
       height: 50px;
       display: inline-block;
+      position: relative;
       ul {
         height: 50px;
         line-height: 50px;
         padding: 0;
         margin: 0;
         list-style-type: none;
+        text-align: left;
         li {
           display: inline-block;
           margin-right: 15px;
@@ -692,3 +694,36 @@ div#content {
     line-height: 35px;
     margin-left: 5px;
   }
+
+.form-search {
+  width: 500px;
+  display: inline-block;
+  margin-left: 35px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  & input {
+    width: 100%;
+    padding: 0 0 0 4px;
+    margin: 5px 0 0 0;
+    line-height: 40px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: #000;
+    border: 1px solid #000;
+    font-size: .8em;
+    float: left;
+    display: inline-block;
+  }
+}
+
+ul.search-nav-items {
+  float: left;
+  width: 35px;
+  & li.search-btn {
+    font-size: 1.2em !important;
+  }
+}
+ul.nav-items {
+  float: left;
+}

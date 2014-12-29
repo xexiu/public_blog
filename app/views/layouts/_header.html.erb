@@ -1,6 +1,10 @@
   <header id="header">
     <nav>
-      <ul>
+      <ul class="search-nav-items">
+        <li class="search-btn"><a href="#search" title="Search"><span class="glyphicon glyphicon-search"></span></a></li>
+        <li class="form-search-item" style="display: none"><%= form_tag(posts_path, :method => "get", class: "form-search") do %> <%= text_field_tag :search, params[:search], placeholder: "Search..." %> <%# button_tag "", :title => nil do %> <%# end %> <% end %></li>
+      </ul>
+      <ul class="nav-items">
         <% if current_page?(html_css_path) %>
         <li><%= link_to 'HTML+CSS', html_css_path, class: 'active-html' %></li>
         <% else %>
@@ -18,7 +22,7 @@
         <% else %>
         <li><%= link_to 'Ruby', ruby_path, class: 'noactive-ruby' %></li>
         <% end %>
-      </ul>
+    </ul>
     </nav>
   <% if logged_in? %>
     <div class="buttons">

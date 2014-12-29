@@ -6,4 +6,13 @@ class Post < ActiveRecord::Base
   validates :user_id, presence: true
   validates :title, presence: true, length: { minimum: 5, maximum: 110 }
   validates :body, presence: true, length: { minimum: 10 }
+  
+  def self.search(query)
+    if Rails.env.production?
+      where("CAST(title as text) ilike ? OR CAST(id AS text) ilike ?", "%#{query}%", "%#{query}%") # postgres
+    else
+      where("title like ? OR id like ?", "%#{query}%", "%#{query}%") # sqlite
+    end
+  end
+  
 end

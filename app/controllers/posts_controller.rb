@@ -7,7 +7,11 @@ class PostsController < ApplicationController
   before_action :admin_user,     only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.all.order('created_at DESC').paginate(page: params[:page], :per_page => 10)
+    if params[:search]
+      @posts = Post.search(params[:search]).order("created_at DESC").paginate(page: params[:page],  :per_page => 20)
+    else  
+      @posts = Post.all.order('created_at DESC').limit(100).paginate(page: params[:page], :per_page => 10)
+    end
   end
 
   def new

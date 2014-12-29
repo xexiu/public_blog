@@ -11,3 +11,24 @@ $(document.header).ready(function() {
     $('.noactive-ruby').addClass('active-ruby');
   }
 });
+
+$(document).ready(function(){
+  $('.search-btn').click(function(e) {
+    $('.form-search-item').fadeToggle('slow');
+    e.stopPropagation();
+  }); // Hide - Show
+  
+    $('.form-search-item').click(function(e){
+    e.stopPropagation();
+    }); // Stop the bubble to go outside
+  
+  $(document).click(function() {
+    $('.form-search-item').fadeOut('slow');
+  }); // Close the drop-down when clicking outside of it
+  
+  $(document).keyup(function(e) {
+    if (e.keyCode === 27) {
+      $('.form-search-item').fadeOut();
+    }
+  }); // Press ESC will also close the drop-down
+});
