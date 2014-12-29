@@ -15,6 +15,7 @@ $(document.header).ready(function() {
 $(document).ready(function(){
   $('.search-btn').click(function(e) {
     $('.form-search-item').fadeToggle('slow');
+    $("input:text:visible:first").focus(); // Autofocus on Input field
     e.stopPropagation();
   }); // Hide - Show
   
