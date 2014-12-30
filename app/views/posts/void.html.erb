@@ -1,0 +1,11 @@
+<% @posts.each do |post| %>
+<% if post.categories == 'The Void' %>
+<div class="post_wrapper">
+    <h2 class="title"><%= link_to post.title, void_show_path(post) %></h2>
+    <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+    <p class="category-show">
+      Category: <strong><%= post.categories %></strong>
+    </p>
+  </div>
+<% end %>
+<% end %>

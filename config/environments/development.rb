@@ -1,4 +1,6 @@
 Rails.application.configure do
+  # Custom Pages
+  config.consider_all_requests_local = false
   # Add the fonts path
   config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   # Precompile additional assets

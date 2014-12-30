@@ -10,6 +10,9 @@ $(document.header).ready(function() {
   if (url == '/ruby/'+id) {
     $('.noactive-ruby').addClass('active-ruby');
   }
+  if (url == '/void/'+id) {
+    $('.noactive-void').addClass('active-void');
+  }
 });
 
 $(document).ready(function(){

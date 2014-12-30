@@ -1,7 +1,10 @@
       <% provide(:title, @post.title ) %>
+      <article role="article-post">
+<header>
 <h1 class="title-show"><!-- Title -->
         <%= @post.title %>
       </h1>
+</header>
       <div class="date-show"><!-- Date -->
         Submitted <%= time_ago_in_words(@post.created_at) %> ago
         <% if logged_in? && current_user.admin? %>
@@ -29,7 +32,9 @@
         </aside>
       </div>
       <%# link_to 'Add a Comment', new_post_comment_path(@post) %>
+      </article>
       
+    <aside role="comments-post">
       <div id="comments">
         <h2 class="comment-count"><%= pluralize(@post.comments.count, "Comment") %></h2>
         <ul class="comment_list"><!-- Render Partial List Comments -->
@@ -37,3 +42,4 @@
         </ul>
         <%= render "comments/form_comments" %>
       </div>
+    </aside>
