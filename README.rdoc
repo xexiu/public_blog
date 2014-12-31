@@ -17,4 +17,11 @@ Things you may want to cover:
 
 * rake rails:update:bin (incase you get the "bin folder doesn't found" message)
 
+== Main (index):
+
 http://oi58.tinypic.com/302xq82.jpg
+
+== Show Post
+
+http://oi61.tinypic.com/25row8g.jpg
+
