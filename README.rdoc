@@ -15,7 +15,7 @@ Things you may want to cover:
 
 * Deployment instructions (Heroku with postgresql database)
 
-* rake rails:update:bin (incase you get the "bin folder doesn't found" message)
+* rake rails:update:bin (in case you get the "bin folder doesn't found" message)
 
 == Main (index):
 
