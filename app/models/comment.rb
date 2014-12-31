@@ -1,5 +1,6 @@
 class Comment < ActiveRecord::Base
   apply_simple_captcha
+  belongs_to :user
   belongs_to :commentable, :polymorphic => true # belongs_to :post
   has_many :comments, :as => :commentable
   validates :name, presence: true, length: { minimum: 3, maximum: 55 }
