@@ -51,10 +51,10 @@ module ApplicationHelper
   end
 
   def meta_description
-    description = "I am a truly dynamic individual with next-level ideas and a killer resume to boot, considering myself a good front-ender with pretty good skills on Ruby (ruby on rails). I mainly focus on html(5), css(3) and javascript (jQuery, Angular, etc)."
+    @description = "I'm a truly dynamic individual with top-level ideas and a impressive resume to prove it, considering myself a good front-ender with pretty good skills on Ruby (Ruby on Rails). I mainly focus on HTML(5), CSS(3) and Javascript (jQuery, Angular, etc)."
   end
 
   def meta_keywords
-    keywords = "html(5), css(3), sass, javascript, jquery, angular, bootstrap, ruby, ruby on rails, git, heroku"
+    @keywords = "html(5), css(3), sass, javascript, jquery, angular, bootstrap, ruby, ruby on rails, git, heroku"
   end
 end
