@@ -8,10 +8,10 @@
 }
 
 /* iPhone5 (portrait and landscape) ----------- */
-@mixin iphone5 {
+@mixin iphone5-crapy-phones {
     @media only screen 
-    and (min-device-width : 320px) 
-    and (max-device-width : 568px) {
+    and (min-width : 320px) 
+    and (max-width : 568px) {
         @content
     }
 }
@@ -19,8 +19,8 @@
 /* iPhone6 (portrait and landscape) ----------- */
 @mixin iphone6 {
     @media only screen 
-    and (min-device-width : 375px) 
-    and (max-device-width : 736px) {
+    and (min-width : 569px)  // Default was 375px
+    and (max-width : 736px) {
         @content
     }
 }
@@ -28,31 +28,38 @@
 /* iPads (portrait and landscape) ----------- */
 @mixin ipad {
     @media only screen 
-    and (min-width : 768px) 
+    and (min-width : 737px) // Default was 768px
     and (max-width : 1024px) {
         @content
     }
 }
 
 /* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
+@mixin desktops {
+    @media only screen 
+    and (min-width : 1025px)
+    and (max-width : 1823px){
+        @content
+    }
 }
 
 /* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-/* Styles */
+@mixin desktops-xl {
+    @media only screen 
+    and (min-width : 1824px)
+    and (max-width : 4000px){
+        @content
+    }
 }
 
 /* Begin styling for devices */
 /* ========================= */
 
-@include crapy-phones {
+@include iphone5-crapy-phones {
     #header {
         margin-left: 0px !important;
         padding: 0px 5px 0px 5px !important;
+        position: relative;
         & div#logo-mobile {
             float: left;
             width: 50px;
@@ -64,13 +71,60 @@ and (min-width : 1824px) {
         & div.buttons {
             display: none !important;
         }
+        & div.buttons-mobile {
+            float: left;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
         & div.mobile-button {
             float: right;
             font-size: 2em;
             line-height: 50px;
+            & span {
+                margin-top: 10px;
+            }
             &:hover {
                 cursor: pointer;
                 color: white;
+            }
+        }
+        & div.mobile-menu {
+            background-color: #222;
+            width: 100%;
+            text-align: center;
+            top: 49px;
+            left: 0;
+            position: absolute;
+            display: none;
+            & .form-search-mobile {
+                & input {
+                    width: 100%;
+                    padding: 0 0 0 4px;
+                    margin: 5px 0 0 0;
+                    line-height: 40px;
+                    height: 40px;
+                    border-radius: 2px;
+                    background-color: #000;
+                    border: 1px solid #000;
+                    font-size: 1em;
+                    float: left;
+                    display: inline-block;
+                    text-align: center;
+                }
+            }
+            & ul {
+                list-style-type: none;
+                width: 100%;
+                & li {
+                    padding: 3px 0;
+                    & a {
+                        display: inline-block;
+                        width: 100%;
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
             }
         }
     }
@@ -81,6 +135,90 @@ and (min-width : 1824px) {
         margin-left: 0px !important;
         & div.wrapper {
             padding: 5px !important;
+            & h1.title-show {
+                font-size: 1.5em;
+            }
+            & h2.comment-count {
+                margin-top: 5px !important;
+                font-size: 1em;
+            }
+            & aside.vote-count {
+                font-size: 1em !important;
+            }
         }
+    }
+}
+
+@include iphone6 {
+    div#logo-mobile, div.mobile-button, div.mobile-menu, div.buttons-mobile {
+        display: none;
+    }
+    #main_content {
+        margin-left: 150px !important;
+        & div.wrapper {
+            padding: 10px !important;
+        }
+    }
+    #header {
+        margin-left: 150px !important;
+        padding: 0px 5px !important;
+        & nav {
+            width: 100%;
+        }
+        & ul.nav-items {
+            display: none;
+        }
+    }
+    #sidebar {
+        width: 150px !important;
+        & div#logo {
+            left: 25px;
+        }
+        & ul {
+            width: 150px !important;
+            & li {
+                width: 150px !important;
+                & a {
+                    width: 150px !important;
+                }
+            }
+        }
+        & div.copyright {
+        margin-left: 15px !important;
+        }
+        & .active-html, .active-js, .active-ruby, .active-void {
+            border: 0px solid transparent !important;
+        }
+    }
+    .form-search {
+        width: 94.5% !important;
+        left: 25px !important;
+    }
+}
+
+@include ipad {
+    div#logo-mobile, div.mobile-button, div.mobile-menu, div.buttons-mobile, ul.nav-items {
+        display: none;
+    }
+    #header {
+        padding: 0px 10px !important;
+    }
+    div.wrapper {
+        padding: 10px !important;
+    }
+    #sidebar {
+     .active-html, .active-js, .active-ruby, .active-void {
+        border: 0px solid transparent !important;
+        }   
+    }
+    .form-search {
+        width: 94.5% !important;
+        left: 25px !important;
+    }
+}
+
+@include desktops {
+    div#logo-mobile, div.mobile-button, div.mobile-menu, div.buttons-mobile, .items-iphone6 {
+        display: none;
     }
 }

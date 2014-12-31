@@ -1,10 +1,63 @@
   <header id="header" role="banner">
+    <!-- ================= Mobile ======== -->
     <div id="logo-mobile">
       <%= link_to root_path do %><%= image_tag "logo.png", width: '50px', height: '50px' %><% end %>
     </div>
+    <% if logged_in? %>
+    <div class="buttons-mobile">
+      <%= link_to new_post_path do %><button class="button">New Post</button><% end %>
+      <%= link_to logout_path, method: :delete do %><button class="button">Log Out</button><% end %>
+    </div>
+    <% else %>
+    <div class="buttons-mobile">
+      <%= link_to signup_path do %><button class="button">Sign Up</button><% end %>
+      <%= link_to login_path do %><button class="button">Log In</button><% end %>
+    </div>
+    <% end %>
     <div class="mobile-button">
       <span class="glyphicon glyphicon-tasks"></span>
     </div>
+    <div class="mobile-menu">
+        <ul>
+          <li>
+            <%= link_to 'HTML+CSS', html_css_path %>
+          </li>
+          <li>
+            <%= link_to 'Javascript', javascript_path %>
+          </li>
+          <li>
+            <%= link_to 'Ruby', ruby_path %>
+          </li>
+          <li>
+            <%= link_to 'Void', void_path %>
+          </li>
+          <% if logged_in? %>
+            <% if current_page?(user_path(current_user)) %>
+              <li>
+                <%= link_to "Profile", current_user %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to "Profile", current_user %>
+              </li>
+            <% end %>
+          
+            <% if current_page?(edit_user_path(current_user)) %>
+              <li>
+                <%= link_to "Settings", edit_user_path(current_user) %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to "Settings", edit_user_path(current_user) %>
+              </li>
+            <% end %>
+          <% end %>
+          <li>
+            <%= form_tag(posts_path, :method => "get", class: "form-search-mobile") do %> <%= text_field_tag :search, params[:search], placeholder: "Search..." %> <%# button_tag "", :title => nil do %> <%# end %> <% end %>
+          </li>
+        </ul>
+      </div>
+    <!-- ================= Mobile ========= -->
     <nav>
       <ul class="search-nav-items">
         <li class="search-btn"><a href="#search" title="Search"><span class="glyphicon glyphicon-search"></span></a></li>
@@ -35,16 +88,17 @@
         <li><%= link_to 'Void', void_path, class: 'noactive-void' %></li>
         <% end %>
       </ul>
+      
+      <% if logged_in? %>
+        <div class="buttons">
+          <%= link_to new_post_path do %><button class="button">New Post</button><% end %>
+          <%= link_to logout_path, method: :delete do %><button class="button">Log Out</button><% end %>
+        </div>
+      <% else %>
+        <div class="buttons">
+          <%= link_to signup_path do %><button class="button">Sign Up</button><% end %>
+          <%= link_to login_path do %><button class="button">Log In</button><% end %>
+        </div>
+      <% end %>
     </nav>
-  <% if logged_in? %>
-    <div class="buttons">
-      <%= link_to new_post_path do %><button class="button">New Post</button><% end %>
-      <%= link_to logout_path, method: :delete do %><button class="button">Log Out</button><% end %>
-    </div>
-    <% else %>
-    <div class="buttons">
-      <%= link_to signup_path do %><button class="button">Sign Up</button><% end %>
-      <%= link_to login_path do %><button class="button">Log In</button><% end %>
-    </div>
-    <% end %>
   </header>

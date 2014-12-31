@@ -142,6 +142,7 @@ div#content {
     color: #9eafba;
     nav {
       height: 50px;
+      width: 100%;
       display: inline-block;
       position: relative;
       ul {
@@ -700,9 +701,9 @@ div#content {
   }
 
 .form-search {
-  width: 570px;
+  width: 97.5%;
+  left: 25px;
   display: inline-block;
-  margin-left: 35px;
   height: 50px;
   position: absolute;
   top: 0;

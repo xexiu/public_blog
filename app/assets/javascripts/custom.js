@@ -36,3 +36,18 @@ $(document).ready(function(){
     }
   }); // Press ESC will also close the drop-down
 });
+
+$(document).ready(function() {
+   $('.mobile-button').click(function(e) {
+       $('.mobile-menu').slideToggle('slow');
+       e.stopPropagation();
+   });
+   
+   $('.mobile-menu').click(function(e){
+    e.stopPropagation();
+    }); // Stop the bubble to go outside
+   
+   $(document).click(function() {
+    $('.mobile-menu').slideUp('slow');
+  }); // Close the drop-down when clicking outside of it
+});
