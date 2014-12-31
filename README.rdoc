@@ -5,24 +5,16 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version (ruby v2.1.4 with rails 4.1.8)
 
 * System dependencies
 
-* Configuration
+* Configuration (made on c9: https://c9.io/)
 
-* Database creation
+* Database creation (rake db:drop db:migrate db:seed --> admin login: ser@ser.com, password: foobarAdmin)
 
-* Database initialization
+* Deployment instructions (Heroku with postgresql database)
 
-* How to run the test suite
+* rake rails:update:bin (incase you get the "bin folder doesn't found" message)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* rake rails:update:bin
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+http://oi58.tinypic.com/302xq82.jpg

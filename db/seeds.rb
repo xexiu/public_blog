@@ -8,8 +8,8 @@
 
 User.create!(name:  "Sergio Mironescu",
              email: "ser@ser.com",
-             password:              "foobar2208",
-             password_confirmation: "foobar2208",
+             password:              "foobarAdmin",
+             password_confirmation: "foobarAdmin",
              admin: true)
 
 User.create!(name:  "Test",
