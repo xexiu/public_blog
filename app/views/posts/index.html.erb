@@ -38,7 +38,7 @@
     <article>
       <% if post.categories == 'The Void' %>
       <div class="post_wrapper">
-        <header><h2 class="title"><%= link_to post.title, post %></h2></header>
+        <header><h2 class="title"><%= link_to post.title, void_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
