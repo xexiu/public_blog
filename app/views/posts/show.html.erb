@@ -30,6 +30,30 @@
             <span class="ncount ncount-<%= @post.id %>"><%= @post.get_downvotes.size %></span>
           <% end %>
         </aside>
+        <div class="social-share">
+          <p class="twitter-btn">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="smironescu">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </p>
+          <p class="facebook-btn">
+            <div id="fb-root"></div>
+              <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=117488980696&version=v2.0";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));</script>
+              
+              <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+          </p>
+          <p class="linkedin-btn">
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">
+            lang: en_US
+            </script>
+            <script type="IN/Share" data-counter="right"></script>
+          </p>
+        </div>
       </div>
       <%# link_to 'Add a Comment', new_post_comment_path(@post) %>
       </article>

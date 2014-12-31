@@ -309,7 +309,7 @@ div#content {
     font-size: .7em;
   }
   .comment-count {
-    margin-top: 20px;
+    margin-top: 5px;
     border-bottom: 1px solid #ddd;
   }
   .comment-block {
@@ -731,4 +731,16 @@ ul.search-nav-items {
 }
 ul.nav-items {
   float: left;
+}
+
+div.social-share {
+  width: 100%;
+  text-align: left;
+  & p {
+    display: block;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0px !important;
+    }
+  }
 }
