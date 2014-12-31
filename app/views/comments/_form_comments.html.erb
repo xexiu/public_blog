@@ -1,10 +1,20 @@
 <h3>Add a comment:</h3>
       <span class="md-page">Markdown is <%= link_to 'allowed', markdown_path, target: '_blank', rel: 'nofollow' %></span>
       <%= form_for([@post, @post.comments.build]) do |f| %>
-        <div class="label-name"><%= f.label 'Your Name' %></div>
-        <div class="text-name"><%= f.text_field :name, placeholder: 'Minimum 3 characters' %></div>
-        <div class="label-body"><%= f.label :body %></div>
-        <div class="text-body"><%= f.text_area :body, placeholder: 'Minimum 6 characters' %></div>
-        <%= show_simple_captcha %><br />
-        <%= f.submit %>
+        <% if logged_in? && current_user %>
+          <%= f.hidden_field :name, :value => current_user.name %>
+          <div class="label-body"><%= f.label 'Message' %></div>
+          <div class="text-body"><%= f.text_area :body, placeholder: 'Minimum 6 characters' %></div>
+          <%= show_simple_captcha %><br />
+          <%= f.submit %>
+          <% else %>
+          <div class="label-name"><%= f.label 'Your Name' %></div>
+          <div class="text-name"><%= f.text_field :name, placeholder: 'Minimum 3 characters' %></div>
+          <div class="label-body"><%= f.label 'Message' %></div>
+          <div class="text-body"><%= f.text_area :body, placeholder: 'Minimum 6 characters' %></div>
+          <%= show_simple_captcha %><br />
+          <%= f.submit %>
+        <% end %>
       <% end %>
+      
+      

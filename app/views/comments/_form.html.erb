@@ -3,20 +3,18 @@
 <%= render 'comments/reply_comment' %>
 
 <%= form_for [@post, @parent, @comment] do |f| %>
-  <% if @comment.errors.any? %>
-    <div id="errors">
-      <h2><%= pluralize(@comment.errors.count, "error") %> prevented this post from saving:</h2>
-      <ul>
-        <% @comment.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+  <% if logged_in? && current_user %>
+    <%= f.hidden_field :name, :value => current_user.name %>
+    <div class="label-body"><%= f.label 'Message' %></div>
+    <div class="text-body"><%= f.text_area :body, placeholder: 'Minimum 6 characters' %></div>
+    <%= show_simple_captcha %><br />
+    <%= f.submit %>
+    <% else %>
+    <div class="label-name"><%= f.label 'Your Name' %></div>
+    <div class="text-name"><%= f.text_field :name, autofocus: true %></div>
+    <div class="label-body"><%= f.label :body %></div>
+    <div class="text-body"><%= f.text_area :body %></div>
+    <%= show_simple_captcha %><br />
+    <%= f.submit %>
   <% end %>
-  <div class="label-name"><%= f.label 'Your Name' %></div>
-  <div class="text-name"><%= f.text_field :name, autofocus: true %></div>
-  <div class="label-body"><%= f.label :body %></div>
-  <div class="text-body"><%= f.text_area :body %></div>
-  <%= show_simple_captcha %><br />
-  <%= f.submit %>
 <% end %>
