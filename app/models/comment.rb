@@ -10,5 +10,9 @@ class Comment < ActiveRecord::Base
     return @post if defined?(@post)
     @post = commentable.is_a?(Post) ? commentable : commentable.post
   end
+  
+  def content
+    MarkdownService.new.render(body).html_safe
+  end
 
 end

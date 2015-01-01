@@ -26,7 +26,7 @@
                 <%# l(comment.created_at, format: '%B, %d %Y %H:%M:%S') %> <!--Comment Date: 23 december, 21:36:33-->
       </div>
     </div>
-    <div class="comment_body"><%= markdown(comment.body) %><!-- Body Comment -->
+    <div class="comment_body"><%= comment.content %><!-- Body Comment -->
       <% unless comment.comments.empty? %>
       <ul class="comment_list">
         <%= render :partial => 'comments/comment_comments', :collection => comment.comments, :as => :comment %>

@@ -1,36 +1,8 @@
 module ApplicationHelper
   
-  def indented_render(num, *args)
-    render(*args).gsub("Add a Reply", "\t" * num).html_safe
-  end
-
-  def markdown(text)
-
-    options = {
-      # escape_html: true, # se to false to allow html, eg: <div>test</div>
-      link_attributes: { rel: 'nofollow', target: "_blank" },
-      hard_wrap: true,
-      fenced_code_blocks: true,
-      filter_html: true
-    }
-    
-    extensions = {
-      space_after_headers: true,
-      autolink:           true,
-      no_intra_emphasis: true,
-      highlight: true,
-      strikethrough: true,
-      quote: true,
-      no_images: false,
-      superscript: true,
-      footnotes: true,
-      tables: true
-    }
-
-    renderer = Redcarpet::Render::HTML.new(options)
-    markdown = Redcarpet::Markdown.new(renderer, extensions)
-    markdown.render(text).html_safe
-  end
+  #def indented_render(num, *args)
+    #render(*args).gsub("Add a Reply", "\t" * num).html_safe
+  #end
   
   def controller?(*controller)
     controller.include?(params[:controller])

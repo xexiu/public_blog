@@ -1,6 +1,7 @@
 @import 'normalize.css.scss';
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import 'bootstrap.css.scss';
+@import 'highlight.css.scss';
 @import 'media.css.scss';
 
 /* Style */
@@ -451,8 +452,13 @@ div#content {
     margin-top: 25px;
   }
   .comment_body {
-    margin-left: 65px;
-    margin-top: -3px;
+    margin-left: 60px;
+    text-align: left;
+    margin-top: 0px;
+    display: block;
+    & p {
+      text-align: left;
+    }
   }
   .add-comment {
     margin-top: 20px;
