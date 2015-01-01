@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   match '/500', to: 'errors#internal_server_error', via: :all # The "match" method is used to match a URL to one or more routes. It’s a bit more flexible than for instance the "get" method because you can configure it to be triggered in conjunction with any matching route and HTTP method as opposed to for instance just a route matching the get method. You can pass specific HTTP methods into the via option, however we want to match routes in conjunction with any HTTP method, and so I’ve passed all into via.
 
   resources :users
+  get '/users/(:comment)', to: 'users#show', as: 'autor'
   
   resources :posts do
     member do
