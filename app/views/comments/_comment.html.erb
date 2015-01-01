@@ -1,7 +1,7 @@
   <div class="comment-block">
             <div class="comment clearfix">
               <div class="comment_content"><!--Content -->
-              <% if logged_in? && current_user %>
+              <% if comment.parent_id %>
                 <p class="comment_name"><%= image_tag "logo.png", width: '30px', height: '30px', style: 'margin-right: 5px' %>
                 <%# comment.name %>
                 <%= link_to comment.name, autor_path(comment.parent_id) %>
