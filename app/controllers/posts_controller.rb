@@ -11,7 +11,6 @@ class PostsController < ApplicationController
       @posts = Post.search(params[:search]).order("created_at DESC").paginate(page: params[:page],  :per_page => 20)
     else  
       @posts = Post.all.featured
-      #@posts = Post.where(featured_post: 'yes') if params[:featured_post]
     end
   end
 
