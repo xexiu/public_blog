@@ -17,7 +17,7 @@ $(document.header).ready(function() {
 
 $(document).ready(function(){
   $('.search-btn').click(function(e) {
-    $('.form-search-item').fadeToggle('slow');
+    $('.form-search-item').fadeToggle('fast');
     $("input:text:visible:first").focus(); // Autofocus on Input field
     e.stopPropagation();
   }); // Hide - Show
@@ -27,12 +27,12 @@ $(document).ready(function(){
     }); // Stop the bubble to go outside
   
   $(document).click(function() {
-    $('.form-search-item').fadeOut('slow');
+    $('.form-search-item').fadeOut('fast');
   }); // Close the drop-down when clicking outside of it
   
   $(document).keyup(function(e) {
     if (e.keyCode === 27) {
-      $('.form-search-item').fadeOut();
+      $('.form-search-item').fadeOut('fast');
     }
   }); // Press ESC will also close the drop-down
 });

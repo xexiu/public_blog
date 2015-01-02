@@ -105,33 +105,43 @@ div#content {
   font-size: .7em;
 }
 
-.active-html {
-  color: #33acb7 !important;
-  border-bottom: 4px solid #33acb7 !important;
-  height: 49px !important;
-}
-
-.active-js {
-  color: #39d350 !important;
-  border-bottom: 4px solid #39d350 !important;
-  height: 49px !important;
-}
-
-.active-ruby {
-  color: #e1121e !important;
-  border-bottom: 4px solid #e1121e !important;
-  height: 49px !important;
-}
-
-.active-void {
-  color: grey !important;
-  border-bottom: 4px solid grey !important;
-  height: 49px !important;
+.active-html, .active-js, .active-ruby, .active-void {
+  color: #fff !important;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  &:after {
+    content: '▲';
+    color: #fff;
+    position: absolute;
+    font-size: 2em;
+    height: 20px;
+    bottom: 2px;
+    left: 0;
+    margin-left: 15%;
+    -webkit-transform: scale(1.8,1.0);
+    -ms-transform: scale(1.8,1.0);
+    transform: scale(1.8,1.0);
+  }
 }
 
 .active-sb {
   color: #fff !important;
-  border-right: 4px solid #fff;
+  width: 100%;
+  position: relative;
+  &:after {
+    content: '▲';
+    color: #fff;
+    position: absolute;
+    font-size: 2em;
+    width: 20px;
+    height: 20px;
+    top: -5px;
+    right: -5px;
+    -webkit-transform: rotate(27deg);
+    -ms-transform: rotate(27deg);
+    transform: rotate(27deg);
+  }
 }
 
   #header {
@@ -714,6 +724,7 @@ div#content {
   height: 50px;
   position: absolute;
   top: 0;
+  z-index: 1000;
   & input {
     width: 100%;
     padding: 0 0 0 4px;
@@ -726,6 +737,7 @@ div#content {
     font-size: .8em;
     float: left;
     display: inline-block;
+    z-index: 1000;
   }
 }
 

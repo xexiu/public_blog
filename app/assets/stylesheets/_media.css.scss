@@ -187,7 +187,22 @@
         margin-left: 15px !important;
         }
         & .active-html, .active-js, .active-ruby, .active-void {
-            border: 0px solid transparent !important;
+            height: 35px !important;
+            width: 100%;
+            position: relative;
+            &:after {
+              content: '▲';
+              color: #fff;
+              position: absolute;
+              font-size: 2em;
+              width: 20px;
+              height: 20px;
+              top: -5px;
+              left: 78%;
+              -webkit-transform: rotate(27deg);
+              -ms-transform: rotate(27deg);
+              transform: rotate(27deg);
+          }
         }
     }
     .form-search {
@@ -208,7 +223,22 @@
     }
     #sidebar {
      .active-html, .active-js, .active-ruby, .active-void {
-        border: 0px solid transparent !important;
+       height: 35px !important;
+       width: 100%;
+       position: relative;
+        &:after {
+          content: '▲';
+          color: #fff;
+          position: absolute;
+          font-size: 2em;
+          width: 20px;
+          height: 20px;
+          top: -5px;
+          left: 78%;
+          -webkit-transform: rotate(27deg);
+          -ms-transform: rotate(27deg);
+          transform: rotate(27deg);
+          }
         }   
     }
     .form-search {
