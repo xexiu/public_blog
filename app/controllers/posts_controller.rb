@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     if params[:search]
       @posts = Post.search(params[:search]).order("created_at DESC").paginate(page: params[:page],  :per_page => 20)
     else  
-      @posts = Post.all.order('created_at DESC').limit(100).paginate(page: params[:page], :per_page => 10)
+      @posts = Post.all.featured
     end
   end
 
@@ -107,7 +107,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :categories)
+    params.require(:post).permit(:title, :body, :categories, :featured_post)
   end
 
   # Confirms an admin user.

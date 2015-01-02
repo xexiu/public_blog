@@ -3,9 +3,11 @@ class Post < ActiveRecord::Base
   belongs_to :user
   has_many :comments, :as => :commentable, dependent: :destroy
   validates :categories, presence: true, :inclusion => { :in => ['The Void', 'HTML + CSS','Javascript','Ruby'] }
+  validates :featured_post, presence: true, :inclusion => { :in => ['yes', 'no'] }
   validates :user_id, presence: true
   validates :title, presence: true, length: { minimum: 5, maximum: 110 }
   validates :body, presence: true, length: { minimum: 10 }
+  scope :featured, -> { order(featured_post: :desc, created_at: :desc).limit(100) }
   
   def self.search(query)
     if Rails.env.production?

@@ -1,7 +1,7 @@
     <% @posts.each do |post| %>
     <article>
     <% if post.categories == 'HTML + CSS' %>
-      <div class="post_wrapper">
+      <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
         <header><h2 class="title"><%= link_to post.title, html_css_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
         <p class="category-show">
@@ -13,7 +13,7 @@
     
     <article>
       <% if post.categories == 'Javascript' %>
-      <div class="post_wrapper">
+      <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
         <header><h2 class="title"><%= link_to post.title, javascript_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
         <p class="category-show">
@@ -25,7 +25,7 @@
     
     <article>
       <% if post.categories == 'Ruby' %>
-      <div class="post_wrapper">
+      <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
         <header><h2 class="title"><%= link_to post.title, ruby_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
         <p class="category-show">
@@ -37,7 +37,7 @@
     
     <article>
       <% if post.categories == 'The Void' %>
-      <div class="post_wrapper">
+      <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
         <header><h2 class="title"><%= link_to post.title, void_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
         <p class="category-show">

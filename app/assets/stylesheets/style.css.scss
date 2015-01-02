@@ -528,6 +528,7 @@ div#content {
     .title {
       font-size: 1em;
       margin: 0;
+      position: relative;
     a {
       font-weight: 500;
       text-decoration: none;
@@ -762,4 +763,23 @@ div.social-share {
       margin-bottom: 0px !important;
     }
   }
+}
+
+.featured-post {
+  background-color: #fffae0;
+  & .title:after {
+      content: 'featured';
+      background-color: #f7f7ee;
+      font-size: .8em;
+      color: grey;
+      position: absolute;
+      float: left;
+      display: inline-block;
+      width: 55px;
+      margin-top: 5px;
+      margin-left: 5px;
+      padding: 0px 4px 0px 4px;
+      border: 1px solid #999;
+      border-radius: 4px;
+    }
 }
