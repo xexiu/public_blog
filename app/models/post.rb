@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
   validates :body, presence: true, length: { minimum: 10 }
   if Rails.env.production?
     scope :featured, -> { order(featured_post: :asc, created_at: :desc).limit(100) } if Post.where(featured_post: 'yes') #pg
-    scope :featured, -> { order(featured_post: :desc, created_at: :desc).limit(100) } if Post.where(featured_post: 'no') #pg
+    scope :featured, -> { order(featured_post: :asc, created_at: :asc).limit(100) } if Post.where(featured_post: 'no') #pg
   else
     scope :featured, -> { order(featured_post: :desc, created_at: :desc).limit(100) } if Post.where(featured_post: 'yes') #sqlite
   end
