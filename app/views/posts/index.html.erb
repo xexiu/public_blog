@@ -8,6 +8,9 @@
           Category: <strong><%= post.categories %></strong>
         </p>
       </div>
+      <div class="tags">
+        <%= raw tag_links(post.all_tags)%>
+      </div>
       <% end %>
     </article>
     
@@ -58,6 +61,9 @@
           Category: <strong><%= post.categories %></strong>
         </p>
       </div>
+      <div class="tags">
+        <%= raw tag_links(post.all_tags)%>
+      </div>
       <% end %>
     </article>
     
@@ -97,3 +103,11 @@
       <% end %>
     </article>
     <% end %>
+    
+    
+    <div class="tags-cloud glassy-bg">
+      <h4>Tags Cloud</h4>
+      <% tag_cloud Tag.counts, %w{css1 css2 css3 css4} do |tag, css_class| %>
+        <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+      <% end %>
+    </div>

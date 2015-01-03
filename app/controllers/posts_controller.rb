@@ -7,7 +7,10 @@ class PostsController < ApplicationController
   before_action :admin_user,     only: [:edit, :update, :destroy]
 
   def index
-    if params[:search]
+    if params[:tag]
+      @posts_featured = Post.tagged_with(params[:tag]).featured
+      @posts_unfeatured = Post.tagged_with(params[:tag]).unfeatured
+    elsif params[:search]
       @posts_featured = Post.search(params[:search]).featured
       @posts_unfeatured = Post.search(params[:search]).unfeatured
     else
@@ -109,7 +112,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :categories, :featured_post)
+    params.require(:post).permit(:title, :body, :categories, :featured_post, :all_tags)
   end
 
   # Confirms an admin user.
