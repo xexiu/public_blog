@@ -3,13 +3,10 @@
     <% if post.categories == 'HTML + CSS' %>
       <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
         <header><h2 class="title"><%= link_to post.title, html_css_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <%= raw tag_links(post.all_tags)%></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
         </p>
-      </div>
-      <div class="tags">
-        <%= raw tag_links(post.all_tags)%>
       </div>
       <% end %>
     </article>
@@ -18,7 +15,7 @@
       <% if post.categories == 'Javascript' %>
       <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
         <header><h2 class="title"><%= link_to post.title, javascript_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <%= raw tag_links(post.all_tags)%></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
         </p>
@@ -30,7 +27,7 @@
       <% if post.categories == 'Ruby' %>
       <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
         <header><h2 class="title"><%= link_to post.title, ruby_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <%= raw tag_links(post.all_tags) %></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
         </p>
@@ -42,7 +39,7 @@
       <% if post.categories == 'The Void' %>
       <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
         <header><h2 class="title"><%= link_to post.title, void_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <%= raw tag_links(post.all_tags)%></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
         </p>
@@ -56,13 +53,10 @@
     <% if post.categories == 'HTML + CSS' %>
       <div class="post_wrapper">
         <header><h2 class="title"><%= link_to post.title, html_css_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <%= raw tag_links(post.all_tags)%></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
         </p>
-      </div>
-      <div class="tags">
-        <%= raw tag_links(post.all_tags)%>
       </div>
       <% end %>
     </article>
@@ -71,7 +65,7 @@
       <% if post.categories == 'Javascript' %>
       <div class="post_wrapper">
         <header><h2 class="title"><%= link_to post.title, javascript_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <%= raw tag_links(post.all_tags)%></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
         </p>
@@ -83,7 +77,7 @@
       <% if post.categories == 'Ruby' %>
       <div class="post_wrapper">
         <header><h2 class="title"><%= link_to post.title, ruby_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <%= raw tag_links(post.all_tags)%></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
         </p>
@@ -95,7 +89,7 @@
       <% if post.categories == 'The Void' %>
       <div class="post_wrapper">
         <header><h2 class="title"><%= link_to post.title, void_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <%= raw tag_links(post.all_tags)%></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
         </p>
@@ -105,9 +99,9 @@
     <% end %>
     
     
-    <div class="tags-cloud glassy-bg">
+    <!--<div class="tags-cloud glassy-bg">
       <h4>Tags Cloud</h4>
-      <% tag_cloud Tag.counts, %w{css1 css2 css3 css4} do |tag, css_class| %>
-        <%= link_to tag.name, tag_path(tag.name), class: css_class %>
-      <% end %>
-    </div>
+      <%# tag_cloud Tag.counts, %w{css1 css2 css3 css4} do |tag, css_class| %>
+        <%# link_to tag.name, tag_path(tag.name), class: css_class %>
+      <%# end %>
+    </div>-->
