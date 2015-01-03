@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
   if Rails.env.production?
     scope :featured, -> { order(featured_post: :asc, created_at: :desc).limit(100) } #pg
   else
-    scope :featured, -> { order(featured_post: :desc, created_at: :desc).limit(100) } #sqlite
+    scope :featured, -> { order('featured_post DESC, rand()').limit(100) } #sqlite
   end
   
   def self.search(query)
