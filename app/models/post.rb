@@ -7,12 +7,8 @@ class Post < ActiveRecord::Base
   validates :user_id, presence: true
   validates :title, presence: true, length: { minimum: 5, maximum: 110 }
   validates :body, presence: true, length: { minimum: 10 }
-  if Rails.env.production?
-    scope :featured, -> { where(featured_post: 'yes').order(created_at: :desc) } #pg
-  else
-    scope :featured, -> { where(featured_post: 'yes').order(created_at: :desc) } #sqlite
-    scope :unfeatured, -> { where(featured_post: 'no').order(created_at: :desc) } #sqlite
-  end
+  scope :featured, -> { where(featured_post: 'yes').order(created_at: :desc) }
+  scope :unfeatured, -> { where(featured_post: 'no').order(created_at: :desc) }
   
   def self.search(query)
     if Rails.env.production?
