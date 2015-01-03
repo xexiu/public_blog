@@ -9,9 +9,10 @@ class PostsController < ApplicationController
   def index
     if params[:search]
       @posts = Post.search(params[:search]).order("created_at DESC").paginate(page: params[:page],  :per_page => 20)
-    else  
+    elsif if params[:featured_post] == 'yes'  
       @posts = Post.all.order("featured_post ASC, created_at DESC, random()")
-    end
+    elsif if params[:archive] == 'no'
+      @posts = Post.all.order("featured_post DESC, created_at DESC, random()")
   end
 
   def new
