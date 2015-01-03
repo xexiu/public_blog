@@ -51,3 +51,14 @@ $(document).ready(function() {
     $('.mobile-menu').slideUp('slow');
   }); // Close the drop-down when clicking outside of it
 });
+
+$(document).ready(function() {
+    $('.all-tags').bind('keyup', function(){
+        var text = $(this)
+        if ($(text).val($(text).val().replace(',', ' '))) {
+          $(text).css({
+            color: ($(text).val().toLowerCase() == $(text).val()) ? '#222' : '#222'
+          });  
+        }
+    });
+});

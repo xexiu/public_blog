@@ -16,7 +16,7 @@
   <%= f.label :body %><br>
   <%= f.text_area(:body, class: 'bg-code') %><br>
   <%= f.label 'Tags (maximum 5)' %><br>
-  <%= f.text_field :all_tags, placeholder: "Tags separated with comma" %><br>
+  <%= f.text_field :all_tags, class: 'all-tags', placeholder: "Tags separated with comma" %><br>
   <div style="float: left; margin-right: 10px"><p><%= f.label :categories %><br>
   <%= f.select :categories, [ 'The Void', 'HTML + CSS', 'Javascript', 'Ruby' ], :prompt => 'Select One' %>
   </p></div>
