@@ -9,6 +9,12 @@ class Post < ActiveRecord::Base
   validates :user_id, presence: true
   validates :title, presence: true, length: { minimum: 5, maximum: 110 }
   validates :body, presence: true, length: { minimum: 10 }
+  validates :all_tags, presence: true, length: { minimum: 2, maximum: 15 }, 
+  :length => { # Maximum 5 words
+  :maximum => 5,
+  :tokenizer => lambda { |str| str.scan(/\w+/) },
+  :too_long  => "Please limit your summary to %{count} words"
+}
   scope :featured, -> { where(featured_post: 'yes').order(created_at: :desc).limit(100) }
   scope :unfeatured, -> { where(featured_post: 'no').order(created_at: :desc).limit(100) }
   
