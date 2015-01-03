@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     if params[:search]
       @posts = Post.search(params[:search]).order("created_at DESC").paginate(page: params[:page],  :per_page => 20)
     else
-      @posts = Post.all.order("featured_post ASC, random()").order("created_at DESC")
+      @posts = Post.all.where(featured_post: 'yes').order(created_at: :desc)
     end
   end
 
