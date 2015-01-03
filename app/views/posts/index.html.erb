@@ -49,7 +49,7 @@
     <% end %>
     
     <% @posts_unfeatured.each do |post| %>
-          <article>
+    <article>
     <% if post.categories == 'HTML + CSS' %>
       <div class="post_wrapper">
         <header><h2 class="title"><%= link_to post.title, html_css_show_path(post) %></h2></header>

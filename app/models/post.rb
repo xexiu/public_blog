@@ -7,8 +7,8 @@ class Post < ActiveRecord::Base
   validates :user_id, presence: true
   validates :title, presence: true, length: { minimum: 5, maximum: 110 }
   validates :body, presence: true, length: { minimum: 10 }
-  scope :featured, -> { where(featured_post: 'yes').order(created_at: :desc) }
-  scope :unfeatured, -> { where(featured_post: 'no').order(created_at: :desc) }
+  scope :featured, -> { where(featured_post: 'yes').order(created_at: :desc).limit(100) }
+  scope :unfeatured, -> { where(featured_post: 'no').order(created_at: :desc).limit(100) }
   
   def self.search(query)
     if Rails.env.production?

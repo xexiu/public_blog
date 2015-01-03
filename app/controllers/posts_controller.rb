@@ -8,7 +8,8 @@ class PostsController < ApplicationController
 
   def index
     if params[:search]
-      @posts = Post.search(params[:search]).order("created_at DESC").paginate(page: params[:page],  :per_page => 20)
+      @posts_featured = Post.search(params[:search]).featured
+      @posts_unfeatured = Post.search(params[:search]).unfeatured
     else
       @posts_featured = Post.all.featured
       @posts_unfeatured = Post.all.unfeatured
