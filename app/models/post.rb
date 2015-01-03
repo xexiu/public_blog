@@ -11,6 +11,7 @@ class Post < ActiveRecord::Base
     scope :featured, -> { where(featured_post: 'yes').order(created_at: :desc) } #pg
   else
     scope :featured, -> { where(featured_post: 'yes').order(created_at: :desc) } #sqlite
+    scope :unfeatured, -> { where(featured_post: 'no').order(created_at: :desc) } #sqlite
   end
   
   def self.search(query)

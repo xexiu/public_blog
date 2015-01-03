@@ -10,7 +10,8 @@ class PostsController < ApplicationController
     if params[:search]
       @posts = Post.search(params[:search]).order("created_at DESC").paginate(page: params[:page],  :per_page => 20)
     else
-      @posts = Post.all.featured
+      @posts_featured = Post.all.featured
+      @posts_unfeatured = Post.all.unfeatured
     end
   end
 
