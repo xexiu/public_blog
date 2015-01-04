@@ -53,12 +53,13 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $('.all-tags').bind('keyup', function(){
-        var text = $(this)
-        if ($(text).val($(text).val().replace(',', ' '))) {
-          $(text).css({
-            color: ($(text).val().toLowerCase() == $(text).val()) ? '#222' : '#222'
-          });  
+    $('.all-tags').bind('keyup', function(e){
+        var text = $(this);
+        $(text).val($(text).val().toLowerCase().trim().replace(',', ' '));
+        if(e.keyCode === 188){
+          $(text).addClass('tag-link-form');
+        } else {
+          $(text).removeClass('tag-link-form');
         }
     });
 });

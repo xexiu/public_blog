@@ -7,10 +7,13 @@ class MarkdownService
   end
 
   def initialize
+    # ::Rouge::Formatters::HTML.new(opts.merge({ line_numbers: true }))
     options = { # DON'T TOUCH THIS OPTIONS UNLESS YOU KNOW WHAT YOUR DOING!!!
       # escape_html: true, # se to false to allow html, eg: <div>test</div>
       link_attributes: { rel: 'nofollow', target: "_blank" },
       hard_wrap: true,
+      line_numbers: true,
+      start_line: 1,
       filter_html: true
     }
     

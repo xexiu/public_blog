@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
   validates :user_id, presence: true
   validates :title, presence: true, length: { minimum: 5, maximum: 110 }
   validates :body, presence: true, length: { minimum: 10 }
-  validates :all_tags, presence: true, length: { minimum: 2, maximum: 15 }, 
+  validates :all_tags, presence: true, uniqueness: true, length: { minimum: 2, maximum: 15 }, 
   :length => { # Maximum 5 words
   :maximum => 5,
   :tokenizer => lambda { |str| str.scan(/\w+/) },
