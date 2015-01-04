@@ -2,7 +2,7 @@
     <article>
     <% if post.categories == 'HTML + CSS' %>
       <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
-        <header><h2 class="title"><%= link_to post.title, html_css_show_path(post) %></h2></header>
+        <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), html_css_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
@@ -14,7 +14,7 @@
     <article>
       <% if post.categories == 'Javascript' %>
       <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
-        <header><h2 class="title"><%= link_to post.title, javascript_show_path(post) %></h2></header>
+        <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), javascript_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
@@ -26,7 +26,7 @@
     <article>
       <% if post.categories == 'Ruby' %>
       <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
-        <header><h2 class="title"><%= link_to post.title, ruby_show_path(post) %></h2></header>
+        <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), ruby_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
@@ -38,7 +38,7 @@
     <article>
       <% if post.categories == 'The Void' %>
       <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
-        <header><h2 class="title"><%= link_to post.title, void_show_path(post) %></h2></header>
+        <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), void_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
@@ -52,7 +52,7 @@
     <article>
     <% if post.categories == 'HTML + CSS' %>
       <div class="post_wrapper">
-        <header><h2 class="title"><%= link_to post.title, html_css_show_path(post) %></h2></header>
+        <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), html_css_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
@@ -64,7 +64,7 @@
     <article>
       <% if post.categories == 'Javascript' %>
       <div class="post_wrapper">
-        <header><h2 class="title"><%= link_to post.title, javascript_show_path(post) %></h2></header>
+        <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), javascript_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
@@ -76,7 +76,7 @@
     <article>
       <% if post.categories == 'Ruby' %>
       <div class="post_wrapper">
-        <header><h2 class="title"><%= link_to post.title, ruby_show_path(post) %></h2></header>
+        <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), ruby_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
@@ -88,7 +88,7 @@
     <article>
       <% if post.categories == 'The Void' %>
       <div class="post_wrapper">
-        <header><h2 class="title"><%= link_to post.title, void_show_path(post) %></h2></header>
+        <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), void_show_path(post) %></h2></header>
         <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
         <p class="category-show">
           Category: <strong><%= post.categories %></strong>
