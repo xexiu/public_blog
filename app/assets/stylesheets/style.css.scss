@@ -531,6 +531,9 @@ div#content {
       color: grey;
       font-size: .9em;
       font-style: italic;
+      & span a, a:hover {
+        text-decoration: none;
+      }
     }
     .title {
       font-size: 1em;
