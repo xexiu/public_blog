@@ -20,9 +20,9 @@ class Post < ActiveRecord::Base
   
   def self.search(query)
     if Rails.env.production?
-      where("CAST(title as text) ilike ? OR CAST(id AS text) ilike ?", "%#{query}%", "%#{query}%") # postgres
+      where("CAST(title as text) ilike ? OR CAST(id AS text) ilike ? OR CAST(categories AS text) ilike ?", "%#{query}%", "%#{query}%", "%#{query}%") # postgres
     else
-      where("title like ? OR id like ?", "%#{query}%", "%#{query}%") # sqlite
+      where("title like ? OR id like ? OR categories like ?", "%#{query}%", "%#{query}%", "%#{query}%") # sqlite
     end
   end
   
