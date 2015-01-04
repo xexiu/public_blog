@@ -787,3 +787,20 @@ div.social-share {
 .tag-link-form {
   color: blue !important;
 }
+
+.tags-show-post a {
+  background: #E0EAF1;
+  padding: 3px;
+  border-bottom: 1px solid #B3CEE1;
+  border-right: 1px solid #B3CEE1;
+  text-align: center;
+  color: #5D6DB0;
+  font-size: .8em;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    background: #C5D2DB;
+  }
+}
