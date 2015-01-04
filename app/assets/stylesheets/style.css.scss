@@ -72,6 +72,11 @@ q {
   }
 }
 
+strong {
+  font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  color: #444;
+}
+
 textarea#post_body {
   overflow: auto; // IE FIX
   min-height: 250px;
