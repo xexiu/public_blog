@@ -29,6 +29,7 @@ Rails.application.routes.draw do
       put 'like', to: 'posts#upvote'
       put 'dislike', to: 'posts#downvote'
     end
+    get :autocomplete_tag_name, :on => :collection
     resources :comments do
       resources :comments
     end

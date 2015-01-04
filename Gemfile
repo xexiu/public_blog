@@ -29,6 +29,7 @@ gem 'redcarpet'
 gem 'rouge'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'nprogress-rails'
+gem 'rails4-autocomplete'
 gem 'dumper'
 # Captcha
 gem 'simple_captcha2', require: 'simple_captcha'

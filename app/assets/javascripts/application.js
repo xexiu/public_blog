@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui.min.js
+//= require autocomplete-rails
 //= require turbolinks
 //= require bootstrap.min.js
 //= require nprogress

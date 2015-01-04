@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  autocomplete :tag, :name, :full => true # This will create an action autocomplete_brand_name on your controller, don't forget to add it on your routes file
   helper_method :index
   # before_action :logged_in_user, only: [:create, :destroy]
   # Allow the current user to delete his OWN entry
@@ -21,6 +22,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @tag_list = Tag.all
   end
 
   def show
