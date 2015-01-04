@@ -22,7 +22,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @tag_list = Tag.all
   end
 
   def show
