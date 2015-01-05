@@ -11,7 +11,7 @@
     </div>
   <% end %>
   <%= f.label :title %><br>
-  <%= f.text_field :title, autofocus: 'autofocus' %><br>
+  <%= f.autocomplete_field :title, autocomplete_post_title_posts_path, autofocus: 'autofocus' %><br>
   <br>
   <%= f.label :body %><br>
   <%= f.text_area(:body, class: 'bg-code') %><br>
