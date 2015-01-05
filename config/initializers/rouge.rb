@@ -1,9 +1,15 @@
 # need to be required to use Rouge with Redcarpet
+require 'redcarpet'
+require 'rouge'
 require 'rouge/plugins/redcarpet'
 
 class MarkdownService
   class HTML < Redcarpet::Render::HTML
     include Rouge::Plugins::Redcarpet # yep, that's it.
+    def rouge_formatter(opts={})
+        opts ={line_numbers: true}
+        Rouge::Formatters::HTML.new(opts)
+    end
   end
 
   def initialize

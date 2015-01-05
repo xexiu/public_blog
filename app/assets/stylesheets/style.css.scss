@@ -95,8 +95,23 @@ code {
   white-space: pre-wrap;
   border: 1px solid rgba(0,0,0,0.15);
   border-radius: 4px;
-  & br {
-    display: none;
+}
+
+.gutter {
+  float: left;
+  min-width: 50px !important;
+  text-align: center;
+  & .lineno {
+    text-align: center;
+  }
+}
+
+div.highlight {
+  margin: 5px 0px;
+  display: block;
+  width: 100%;
+  & table td {
+    width: 100%;
   }
 }
 
