@@ -61,7 +61,7 @@
     <nav>
       <ul class="search-nav-items">
         <li class="search-btn"><a href="#search" title="Search"><span class="glyphicon glyphicon-search"></span></a></li>
-        <li class="form-search-item" style="display: none"><%= form_tag(posts_path, :method => "get", class: "form-search") do %> <%= text_field_tag :search, params[:search], placeholder: "Search...", autofocus: 'autofocus' %> <%# button_tag "", :title => nil do %> <%# end %> <% end %></li>
+        <li class="form-search-item" style="display: none"><%= form_tag(posts_path, :method => "get", class: "form-search") do %> <%= text_field_tag :search, params[:search], class: "search-query", placeholder: "Search...", autofocus: 'autofocus', data: { autocomplete: autocomplete_post_title_posts_path } %> <%= button_tag "", class: 'btn-search', :title => nil do %> <i class="search-me"></i> <% end %> <% end %></li>
       </ul>
       <ul class="nav-items">
         <% if current_page?(html_css_path) %>

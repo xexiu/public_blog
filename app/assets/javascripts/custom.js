@@ -18,6 +18,7 @@ $(document.header).ready(function() {
 $(document).ready(function(){
   $('.search-btn').click(function(e) {
     $('.form-search-item').fadeToggle('fast');
+    $('.search-query').select();
     $("input:text:visible:first").focus(); // Autofocus on Input field
     e.stopPropagation();
   }); // Hide - Show
@@ -62,4 +63,10 @@ $(document).ready(function() {
           $(text).removeClass('tag-link-form');
         }
     });
+});
+
+$(document).ready(function() {
+  $('.search-query').bind('railsAutocomplete.select', function(event, data) {
+  $('.search-me').trigger('click');
+  });
 });
