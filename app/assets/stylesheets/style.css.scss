@@ -85,19 +85,16 @@ textarea#post_body {
 }
 
 code {
-  margin: .5rem 0 .2rem 0;
-  font-size: .9em;
-  background: #fbfaf8;
-  padding: .5rem;
-  word-break: normal;
-  display: block;
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  border: 1px solid rgba(0,0,0,0.15);
-  border-radius: 4px;
-  & br {
-    display: none;
-  }
+  padding: 0;
+  padding: .1em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+code:before, code:after {
+  content: '';
+  letter-spacing: -0.2em;
 }
 
 .gutter {
