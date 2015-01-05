@@ -59,20 +59,25 @@ class PostsController < ApplicationController
   
   def upvote
     @post = Post.find(params[:id])
-    respond_to do |format|
-      unless current_user.voted_for? @post
-        format.html { redirect_to :back }
-        format.json { head :no_content }
-        format.js { render :layout => false }
-        @post.vote_total = @post.vote_total + 1
-        @post.save
-        @post.upvote_by current_user
-      else
-        flash[:danger] = 'You allready voted this entry'
-        format.html { redirect_to :back }
-        format.json { head :no_content }
-        format.js
+    if current_user
+      respond_to do |format|
+        unless current_user.voted_for? @post
+          format.html { redirect_to :back }
+          format.json { head :no_content }
+          format.js { render :layout => false }
+          @post.vote_total = @post.vote_total + 1
+          @post.save
+          @post.upvote_by current_user
+        else
+          flash[:danger] = 'You allready voted this entry'
+          format.html { redirect_to :back }
+          format.json { head :no_content }
+          format.js
+        end
       end
+    else
+      flash[:danger] = "You need to log in or sign up to vote!"
+      redirect_to login_path
     end
   end
 
