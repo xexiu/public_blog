@@ -95,6 +95,9 @@ code {
   white-space: pre-wrap;
   border: 1px solid rgba(0,0,0,0.15);
   border-radius: 4px;
+  & br {
+    display: none;
+  }
 }
 
 .gutter {
