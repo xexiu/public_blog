@@ -11,9 +11,12 @@
                 <p class="comment-single">
                 <% from_reply_form ||= nil %>
                 <% unless from_reply_form %>
-                  <%= link_to 'View single comment', post_comment_path(@post, comment) %>
+                  <%= link_to '#'+comment.id.to_s, post_comment_path(@post, comment) %>
                 <% end %>
                 </p>
+                <% if @post.user_id %>
+                AUTHOR
+                <% end %>
                 <p class="reply-comment"><%= link_to 'Reply', new_post_comment_comment_path(@post, comment) %></p>
               <% if logged_in? && current_user.admin? || current_user %>
                 <p class="edit-comment">
