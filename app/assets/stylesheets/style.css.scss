@@ -347,9 +347,7 @@ div#content {
     border-bottom: 1px solid #ddd;
   }
   .comment-block {
-    border: 1px solid #ddd;
     border-radius: 4px;
-    padding: 5px;
     margin-bottom: 5px;
     position: relative;
   }
@@ -391,26 +389,11 @@ div#content {
       margin-top: 4px;
     }
   }
-  .comment_content {
+  .comment-content {
     display: block;
     margin-top: 10px;
     position: relative;
     z-index: 2;
-  }
-  .comment-block-reply {
-    & .comment_name:before {
-    content: '▲';
-    position: absolute;
-    display: block;
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    color: #ccc;
-    font-size: .7em;
-    transform: rotate(-30deg);
-    margin-left: 45px;
-    margin-top: 25px;
-    }
   }
   .comment-block-reply:hover > p.comment-reply {
     display: block;
@@ -437,11 +420,14 @@ div#content {
   .comment-block:hover > p.comment {
     display: block;
   }
-  .comment_name {
+  .comment-name {
     position: relative;
     font-weight: bolder;
     float: left;
     max-width: 300px;
+    & a {
+      color: #444;
+    }
   }
   .comment-single {
     display: inline-block; 

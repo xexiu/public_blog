@@ -1,21 +1,24 @@
   <div class="comment-block">
             <div class="comment clearfix">
-              <div class="comment_content"><!--Content -->
+              <div class="comment-content"><!--Content -->
               <% if comment.parent_id %>
-                <p class="comment_name"><%= image_tag "logo.png", width: '30px', height: '30px', style: 'margin-right: 5px' %>
-                <%# comment.name %>
+                <p class="comment-name"><%= image_tag "logo.png", width: '48px', height: '48px', style: 'margin-right: 5px' %>
                 <%= link_to comment.name, autor_path(comment.parent_id) %>
               <% else %>
-                <p class="comment_name"><%= image_tag "logo.png", width: '30px', height: '30px', style: 'margin-right: 5px' %><%= comment.name %>
+                <p class="comment-name"><%= image_tag "logo.png", width: '48px', height: '48px', style: 'margin-right: 5px' %><%= comment.name %>
               <% end %>
-                <p class="comment-single">
+              
+              <p class="comment-single">
                 <% from_reply_form ||= nil %>
                 <% unless from_reply_form %>
                   <%= link_to '#'+comment.id.to_s, post_comment_path(@post, comment) %>
                 <% end %>
                 </p>
-                <% if @post.user.name %>
-                AUTHOR
+
+                <% if comment.name == @post.user.name %>
+                  Hi
+                  <% else %>
+                  BYE
                 <% end %>
                 <p class="reply-comment"><%= link_to 'Reply', new_post_comment_comment_path(@post, comment) %></p>
               <% if logged_in? && current_user.admin? || current_user %>
