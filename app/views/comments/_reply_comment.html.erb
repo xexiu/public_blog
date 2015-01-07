@@ -1,13 +1,15 @@
 <% if @comment.commentable_id %>
+<p class="comment-logo"><%= image_tag "logo.png", width: '48px', height: '48px', alt: 'Avatar ' + @parent.name %>
   <div class="comment-block">
-  <div class="comment clearfix">
-    <div class="comment_content"><!--Content -->
-      <p class="comment_name"><%= image_tag "logo.png", width: '30px', height: '30px', style: 'margin-right: 5px' %><%= @parent.name %>
-      <p class="comment_time"><%= time_ago_in_words(@parent.created_at) %> Ago</p>
-    </div>
+  <div class="comment-wrap-info"><!--Content -->
+      <% if @parent.parent_id %><!-- Comment Name -->
+          <%= link_to @parent.name, autor_path(@parent.parent_id) %>
+        <% else %>
+          <%= @parent.name %>
+        <% end %>
+      <p class="comment-time"><%= time_ago_in_words(@parent.created_at) %> Ago</p>
   </div>
-
-  <div class="comment_body"><%= @parent.content %><!-- Body Comment -->
+  <div class="comment-body"><%= @parent.content %><!-- Body Comment -->
   </div>
 </div>
 <% end %>

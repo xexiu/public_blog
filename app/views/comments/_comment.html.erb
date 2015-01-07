@@ -1,48 +1,46 @@
-  <div class="comment-block">
-            <div class="comment clearfix">
-              <div class="comment-content"><!--Content -->
-              <% if comment.parent_id %>
-                <p class="comment-name"><%= image_tag "logo.png", width: '48px', height: '48px', style: 'margin-right: 5px' %>
-                <%= link_to comment.name, autor_path(comment.parent_id) %>
-              <% else %>
-                <p class="comment-name"><%= image_tag "logo.png", width: '48px', height: '48px', style: 'margin-right: 5px' %><%= comment.name %>
-              <% end %>
+  <% if comment.parent_id %>
+      <%= link_to autor_path(comment.parent_id) do %>
+        <p class="comment-logo"><%= image_tag "logo.png", width: '48px', height: '48px', alt: 'Avatar ' + comment.name %></p>
+      <% end %>
+    <% else %>
+      <p class="comment-logo"><%= image_tag "logo.png", width: '48px', height: '48px', alt: 'Avatar ' + comment.name %></p>
+  <% end %>
               
-              <p class="comment-single">
-                <% from_reply_form ||= nil %>
-                <% unless from_reply_form %>
-                  <%= link_to '#'+comment.id.to_s, post_comment_path(@post, comment) %>
-                <% end %>
-                </p>
-
-                <% if comment.name == @post.user.name %>
-                  Hi
-                  <% else %>
-                  BYE
-                <% end %>
-                <p class="reply-comment"><%= link_to 'Reply', new_post_comment_comment_path(@post, comment) %></p>
-              <% if logged_in? && current_user.admin? || current_user %>
-                <p class="edit-comment">
-                  <%= link_to edit_post_comment_path(@post, comment) do %>
-                    <span class="glyphicon glyphicon-pencil"></span>
-                  <% end %>
-            </p>
-              <% end %>
-                <p class="comment_time"><%= time_ago_in_words(comment.created_at) %> Ago</p>
-                <%# l(comment.created_at, format: '%B, %d %Y %H:%M:%S') %> <!--Comment Date: 23 december, 21:36:33-->
+  <div class="comment-block">
+      <div class="comment-wrap-info"><!--Content -->
+        <p class="comment-single"><!-- Comment Single -->
+          <% from_reply_form ||= nil %>
+          <% unless from_reply_form %>
+            <%= link_to '#'+comment.id.to_s, post_comment_path(@post, comment) %>
+          <% end %>
+        </p>
+        <% if comment.parent_id %><!-- Comment Name -->
+          <%= link_to comment.name, autor_path(comment.parent_id) %>
+        <% else %>
+          <%= comment.name %>
+        <% end %>
+         <p class="comment-time">commented on <%= l(comment.created_at, format: '%d %B %Y') %></p><!-- Comment Time -->
+        <%# l(comment.created_at, format: '%B, %d %Y %H:%M:%S') %> <!--Comment Date: 23 december, 21:36:33-->
+        <p class="reply-comment"><%= link_to 'Reply', new_post_comment_comment_path(@post, comment) %></p> | <!-- Comment Reply -->
+        <% if logged_in? && current_user.admin? || current_user %><!-- Comment Edit -->
+          <p class="edit-comment"><%= link_to 'Edit', edit_post_comment_path(@post, comment) %></p>
+        <% end %>
+        <% if comment.name == @post.user.name %>
+          <p class="author-comment">Owner</p>
+        <% end %>
       </div>
-    </div>
-    <div class="comment_body"><%= comment.content %><!-- Body Comment -->
+
+    <div class="comment-body"><%= comment.content %><!-- Body Comment -->
       <% unless comment.comments.empty? %>
-      <ul class="comment_list">
+      <ul class="comment-list">
         <%= render :partial => 'comments/comment_comments', :collection => comment.comments, :as => :comment %>
       </ul>
     <% end %>
     </div>
     <% if logged_in? && current_user.admin? %>
-      <p class="comment"><%= link_to 'Delete', post_comment_path(@post, comment),
+      <p class="comment-delete"><%= link_to 'Delete', post_comment_path(@post, comment),
                     method: :delete,
-                    class: "button",
+                    class: "button-delete",
                     data: { confirm: 'Are you sure?' } %>
       </p>
     <% end %>
