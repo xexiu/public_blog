@@ -1,5 +1,12 @@
-@import 'normalize.css.scss';
-@import url(https://fonts.googleapis.com/css?family=Lato);
+@import 'reset.css.scss';
+@import 'utility.css.scss';
+@import 'variables.css.scss';
+@import 'mixins.css.scss';
+@import 'functions.css.scss';
+@import 'buttons.css.scss';
+@import 'budgets.css.scss';
+//@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
 @import 'bootstrap.css.scss';
 @import 'tags.css.scss';
 @import 'highlight.css.scss';
@@ -13,10 +20,12 @@
 }
 
 html, body {
-  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  //font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Varela Round',Helvetica,Arial,sans-serif;
   font-size: 15px;
   line-height: 1.42857143;
-  color: #3e444d;
+  color: $principal-link;
+  @include letterpress(.1);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,16 +48,18 @@ table th {
   background-color: #f8f8f8;
   font-family: "Interstate Bold"; font-weight: bold;
 }
-table tr {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-}
+
 table tr:nth-child(even) {
   background-color: #f8f8f8;
 }
 table th, table td {
 padding: 6px 13px;
-border: 1px solid #ddd;
+border-right: 1px solid white(0.1);
+}
+table td pre {
+  width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 q {
@@ -106,13 +117,8 @@ code:before, code:after {
   }
 }
 
-div.highlight {
-  margin: 5px 0px;
-  display: block;
+table td {
   width: 100%;
-  & table td {
-    width: 100%;
-  }
 }
 
 div#content {

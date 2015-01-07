@@ -1,0 +1,99 @@
+%btn-green {
+  background: $bg-green;
+  border: 0;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1em;
+  text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+  &:hover {
+    cursor: pointer;
+    background: lighten($bg-green, 5%);
+  }
+  &:focus {
+    background: darken($bg-green, 5%);
+    box-shadow: inset 1px 1px 10px rgba(0,0,0,.3);
+  }
+}
+
+%btn-red {
+  background: $bg-red;
+  border: 0;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1em;
+  text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+  &:hover {
+    cursor: pointer;
+    background: lighten($bg-red, 5%);
+  }
+  &:focus {
+    background: darken($bg-red, 5%);
+    box-shadow: inset 1px 1px 10px rgba(0,0,0,.3);
+  }
+}
+
+%btn-blue {
+  background: $bg-blue;
+  border: 0;
+  color: white;
+  padding: 5px 15px;
+  font-size: 1em;
+  text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+  &:hover {
+    cursor: pointer;
+    background: lighten($bg-blue, 5%);
+  }
+  &:focus {
+    background: darken($bg-blue, 5%);
+    box-shadow: inset 1px 1px 10px rgba(0,0,0,.3);
+  }
+}
+
+%btn-grey {
+  background: $bg-grey;
+  border: 0;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1em;
+  text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+  &:hover {
+    cursor: pointer;
+    background: lighten($bg-grey, 5%);
+  }
+  &:focus {
+    background: darken($bg-grey, 5%);
+    box-shadow: inset 1px 1px 10px rgba(0,0,0,.3);
+  }
+}
+
+%budget {
+  max-height: 30px;
+  width: 30px;
+  position: absolute;
+  color: white;
+  @include border-radius;
+  font-size: .7777777em;
+  text-align: center;
+  margin-left: -30px;
+  margin-top: -15px;
+}
+
+.btn-green {
+  @extend %btn-green;
+  @include border-radius(3px);
+}
+
+.btn-red {
+  @extend %btn-red;
+  @include border-radius(3px);
+}
+
+.btn-blue {
+  @extend %btn-blue;
+  @include border-radius(3px);
+}
+
+.btn-grey {
+  @extend %btn-grey;
+  @include border-radius(3px);
+}

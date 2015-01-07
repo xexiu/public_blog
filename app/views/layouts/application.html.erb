@@ -2,10 +2,20 @@
 <html>
 <head>
   <title><%= base_title(yield(:title)) %></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="description" content="<%= meta_description %>">
-  <meta name="Keywords" content="<%= meta_keywords %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<%= base_title(yield(:title)) %>" />
+  <meta property="og:description" content="<%= meta_description %>" />
+  <meta property="og:url" content="<%= request.original_url %>" />
+  <meta property="og:image" content="<%= root_url %>assets/logo.png" />
+  <meta property="og:site_name" content="Sergio Mironescu" />
+  <% if @post %>
+  <meta property="article:section" content="Article" />
+  <meta property="article:published_time" content="<%= @post.created_at %>" />
+  <% end %>
+  <link rel="canonical" href="<%= request.original_url %>" />
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <!-- For third-generation iPad with high-resolution Retina display: -->
   <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png"> -->
@@ -15,7 +25,6 @@
   <!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png"> -->
   <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
   <!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"> -->
-  <link rel="canonical" href="<%= request.original_url %>">
   <%= render 'layouts/ie9_fix' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
