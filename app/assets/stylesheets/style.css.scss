@@ -342,12 +342,6 @@ div#content {
     color: grey;
     font-size: .7em;
   }
-  .category-show {
-    float: right;
-    margin-top: -15px;
-    color: grey;
-    font-size: .7em;
-  }
   .comment-count {
     margin-top: 5px;
     border-bottom: 1px solid #ddd;
@@ -545,15 +539,13 @@ div#content {
     color: darkred;
   }
   .post_wrapper {
-    padding-bottom: .2em;
+    padding: 0px 10px 5px 10px;
     border-bottom: 1px solid #d6dce0;
-    .date {
-      padding: 0;
-      margin: 0;
-      color: grey;
-      font-size: .9em;
-      font-style: italic;
-      & span a, a:hover {
+    & a.btn-green {
+      margin-top: 5px;
+      display: inline-block;
+      &:hover {
+        color: #fff;
         text-decoration: none;
       }
     }
@@ -805,8 +797,8 @@ div.social-share {
       font-size: .8em;
       color: grey;
       float: right;
-      display: inline-block;
-      width: 55px;
+      display: block;
+      width: 60px;
       margin-top: 5px;
       margin-left: 5px;
       padding: 0px 4px 0px 4px;
@@ -838,4 +830,51 @@ div.social-share {
 
 .btn-search {
   display: none;
+}
+
+.post-info {
+  min-height: 20px;
+  line-height: 20px;
+  width: 100%;
+  & .post-category {
+    width: 170px !important;
+  }
+  & .post-tags {
+    width: 300px !important;
+  }
+  & .post-date, .post-category, .post-author, .post-tags {
+      margin-right: 10px;
+      text-align: left;
+      padding: 5px 1px 2px 1px;
+      color: grey;
+      font-size: .8em;
+      display: inline-block;
+      width: 170px;
+      & span {
+        margin-right: 5px;
+      }
+      & span a, a:hover {
+        text-decoration: none;
+      }
+    }
+}
+
+.post-content-short {
+    font-size: 1em;
+    color: grey;
+    text-decoration: none;
+    overflow: hidden;
+    //text-overflow: ellipsis;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    height: 60px;
+  & .lineno {
+    float: left;
+    min-width: 50px;
+    text-align: center;
+    border-right: 1px solid white(.1);
+    margin-right: 5px;
+  }
 }

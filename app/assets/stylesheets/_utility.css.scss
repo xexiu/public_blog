@@ -37,3 +37,10 @@ html, body {
    top: 50%;
    transform: translateY(-50%);
 }
+
+/* FIX ul, ol margin on div.body */
+div.body {
+  ul li, ol li {
+    margin-left: 20px;
+  }
+}

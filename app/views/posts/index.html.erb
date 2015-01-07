@@ -3,10 +3,30 @@
     <% if post.categories == 'HTML + CSS' %>
       <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
         <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), html_css_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
-        <p class="category-show">
-          Category: <strong><%= post.categories %></strong>
-        </p>
+        <div class="post-info">
+          <span class="post-date">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <%= post.created_at.strftime("%B %d, %Y") %>
+          </span>
+          <span class="post-author">
+            <% if post.user_id %>
+              <span class="glyphicon glyphicon-user"></span>
+              <%= post.user.name %>
+            <% end %>
+          </span>
+          <span class="post-category">
+            <span class="glyphicon glyphicon-pencil"></span>
+            Category: <strong><%= post.categories %></strong>
+          </span>
+          <span class="post-tags">
+            <span class="glyphicon glyphicon-tags"></span>
+            tags: <%= raw tag_links(post.all_tags) %>
+          </span>
+        </div>
+        <div class="post-content-short">
+          <%= highlight(post.content, params[:search]) %>
+        </div>
+        <%= link_to 'Continue Reading', html_css_show_path(post), class: 'btn-green' %>
       </div>
       <% end %>
     </article>
@@ -15,10 +35,30 @@
       <% if post.categories == 'Javascript' %>
       <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
         <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), javascript_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
-        <p class="category-show">
-          Category: <strong><%= post.categories %></strong>
-        </p>
+        <div class="post-info">
+          <span class="post-date">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <%= post.created_at.strftime("%B %d, %Y") %>
+          </span>
+          <span class="post-author">
+            <% if post.user_id %>
+              <span class="glyphicon glyphicon-user"></span>
+              <%= post.user.name %>
+            <% end %>
+          </span>
+          <span class="post-category">
+            <span class="glyphicon glyphicon-pencil"></span>
+            Category: <strong><%= post.categories %></strong>
+          </span>
+          <span class="post-tags">
+            <span class="glyphicon glyphicon-tags"></span>
+            tags: <%= raw tag_links(post.all_tags) %>
+          </span>
+        </div>
+        <div class="post-content-short">
+          <%= highlight(post.content, params[:search]) %>
+        </div>
+        <%= link_to 'Continue Reading', javascript_show_path(post), class: 'btn-green' %>
       </div>
       <% end %>
     </article>
@@ -27,10 +67,30 @@
       <% if post.categories == 'Ruby' %>
       <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
         <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), ruby_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
-        <p class="category-show">
-          Category: <strong><%= post.categories %></strong>
-        </p>
+        <div class="post-info">
+          <span class="post-date">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <%= post.created_at.strftime("%B %d, %Y") %>
+          </span>
+          <span class="post-author">
+            <% if post.user_id %>
+              <span class="glyphicon glyphicon-user"></span>
+              <%= post.user.name %>
+            <% end %>
+          </span>
+          <span class="post-category">
+            <span class="glyphicon glyphicon-pencil"></span>
+            Category: <strong><%= post.categories %></strong>
+          </span>
+          <span class="post-tags">
+            <span class="glyphicon glyphicon-tags"></span>
+            tags: <%= raw tag_links(post.all_tags) %>
+          </span>
+        </div>
+        <div class="post-content-short">
+          <%= highlight(post.content, params[:search]) %>
+        </div>
+        <%= link_to 'Continue Reading', ruby_show_path(post), class: 'btn-green' %>
       </div>
       <% end %>
     </article>
@@ -39,10 +99,30 @@
       <% if post.categories == 'The Void' %>
       <div class="post_wrapper <% if post.featured_post == 'yes' %>featured-post<% end %>">
         <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), void_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
-        <p class="category-show">
-          Category: <strong><%= post.categories %></strong>
-        </p>
+        <div class="post-info">
+          <span class="post-date">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <%= post.created_at.strftime("%B %d, %Y") %>
+          </span>
+          <span class="post-author">
+            <% if post.user_id %>
+              <span class="glyphicon glyphicon-user"></span>
+              <%= post.user.name %>
+            <% end %>
+          </span>
+          <span class="post-category">
+            <span class="glyphicon glyphicon-pencil"></span>
+            Category: <strong><%= post.categories %></strong>
+          </span>
+          <span class="post-tags">
+            <span class="glyphicon glyphicon-tags"></span>
+            tags: <%= raw tag_links(post.all_tags) %>
+          </span>
+        </div>
+        <div class="post-content-short">
+          <%= highlight(post.content, params[:search]) %>
+        </div>
+        <%= link_to 'Continue Reading', void_show_path(post), class: 'btn-green' %>
       </div>
       <% end %>
     </article>
@@ -53,10 +133,30 @@
     <% if post.categories == 'HTML + CSS' %>
       <div class="post_wrapper">
         <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), html_css_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
-        <p class="category-show">
-          Category: <strong><%= post.categories %></strong>
-        </p>
+        <div class="post-info">
+          <span class="post-date">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <%= post.created_at.strftime("%B %d, %Y") %>
+          </span>
+          <span class="post-author">
+            <% if post.user_id %>
+              <span class="glyphicon glyphicon-user"></span>
+              <%= post.user.name %>
+            <% end %>
+          </span>
+          <span class="post-category">
+            <span class="glyphicon glyphicon-pencil"></span>
+            Category: <strong><%= post.categories %></strong>
+          </span>
+          <span class="post-tags">
+            <span class="glyphicon glyphicon-tags"></span>
+            tags: <%= raw tag_links(post.all_tags) %>
+          </span>
+        </div>
+        <div class="post-content-short">
+          <%= highlight(post.content, params[:search]) %>
+        </div>
+        <%= link_to 'Continue Reading', html_css_show_path(post), class: 'btn-green' %>
       </div>
       <% end %>
     </article>
@@ -65,10 +165,30 @@
       <% if post.categories == 'Javascript' %>
       <div class="post_wrapper">
         <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), javascript_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
-        <p class="category-show">
-          Category: <strong><%= post.categories %></strong>
-        </p>
+        <div class="post-info">
+          <span class="post-date">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <%= post.created_at.strftime("%B %d, %Y") %>
+          </span>
+          <span class="post-author">
+            <% if post.user_id %>
+              <span class="glyphicon glyphicon-user"></span>
+              <%= post.user.name %>
+            <% end %>
+          </span>
+          <span class="post-category">
+            <span class="glyphicon glyphicon-pencil"></span>
+            Category: <strong><%= post.categories %></strong>
+          </span>
+          <span class="post-tags">
+            <span class="glyphicon glyphicon-tags"></span>
+            tags: <%= raw tag_links(post.all_tags) %>
+          </span>
+        </div>
+        <div class="post-content-short">
+          <%= highlight(post.content, params[:search]) %>
+        </div>
+        <%= link_to 'Continue Reading', javascript_show_path(post), class: 'btn-green' %>
       </div>
       <% end %>
     </article>
@@ -77,10 +197,30 @@
       <% if post.categories == 'Ruby' %>
       <div class="post_wrapper">
         <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), ruby_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
-        <p class="category-show">
-          Category: <strong><%= post.categories %></strong>
-        </p>
+        <div class="post-info">
+          <span class="post-date">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <%= post.created_at.strftime("%B %d, %Y") %>
+          </span>
+          <span class="post-author">
+            <% if post.user_id %>
+              <span class="glyphicon glyphicon-user"></span>
+              <%= post.user.name %>
+            <% end %>
+          </span>
+          <span class="post-category">
+            <span class="glyphicon glyphicon-pencil"></span>
+            Category: <strong><%= post.categories %></strong>
+          </span>
+          <span class="post-tags">
+            <span class="glyphicon glyphicon-tags"></span>
+            tags: <%= raw tag_links(post.all_tags) %>
+          </span>
+        </div>
+        <div class="post-content-short">
+          <%= highlight(post.content, params[:search]) %>
+        </div>
+        <%= link_to 'Continue Reading', ruby_show_path(post), class: 'btn-green' %>
       </div>
       <% end %>
     </article>
@@ -89,10 +229,30 @@
       <% if post.categories == 'The Void' %>
       <div class="post_wrapper">
         <header><h2 class="title"><%= link_to highlight(post.title, params[:search]), void_show_path(post) %></h2></header>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> <span> - tags: <%= raw tag_links(post.all_tags) %></span></p>
-        <p class="category-show">
-          Category: <strong><%= post.categories %></strong>
-        </p>
+        <div class="post-info">
+          <span class="post-date">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <%= post.created_at.strftime("%B %d, %Y") %>
+          </span>
+          <span class="post-author">
+            <% if post.user_id %>
+              <span class="glyphicon glyphicon-user"></span>
+              <%= post.user.name %>
+            <% end %>
+          </span>
+          <span class="post-category">
+            <span class="glyphicon glyphicon-pencil"></span>
+            Category: <strong><%= post.categories %></strong>
+          </span>
+          <span class="post-tags">
+            <span class="glyphicon glyphicon-tags"></span>
+            tags: <%= raw tag_links(post.all_tags) %>
+          </span>
+        </div>
+        <div class="post-content-short">
+          <%= highlight(post.content, params[:search]) %>
+        </div>
+        <%= link_to 'Continue Reading', void_show_path(post), class: 'btn-green' %>
       </div>
       <% end %>
     </article>

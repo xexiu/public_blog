@@ -101,19 +101,27 @@ class PostsController < ApplicationController
   end
 
   def html_css
-    @posts = Post.all.order('created_at DESC').paginate(page: params[:page], :per_page => 10)
+    #@posts = Post.all.order('created_at DESC').paginate(page: params[:page], :per_page => 10)
+    @posts_featured = Post.all.featured
+    @posts_unfeatured = Post.all.unfeatured
   end
 
   def javascript
-    @posts = Post.all.order('created_at DESC').paginate(page: params[:page], :per_page => 10)
+    #@posts = Post.all.order('created_at DESC').paginate(page: params[:page], :per_page => 10)
+    @posts_featured = Post.all.featured
+    @posts_unfeatured = Post.all.unfeatured
   end
 
   def ruby
-    @posts = Post.all.order('created_at DESC').paginate(page: params[:page], :per_page => 10)
+    #@posts = Post.all.order('created_at DESC').paginate(page: params[:page], :per_page => 10)
+    @posts_featured = Post.all.featured
+    @posts_unfeatured = Post.all.unfeatured
   end
   
   def void
-    @posts = Post.all.order('created_at DESC').paginate(page: params[:page], :per_page => 10)
+    #@posts = Post.all.order('created_at DESC').paginate(page: params[:page], :per_page => 10)
+    @posts_featured = Post.all.featured
+    @posts_unfeatured = Post.all.unfeatured
   end
 
   private
