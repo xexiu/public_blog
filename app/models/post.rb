@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
   validates :categories, presence: true, :inclusion => { :in => ['The Void', 'HTML + CSS','Javascript','Ruby'] }
   validates :featured_post, presence: true, :inclusion => { :in => ['yes', 'no'] }
   validates :user_id, presence: true
-  validates :title, presence: true, length: { minimum: 5, maximum: 75 }
+  validates :title, presence: true, length: { minimum: 5, maximum: 85 }
   validates :body, presence: true, length: { minimum: 10 }
   validates :all_tags, presence: true, length: { minimum: 2, maximum: 15 }, 
   :length => { # Maximum 5 words
