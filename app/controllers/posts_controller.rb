@@ -39,11 +39,11 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     if @post.update_attributes(post_params)
       redirect_to @post
     else
@@ -52,13 +52,13 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     @post.destroy
     redirect_to posts_path
   end
   
   def upvote
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     if current_user
       respond_to do |format|
         unless current_user.voted_for? @post
@@ -82,7 +82,7 @@ class PostsController < ApplicationController
   end
 
   def downvote
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     respond_to do |format|
       unless current_user.voted_for? @post
         format.html { redirect_to :back }
