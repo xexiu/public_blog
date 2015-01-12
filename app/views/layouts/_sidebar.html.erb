@@ -27,6 +27,11 @@
         <% else %>
         <li><%= link_to "About Me", about_path %></li>
         <% end %>
+        <% if current_page?(activities_path) %>
+        <li><%= link_to "Live!", activities_path, class: 'active-sb' %></li>
+        <% else %>
+        <li><%= link_to "Live!", activities_path %></li>
+        <% end %>
       </ul>
       <ul class="items-iphone6">
         <li class="category">Categories</li>

@@ -32,26 +32,16 @@
             <%= link_to 'Void', void_path %>
           </li>
           <% if logged_in? %>
-            <% if current_page?(user_path(current_user)) %>
               <li>
                 <%= link_to "Profile", current_user %>
               </li>
-            <% else %>
-              <li>
-                <%= link_to "Profile", current_user %>
-              </li>
-            <% end %>
-          
-            <% if current_page?(edit_user_path(current_user)) %>
               <li>
                 <%= link_to "Settings", edit_user_path(current_user) %>
               </li>
-            <% else %>
-              <li>
-                <%= link_to "Settings", edit_user_path(current_user) %>
-              </li>
-            <% end %>
           <% end %>
+            <li>
+              <%= link_to 'Live!', activities_path %>
+            </li>
           <li>
             <%= form_tag(posts_path, :method => "get", class: "form-search-mobile") do %> <%= text_field_tag :search, params[:search], placeholder: "Search..." %> <%# button_tag "", :title => nil do %> <%# end %> <% end %>
           </li>

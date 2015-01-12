@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  include PublicActivity::Model
+  tracked
   acts_as_votable
   extend FriendlyId
   friendly_id :slug_candidates, use: :slugged
