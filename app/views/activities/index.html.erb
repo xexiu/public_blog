@@ -1,2 +1,12 @@
-<h1>Activities#index</h1>
-<p>Find me in app/views/activities/index.html.erb</p>
+<header>
+  <h1>Latest Activities!! What's going on?</h1>
+</header>
+
+<% @activities.each do |activity| %>
+  <article class="activity">
+    <div><%= link_to activity.owner.name, activity.owner if activity.owner %>
+    <%= render_activity activity %>
+    <%#activity.trackable.inspect %>
+    </div>
+  </article>
+<% end %>

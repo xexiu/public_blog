@@ -1,9 +1,9 @@
 class Post < ActiveRecord::Base
   include PublicActivity::Model
-  tracked
+  tracked owner: Proc.new{ |controller, model| controller.current_user }
   acts_as_votable
   extend FriendlyId
-  friendly_id :slug_candidates, use: :slugged
+  friendly_id :slug_candidates, use: [:slugged, :finders]
   belongs_to :user
   has_many :comments, :as => :commentable, dependent: :destroy
   has_many :taggings, dependent: :destroy

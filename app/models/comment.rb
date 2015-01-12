@@ -1,8 +1,9 @@
 class Comment < ActiveRecord::Base
   include PublicActivity::Model
-  tracked
+  tracked owner: Proc.new{ |controller, model| controller.current_user }
   apply_simple_captcha
   belongs_to :user
+  belongs_to :post
   belongs_to :commentable, :polymorphic => true # belongs_to :post
   has_many :comments, :as => :commentable, dependent: :destroy
   validates :name, presence: true, length: { minimum: 3, maximum: 55 }

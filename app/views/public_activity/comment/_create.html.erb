@@ -1,0 +1,10 @@
+added a
+
+<% if activity.trackable %>
+  <%# link_to activity.trackable.name %>
+  <%# activity.trackable.body %>
+  <%= link_to 'comment', comment_reply_path(activity.trackable.commentable_id, activity.trackable_id) %> on 
+  <%= link_to 'post', comment_post_path(activity.trackable.commentable_id) %>
+<% else %>
+  which has since been removed
+<% end %>
