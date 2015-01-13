@@ -6,7 +6,6 @@
           <%= f.hidden_field :parent_id, :value => current_user.id %>
           <div class="label-body"><%= f.label 'Message' %></div>
           <div class="text-body"><%= f.text_area :body, placeholder: 'Minimum 6 characters' %></div>
-          <%= show_simple_captcha %><br />
           <%= f.submit %>
           <% else %>
           <div class="label-name"><%= f.label 'Your Name' %></div>

@@ -1,12 +1,11 @@
 <header>
-  <h1>Latest Activities!! What's going on?</h1>
+  <h1 class="latest-activity">Latest Activities!! What's going on?</h1>
 </header>
 
 <% @activities.each do |activity| %>
   <article class="activity">
-    <div><%= link_to activity.owner.name, activity.owner if activity.owner %>
+    <div>
     <%= render_activity activity %>
-    <%#activity.trackable.inspect %>
     </div>
   </article>
 <% end %>

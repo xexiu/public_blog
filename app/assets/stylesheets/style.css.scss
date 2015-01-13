@@ -576,7 +576,7 @@ div#content {
     & a.btn-green {
       margin-top: 5px;
       display: inline-block;
-      &:hover {
+      &:hover, &:focus {
         color: #fff;
         text-decoration: none;
       }
@@ -879,4 +879,8 @@ div.social-share {
     border-right: 1px solid white(.1);
     margin-right: 5px;
   }
+}
+
+h1.latest-activity {
+  border-bottom: 1px solid black(.1);
 }

@@ -1,10 +1,17 @@
-added a
-
 <% if activity.trackable %>
-  <%# link_to activity.trackable.name %>
-  <%# activity.trackable.body %>
-  <%= link_to 'comment', comment_reply_path(activity.trackable.commentable_id, activity.trackable_id) %> on 
-  <%= link_to 'post', comment_post_path(activity.trackable.commentable_id) %>
+  <% if activity.trackable.parent_id != current_user.id %>
+    <%# activity.trackable.parent_id %>
+    <%# activity.trackable.commentable_id %>
+    <%# activity.trackable.id %>
+    <%= link_to activity.owner.name, activity.owner if activity.owner %> made a 
+    <%= link_to 'reply', comment_reply_reply_path(activity.trackable.parent_id.to_i, activity.trackable.commentable_id, activity.trackable.id) %> to this
+    <%= link_to 'comment', comment_reply_path(activity.trackable.parent_id.to_i, activity.trackable.commentable_id) %> on this
+    <%= link_to 'post', comment_post_path(activity.trackable.parent_id.to_i) %>
+  <% else %>
+    <%= link_to activity.owner.name, activity.owner if activity.owner %> added a
+    <%= link_to 'comment', comment_reply_path(activity.trackable.commentable_id, activity.trackable_id) %> on a
+    <%= link_to 'post', comment_post_path(activity.trackable.commentable_id) %>
+  <% end %>
 <% else %>
-  which has since been removed
+  <%= link_to activity.owner.name, activity.owner if activity.owner %> which has since been removed
 <% end %>

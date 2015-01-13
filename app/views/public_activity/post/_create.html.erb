@@ -1,4 +1,4 @@
-added a post
+<%= link_to activity.owner.name, activity.owner if activity.owner %> added a post
 
 <% if activity.trackable %>
   <%= link_to activity.trackable.title, activity.trackable %>

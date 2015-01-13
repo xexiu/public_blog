@@ -22,8 +22,6 @@ Rails.application.routes.draw do
   get 'tags/:tag', to: 'posts#index', as: "tag"
   
   resources :activities
-  get '/posts/:id', to: 'posts#show', as: 'comment_post'
-  get '/posts/:post_id/comments/:id', to: 'comments#show', as: 'comment_reply'
   resources :users
   get '/users/(:comment)', to: 'users#show', as: 'autor'
   
@@ -38,6 +36,10 @@ Rails.application.routes.draw do
       resources :comments
     end
   end
+  
+  get '/posts/:id', to: 'posts#show', as: 'comment_post'
+  get '/posts/:post_id/comments/:id', to: 'comments#show', as: 'comment_reply'
+  get '/posts/:post_id/comments/:comment_id/comments/:id', to: 'comments#show', as: 'comment_reply_reply'
   
 end
 
