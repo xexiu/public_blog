@@ -1,5 +1,5 @@
     <% provide(:title, @post.title ) %>
-    <article role="article-post">
+    <article role="article-post" <% if @post.status == "draft" %>class="unapproved"<% end %>>
       <header>
         <h1 class="title-show"><!-- Title -->
           <%= @post.title %>
@@ -7,7 +7,7 @@
       </header>
       <div class="date-show"><!-- Date -->
         Submitted <%= time_ago_in_words(@post.created_at) %> ago
-        <% if logged_in? && current_user.admin? %>
+        <% if logged_in? && current_user || current_user.admin? %>
         | <%= link_to 'Edit', edit_post_path(@post) %>
         | <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
@@ -18,53 +18,59 @@
       <!-- BODY -->
       <div class="body">
         <%= @post.content %>
-        <aside class="vote-count bind-<%= @post.id %>">
-          <!-- Positive Votes -->
-          <%= link_to like_post_path(@post), method: :put, class: 'vpos' do %>
-            <span class="glyphicon glyphicon-chevron-up"></span>
-            <span class="vcount vcount-<%= @post.id %>"><%= @post.get_upvotes.size %></span>
-          <% end %>
-          <!-- Negative Votes -->
-          <%= link_to dislike_post_path(@post), method: :put, class: 'npos' do %>
-            <span class="glyphicon glyphicon-chevron-down"></span>
-            <span class="ncount ncount-<%= @post.id %>"><%= @post.get_downvotes.size %></span>
-          <% end %>
-        </aside>
-        <div class="social-share">
-          <p class="twitter-btn">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-via="smironescu">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-          </p>
-          <p class="facebook-btn">
-            <div id="fb-root"></div>
-              <script>(function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=117488980696&version=v2.0";
-                fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));</script>
-              
-              <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-          </p>
-          <p class="linkedin-btn">
-            <script src="//platform.linkedin.com/in.js" type="text/javascript">
-            lang: en_US
-            </script>
-            <script type="IN/Share" data-counter="right"></script>
-          </p>
+        <% if @post.status == "approved" %> <!-- Hide social and votes -->
+          <aside class="vote-count bind-<%= @post.id %>">
+            <!-- Positive Votes -->
+            <%= link_to like_post_path(@post), method: :put, class: 'vpos' do %>
+              <span class="glyphicon glyphicon-chevron-up"></span>
+              <span class="vcount vcount-<%= @post.id %>"><%= @post.get_upvotes.size %></span>
+            <% end %>
+            <!-- Negative Votes -->
+            <%= link_to dislike_post_path(@post), method: :put, class: 'npos' do %>
+              <span class="glyphicon glyphicon-chevron-down"></span>
+              <span class="ncount ncount-<%= @post.id %>"><%= @post.get_downvotes.size %></span>
+            <% end %>
+          </aside>
+        
+          <div class="social-share">
+            <p class="twitter-btn">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="smironescu">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </p>
+            <p class="facebook-btn">
+              <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=117488980696&version=v2.0";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+                
+                <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+            </p>
+            <p class="linkedin-btn">
+              <script src="//platform.linkedin.com/in.js" type="text/javascript">
+              lang: en_US
+              </script>
+              <script type="IN/Share" data-counter="right"></script>
+            </p>
+          </div>
         </div>
-      </div>
+      <% end %>
+      
       <div class="tags-show-post">Tags: <%= raw tag_links(@post.all_tags) %></div>
       <%# link_to 'Add a Comment', new_post_comment_path(@post) %>
     </article>
-      
-    <aside role="comments-post">
-      <div id="comments">
-        <!--<h2 class="comment-count"><%# pluralize(@post.comments.count, "Comment") %></h2>-->
-        <ul class="comment_list"><!-- Render Partial List Comments -->
-        <%= render :partial => 'comments/comment', :collection => @post.comments %>
-        </ul>
-        <%= render "comments/form_comments" %>
-      </div>
-    </aside>
+    
+    <% if @post.status == "approved" %><!-- Hide Comments for unapproved posts -->
+      <aside role="comments-post">
+        <div id="comments">
+          <!--<h2 class="comment-count"><%# pluralize(@post.comments.count, "Comment") %></h2>-->
+          <ul class="comment_list"><!-- Render Partial List Comments -->
+          <%= render :partial => 'comments/comment', :collection => @post.comments %>
+          </ul>
+          <%= render "comments/form_comments" %>
+        </div>
+      </aside>
+    <% end %>

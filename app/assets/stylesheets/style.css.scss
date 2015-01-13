@@ -574,6 +574,7 @@ div#content {
     padding: 0px 10px 5px 10px;
     border-bottom: 1px solid #d6dce0;
     & a.btn-green {
+      font-size: .8em;
       margin-top: 5px;
       display: inline-block;
       &:hover, &:focus {
@@ -869,9 +870,9 @@ div.social-share {
     //text-overflow: ellipsis;
     text-align: justify;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-    height: 60px;
+    height: 20px;
   & .lineno {
     float: left;
     min-width: 50px;
@@ -883,4 +884,28 @@ div.social-share {
 
 h1.latest-activity {
   border-bottom: 1px solid black(.1);
+}
+
+.unapproved {
+  border: 1px solid $bg-red;
+  @include border-radius(3px);
+  padding: 5px;
+  -moz-animation-name: glow;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -moz-animation-duration: 500ms;
+  -webkit-animation-name: glow;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-duration: 500ms;
+}
+@-moz-keyframes glow {
+    0% { box-shadow: 0 0 5px #D11919; }
+    100% { box-shadow: 0 0 15px #D11919; }
+}
+@-webkit-keyframes glow {
+    0% { box-shadow: 0 0 5px #D11919; }
+    100% { box-shadow: 0 0 15px #D11919; }
 }

@@ -34,6 +34,7 @@ gem 'sitemap_generator' # rake -s sitemap:refresh - s option to silence rake
 gem 'whenever', :require => false # schedule cronjobs
 gem 'dumper'
 gem 'public_activity'
+gem 'rails_admin' # admin-ui
 # Captcha
 gem 'simple_captcha2', require: 'simple_captcha'
 # gem 'bootstrap-wysihtml5-rails'
