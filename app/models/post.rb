@@ -1,7 +1,6 @@
 class Post < ActiveRecord::Base
   include PublicActivity::Model
   tracked owner: Proc.new{ |controller, model| controller.current_user }
-  #tracked recipient: proc {|controller, post| controller @post.id }
   acts_as_votable
   extend FriendlyId
   friendly_id :slug_candidates, use: [:slugged, :finders]
