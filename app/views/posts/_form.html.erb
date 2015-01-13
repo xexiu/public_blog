@@ -1,4 +1,4 @@
-<% if logged_in? && current_user.admin? %>
+<% if logged_in? || current_user.admin? %>
 <%= form_for @post do |f| %>
   <% if @post.errors.any? %>
     <div id="errors">

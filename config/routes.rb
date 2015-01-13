@@ -26,6 +26,9 @@ Rails.application.routes.draw do
   get '/users/(:comment)', to: 'users#show', as: 'autor'
   
   resources :posts do
+    collection do
+      put :approve
+    end
     member do
       put 'like', to: 'posts#upvote'
       put 'dislike', to: 'posts#downvote'

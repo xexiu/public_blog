@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   include PublicActivity::Model
-  tracked owner: Proc.new{ |controller, model| controller.current_user }
+  tracked owner: Proc.new{ |controller, model| controller.current_user } if !defined?(Rails::Console) # NOT in rails console
   acts_as_votable
   extend FriendlyId
   friendly_id :slug_candidates, use: [:slugged, :finders]
@@ -21,6 +21,8 @@ class Post < ActiveRecord::Base
 }
   scope :featured, -> { where(featured_post: 'yes').order(created_at: :desc).limit(100) }
   scope :unfeatured, -> { where(featured_post: 'no').order(created_at: :desc).limit(100) }
+  scope :approved, -> { where status: 'approved' }
+  scope :draft, -> { where status: 'draft' }
   
   def slug_candidates
     [
@@ -54,6 +56,11 @@ class Post < ActiveRecord::Base
 
   def self.tagged_with(name)
     Tag.find_by_name!(name).posts
+  end
+  
+  # Returns true if the given user is the current user.
+  def current_user?(user)
+    user == current_user
   end
   
 end

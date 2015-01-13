@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150112113236) do
+ActiveRecord::Schema.define(version: 20150113180729) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20150112113236) do
     t.string   "categories"
     t.integer  "vote_total",    default: 0
     t.string   "featured_post"
+    t.string   "status"
   end
 
   add_index "posts", ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"

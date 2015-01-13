@@ -10,14 +10,14 @@ class PostsController < ApplicationController
 
   def index
     if params[:tag]
-      @posts_featured = Post.tagged_with(params[:tag]).featured
-      @posts_unfeatured = Post.tagged_with(params[:tag]).unfeatured
+      @posts_featured = Post.tagged_with(params[:tag]).featured.approved
+      @posts_unfeatured = Post.tagged_with(params[:tag]).unfeatured.approved
     elsif params[:search]
-      @posts_featured = Post.search(params[:search]).featured
-      @posts_unfeatured = Post.search(params[:search]).unfeatured
+      @posts_featured = Post.search(params[:search]).featured.approved
+      @posts_unfeatured = Post.search(params[:search]).unfeatured.approved
     else
-      @posts_featured = Post.all.featured
-      @posts_unfeatured = Post.all.unfeatured
+      @posts_featured = Post.all.featured.approved
+      @posts_unfeatured = Post.all.unfeatured.approved
     end
   end
 
@@ -31,6 +31,11 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.create(post_params)
+    if current_user.admin?
+      @post.status = "approved"
+    else
+      @post.status = "draft"
+    end
     if @post.save
       redirect_to @post
     else
@@ -123,11 +128,16 @@ class PostsController < ApplicationController
     @posts_featured = Post.all.featured
     @posts_unfeatured = Post.all.unfeatured
   end
+  
+  def approve
+    Post.update_all({status: "approved"}, {id: params[:post_ids]})
+    redirect_to post_path
+  end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :categories, :featured_post, :all_tags)
+    params.require(:post).permit(:title, :body, :categories, :featured_post, :all_tags, :status)
   end
 
   # Confirms an admin user.

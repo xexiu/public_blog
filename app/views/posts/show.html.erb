@@ -1,10 +1,10 @@
-      <% provide(:title, @post.title ) %>
-      <article role="article-post">
-<header>
-<h1 class="title-show"><!-- Title -->
-        <%= @post.title %>
-      </h1>
-</header>
+    <% provide(:title, @post.title ) %>
+    <article role="article-post">
+      <header>
+        <h1 class="title-show"><!-- Title -->
+          <%= @post.title %>
+        </h1>
+      </header>
       <div class="date-show"><!-- Date -->
         Submitted <%= time_ago_in_words(@post.created_at) %> ago
         <% if logged_in? && current_user.admin? %>
@@ -57,7 +57,7 @@
       </div>
       <div class="tags-show-post">Tags: <%= raw tag_links(@post.all_tags) %></div>
       <%# link_to 'Add a Comment', new_post_comment_path(@post) %>
-      </article>
+    </article>
       
     <aside role="comments-post">
       <div id="comments">
