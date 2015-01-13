@@ -28,7 +28,8 @@ Rails.application.routes.draw do
   
   resources :posts do
     collection do
-      put :approve
+      put 'approve/:id', to: 'posts#approve', as: :approve
+      put 'unapprove/:id', to: 'posts#unapprove', as: :unapprove
     end
     member do
       put 'like', to: 'posts#upvote'

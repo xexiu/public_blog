@@ -1,6 +1,19 @@
 <% if activity.trackable %>
-  <%= link_to activity.owner.name, activity.owner if activity.owner %> added a post
-  <%= link_to activity.trackable.title, activity.trackable %>
+  <% if activity.trackable.status == "draft" && current_user.admin? %>
+    <span class="activity-time">
+      <%= activity.trackable.created_at.strftime("%B %d, %Y") %>
+    </span>
+    <%= link_to activity.owner.name, activity.owner if activity.owner %> added a post
+    <%= link_to activity.trackable.title, activity.trackable %>
+    <%= link_to "Approve", approve_posts_path(activity.trackable.id), method: :put, class: "approve-link"%>
+  <% elsif activity.trackable.status == "approved" %>
+    <span class="activity-time">
+      <%= activity.trackable.created_at.strftime("%B %d, %Y") %>
+    </span>
+    <%= link_to activity.owner.name, activity.owner if activity.owner %> added a post
+    <%= link_to activity.trackable.title, activity.trackable %>
+    <%= link_to "Unapprove", unapprove_posts_path(activity.trackable.id), method: :put, class: "unapprove-link" if current_user.admin? %>
+  <% end %>
 <% else %>
-  which has since been removed
+  <%= link_to activity.owner.name, activity.owner if activity.owner %> - post which has been removed   
 <% end %>

@@ -130,8 +130,15 @@ class PostsController < ApplicationController
   end
   
   def approve
-    Post.update_all({status: "approved"}, {id: params[:post_ids]})
-    redirect_to post_path
+    @post = Post.find(params[:id])
+    @post.update_attributes({status: "approved"})
+    redirect_to :back
+  end
+  
+  def unapprove
+    @post = Post.find(params[:id])
+    @post.update_attributes({status: "draft"})
+    redirect_to :back
   end
 
   private

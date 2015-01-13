@@ -909,3 +909,15 @@ h1.latest-activity {
     0% { box-shadow: 0 0 5px #D11919; }
     100% { box-shadow: 0 0 15px #D11919; }
 }
+
+a.unapprove-link {
+  color: $bg-red;
+}
+a.approve-link {
+  color: $bg-green;
+}
+
+.activity-time {
+  color: $bg-grey;
+  font-size: .8em;
+}
