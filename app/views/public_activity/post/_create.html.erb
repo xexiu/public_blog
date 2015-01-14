@@ -1,5 +1,5 @@
 <% if activity.trackable %>
-  <% if activity.trackable.status == "draft" && current_user.admin? %>
+  <% if logged_in? && (activity.trackable.status == "draft" && current_user.admin?) %>
     <span class="activity-time">
       <%= activity.trackable.created_at.strftime("%B %d, %Y") %>
     </span>
@@ -12,7 +12,7 @@
     </span>
     <%= link_to activity.owner.name, activity.owner if activity.owner %> added a post
     <%= link_to activity.trackable.title, activity.trackable %>
-    <%= link_to "Unapprove", unapprove_posts_path(activity.trackable.id), method: :put, class: "unapprove-link" if current_user.admin? %>
+    <%= link_to "Unapprove", unapprove_posts_path(activity.trackable.id), method: :put, class: "unapprove-link" if logged_in? && current_user.admin? %>
   <% end %>
 <% else %>
   <%= link_to activity.owner.name, activity.owner if activity.owner %> - post which has been removed   

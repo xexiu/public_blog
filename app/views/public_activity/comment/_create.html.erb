@@ -1,5 +1,5 @@
 <% if activity.trackable %>
-  <% if activity.trackable.parent_id != current_user.id %>
+  <% if logged_in? && activity.trackable.parent_id != current_user.id %>
     <%# activity.trackable.parent_id %>
     <%# activity.trackable.commentable_id %>
     <%# activity.inspect %>
