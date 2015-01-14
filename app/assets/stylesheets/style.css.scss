@@ -840,19 +840,19 @@ div.social-share {
   line-height: 20px;
   width: 100%;
   & .post-category {
-    width: 170px !important;
+    width: 160px !important;
   }
   & .post-tags {
-    width: 300px !important;
+    width: 320px !important;
   }
   & .post-date, .post-category, .post-author, .post-tags {
-      margin-right: 10px;
+      margin-right: 0px;
       text-align: left;
       padding: 5px 1px 2px 1px;
       color: grey;
       font-size: .8em;
       display: inline-block;
-      width: 170px;
+      width: 150px;
       & span {
         margin-right: 5px;
       }
