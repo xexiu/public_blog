@@ -5,7 +5,7 @@
       
       <p class="comment-time-reply">commented on <%= l(comment.created_at, format: '%d %B %Y') %></p>
       <!--<p><%# l(comment.created_at, format: '%B, %d %Y %H:%M:%S') %></p> Comment Date: 23 december, 21:36:33-->
-      <% if logged_in? && current_user.admin? || current_user %>
+      <% if is_an_admin? || logged_in? && comment.name == current_user.name %>
         <p class="edit-comment-reply"><%= link_to 'Edit', edit_post_comment_comment_path(@post, comment, comment.id) %></p>
       <% end %>
       <% if comment.name == @post.user.name %>

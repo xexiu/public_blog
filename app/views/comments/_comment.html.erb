@@ -21,9 +21,9 @@
         <% end %>
          <p class="comment-time">commented on <%= l(comment.created_at, format: '%d %B %Y') %></p><!-- Comment Time -->
         <%# l(comment.created_at, format: '%B, %d %Y %H:%M:%S') %> <!--Comment Date: 23 december, 21:36:33-->
-        <p class="reply-comment"><%= link_to 'Reply', new_post_comment_comment_path(@post, comment) %></p> | <!-- Comment Reply -->
-        <% if logged_in? && current_user.admin? || current_user %><!-- Comment Edit -->
-          <p class="edit-comment"><%= link_to 'Edit', edit_post_comment_path(@post, comment) %></p>
+        <p class="reply-comment"><%= link_to 'Reply', new_post_comment_comment_path(@post, comment) %></p> <!-- Comment Reply -->
+        <% if is_an_admin? || logged_in? && comment.name == current_user.name %><!-- Comment Edit -->
+          | <p class="edit-comment"><%= link_to 'Edit', edit_post_comment_path(@post, comment) %></p>
         <% end %>
         <% if comment.name == @post.user.name %>
           <p class="author-comment">Owner</p>

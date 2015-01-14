@@ -42,6 +42,21 @@ module SessionsHelper
       end
     end
   end
+  
+  # admin
+  def is_an_admin?
+    current_user && current_user.admin?
+  end
+  
+  # author of the post
+  def post_author
+    current_user.id == @post.user_id
+  end
+  
+  # author of the comment
+  def comment_author
+    comment.name == current_user.name
+  end
 
 # Returns true if the user is logged in, false otherwise.
   def logged_in?
