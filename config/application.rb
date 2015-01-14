@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module PersonalBlog
   class Application < Rails::Application
+    config.middleware.use Rack::Deflater
     require Rails.root.join("lib/custom_public_exceptions")
     config.exceptions_app = CustomPublicExceptions.new(Rails.public_path) # Custom 404, 500, etc pages
     # config.action_controller.default_url_options = { :trailing_slash => true }
