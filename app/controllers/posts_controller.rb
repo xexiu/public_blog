@@ -2,11 +2,11 @@ class PostsController < ApplicationController
   autocomplete :post, :title, :full => true
   autocomplete :tag, :name, :full => true # This will create an action autocomplete_tag_name on your controller, don't forget to add it on your routes file
   helper_method :index
-  # before_action :logged_in_user, only: [:create, :destroy]
+  #before_action :logged_in_user, only: [:create, :edit, :update, :destroy]
   # Allow the current user to delete his OWN entry
-  # before_action :correct_user,   only: :destroy
+  before_action :correct_user,   only: [:create, :edit, :update, :destroy]
   # Allow admins to delete all entries
-  before_action :admin_user,     only: [:edit, :update, :destroy]
+  # before_action :admin_user,     only: [:create, :edit, :update, :destroy]
 
   def index
     if params[:tag]
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.friendly.find(params[:id])
+    @post = Post.friendly.find(params[:id]) if current_user
   end
 
   def update
@@ -146,10 +146,20 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body, :categories, :featured_post, :all_tags, :status)
   end
+  
+  # Confirms a logged-in user.
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
 
-  # Confirms an admin user.
-  def admin_user
-    redirect_to(root_url) unless current_user.admin?
+  # Confirms the correct user.
+  def correct_user
+    @post = Post.friendly.find(params[:id])
+    redirect_to(root_url) unless current_user?(@post.user) || logged_in? && current_user.admin?
   end
 
 end
