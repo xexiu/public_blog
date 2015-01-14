@@ -52,13 +52,8 @@ module SessionsHelper
   def post_author
     current_user.id == @post.user_id
   end
-  
-  # author of the comment
-  def comment_author
-    comment.name == current_user.name
-  end
 
- # Returns true if the user is logged in, false otherwise.
+  # Returns true if the user is logged in, false otherwise.
   def logged_in?
     !current_user.nil?
   end

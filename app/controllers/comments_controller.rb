@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :correct_user, only: [:create, :edit, :update, :destroy]
   before_filter :get_parent
   
   def index
@@ -69,8 +70,22 @@ class CommentsController < ApplicationController
   def get_parent
     @parent = Post.friendly.find(params[:post_id]) if params[:post_id]
     @parent = Comment.find(params[:comment_id]) if params[:comment_id]
-     
     redirect_to root_path unless defined?(@parent)
+  end
+  
+  # Confirms a logged-in user.
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = "Please log in."
+      redirect_to login_url
+    end
+  end
+
+  # Confirms the correct user.
+  def correct_user
+    @comment = Comment.find(params[:id])
+    redirect_to(root_url) unless logged_in? && (current_user.admin? || @comment.name == current_user.name)
   end
 
 end

@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   # Allow the current user to delete his OWN entry
   before_action :correct_user,   only: [:create, :edit, :update, :destroy]
   # Allow admins to delete all entries
-  # before_action :admin_user,     only: [:create, :edit, :update, :destroy]
+  #before_action :admin_user,     only: [:create, :edit, :update, :destroy]
 
   def index
     if params[:tag]
