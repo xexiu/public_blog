@@ -16,7 +16,6 @@ end
 
 group :production do
   gem 'pg'
-  gem 'rails_12factor'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -35,6 +34,7 @@ gem 'whenever', :require => false # schedule cronjobs
 gem 'dumper'
 gem 'public_activity'
 gem 'rails_admin' # admin-ui
+gem 'rails_12factor'
 # Captcha
 gem 'simple_captcha2', require: 'simple_captcha'
 # gem 'bootstrap-wysihtml5-rails'
