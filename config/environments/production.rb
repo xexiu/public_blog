@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.serve_static_assets = false
+  config.static_cache_control = "public, max-age=3600"
   # Add the fonts path
   config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   # Precompile additional assets
