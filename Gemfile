@@ -35,6 +35,7 @@ gem 'whenever', :require => false # schedule cronjobs
 gem 'dumper'
 gem 'public_activity'
 gem 'rails_admin' # admin-ui
+gem 'rack-zippy'
 # Captcha
 gem 'simple_captcha2', require: 'simple_captcha'
 # gem 'bootstrap-wysihtml5-rails'
