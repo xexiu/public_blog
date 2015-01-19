@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :correct_user, only: [:create, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
   before_filter :get_parent
   
   def index
