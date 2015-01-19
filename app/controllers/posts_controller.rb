@@ -22,7 +22,12 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    if is_an_admin? || logged_in? && current_user
+      @post = Post.new
+    else
+      flash[:danger] = "Login or signup to create new post!"
+      redirect_to login_path
+    end
   end
 
   def show

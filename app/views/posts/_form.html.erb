@@ -1,4 +1,3 @@
-<% if logged_in? || current_user.admin? %>
 <%= form_for @post do |f| %>
   <% if @post.errors.any? %>
     <div id="errors">
@@ -25,7 +24,4 @@
   <%= f.select :featured_post, [ 'no', 'yes' ], :default => 'no' %><br />
   <br>
   <%= f.submit %>
-<% end %>
-<% else %>
-<h1>ADMIN HAS DISABLED TEMPORARILY THIS FEATURE!!</h1>
 <% end %>
