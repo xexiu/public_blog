@@ -69,4 +69,9 @@ $(document).ready(function() {
   $('.search-query').bind('railsAutocomplete.select', function(event, data) {
   $('.search-me').trigger('click');
   });
+  
+  <% usernames = User.all.to_json.html_safe %>
+  <% link = '/users/' %>
+  data = <%= usernames %>; 
+  $('textarea').atwho({at:"@", 'data':data, insertTpl: '[@${name}](<%= link %>${id})'}); 
 });

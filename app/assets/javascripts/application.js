@@ -18,5 +18,6 @@
 //= require bootstrap.min.js
 //= require nprogress
 //= require nprogress-turbolinks
+//= require jquery.atwho
 //angular.module('myApp', [ 'nprogress-rails' ]);
 //This should make all requests made with $http show/hide the NProgress bar.

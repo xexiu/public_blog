@@ -36,6 +36,7 @@ gem 'dumper'
 gem 'public_activity'
 gem 'rails_admin' # admin-ui
 gem 'rack-zippy'
+gem 'jquery-atwho-rails' # added @username
 # Captcha
 gem 'simple_captcha2', require: 'simple_captcha'
 # gem 'bootstrap-wysihtml5-rails'

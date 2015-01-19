@@ -13,4 +13,5 @@
  *= require style
  *= require nprogress
  *= require nprogress-bootstrap
+ *=require jquery.atwho
  */
