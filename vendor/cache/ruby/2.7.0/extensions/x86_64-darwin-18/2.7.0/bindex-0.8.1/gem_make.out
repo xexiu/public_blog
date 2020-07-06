@@ -1,0 +1,15 @@
+current directory: /Users/sergiumironescuiancu1/Desktop/Sergio/Ruby/ruby_on_rails/public_blog/vendor/cache/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/local/opt/ruby/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.7.0 -r ./siteconf20200706-67986-4k7duu.rb extconf.rb
+creating Makefile
+
+current directory: /Users/sergiumironescuiancu1/Desktop/Sergio/Ruby/ruby_on_rails/public_blog/vendor/cache/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/sergiumironescuiancu1/Desktop/Sergio/Ruby/ruby_on_rails/public_blog/vendor/cache/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/sergiumironescuiancu1/Desktop/Sergio/Ruby/ruby_on_rails/public_blog/vendor/cache/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20200706-67986-1d0xmdj/skiptrace/internal

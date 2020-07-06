@@ -1,0 +1,22 @@
+current directory: /Users/sergiumironescuiancu1/Desktop/Sergio/Ruby/ruby_on_rails/public_blog/vendor/cache/ruby/2.7.0/gems/posix-spawn-0.3.14/ext
+/usr/local/opt/ruby/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.7.0 -r ./siteconf20200706-67986-z0htyv.rb extconf.rb
+creating Makefile
+
+current directory: /Users/sergiumironescuiancu1/Desktop/Sergio/Ruby/ruby_on_rails/public_blog/vendor/cache/ruby/2.7.0/gems/posix-spawn-0.3.14/ext
+make "DESTDIR=" clean
+
+current directory: /Users/sergiumironescuiancu1/Desktop/Sergio/Ruby/ruby_on_rails/public_blog/vendor/cache/ruby/2.7.0/gems/posix-spawn-0.3.14/ext
+make "DESTDIR="
+compiling posix-spawn.c
+posix-spawn.c:226:27: warning: incompatible pointer types passing 'int (VALUE, VALUE, posix_spawn_file_actions_t *)' (aka 'int (unsigned long, unsigned long, void **)') to parameter of type 'int (*)(VALUE, VALUE, VALUE)' (aka 'int (*)(unsigned long, unsigned long, unsigned long)') [-Wincompatible-pointer-types]
+        rb_hash_foreach(options, posixspawn_file_actions_operations_iter, (VALUE)fops);
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/intern.h:558:35: note: passing argument to parameter here
+void rb_hash_foreach(VALUE, int (*)(VALUE, VALUE, VALUE), VALUE);
+                                  ^
+1 warning generated.
+linking shared-object posix_spawn_ext.bundle
+
+current directory: /Users/sergiumironescuiancu1/Desktop/Sergio/Ruby/ruby_on_rails/public_blog/vendor/cache/ruby/2.7.0/gems/posix-spawn-0.3.14/ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 posix_spawn_ext.bundle ./.gem.20200706-67986-ta1k8q
