@@ -4,7 +4,7 @@
     </div>
     <nav class="sidebar-menu">
       <ul>
-        <li class="category">Home</li>
+        <li class="category"><%= link_to 'Home', root_path %></li>
         <% if current_page?(root_url) %>
         <li><%= link_to 'All Posts', root_path, class: 'active-sb' %></li>
         <% else %>
@@ -40,19 +40,19 @@
         <% else %>
         <li><%= link_to 'HTML+CSS', html_css_path, class: 'noactive-html' %></li>
         <% end %>
-  
+
         <% if current_page?(javascript_path) %>
         <li><%= link_to 'Javascript', javascript_path, class: 'active-js' %></li>
         <% else %>
         <li><%= link_to 'Javascript', javascript_path, class: 'noactive-js' %></li>
         <% end %>
-  
+
         <% if current_page?(ruby_path) %>
         <li><%= link_to 'Ruby', ruby_path, class: 'active-ruby' %></li>
         <% else %>
         <li><%= link_to 'Ruby', ruby_path, class: 'noactive-ruby' %></li>
         <% end %>
-        
+
         <% if current_page?(void_path) %>
         <li><%= link_to 'Void', void_path, class: 'active-void' %></li>
         <% else %>
