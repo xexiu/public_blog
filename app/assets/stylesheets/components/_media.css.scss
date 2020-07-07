@@ -1,7 +1,7 @@
 /* Phones-crapy (portrait and landscape) ----------- */
 @mixin crapy-phones {
-    @media only screen 
-    and (min-width : 320px) 
+    @media only screen
+    and (min-width : 320px)
     and (max-width : 480px) {
         @content
     }
@@ -9,8 +9,8 @@
 
 /* iPhone5 (portrait and landscape) ----------- */
 @mixin iphone5-crapy-phones {
-    @media only screen 
-    and (min-width : 320px) 
+    @media only screen
+    and (min-width : 320px)
     and (max-width : 568px) {
         @content
     }
@@ -18,7 +18,7 @@
 
 /* iPhone6 (portrait and landscape) ----------- */
 @mixin iphone6 {
-    @media only screen 
+    @media only screen
     and (min-width : 569px)  // Default was 375px
     and (max-width : 736px) {
         @content
@@ -27,7 +27,7 @@
 
 /* iPads (portrait and landscape) ----------- */
 @mixin ipad {
-    @media only screen 
+    @media only screen
     and (min-width : 737px) // Default was 768px
     and (max-width : 1024px) {
         @content
@@ -36,16 +36,16 @@
 
 /* Desktops and laptops ----------- */
 @mixin desktops {
-    @media only screen 
+    @media only screen
     and (min-width : 1025px)
-    and (max-width : 1823px){
+    and (max-width : 4823px){
         @content
     }
 }
 
 /* Large screens ----------- */
 @mixin desktops-xl {
-    @media only screen 
+    @media only screen
     and (min-width : 1824px)
     and (max-width : 4000px){
         @content
@@ -240,7 +240,7 @@
           -ms-transform: rotate(27deg);
           transform: rotate(27deg);
           }
-        }   
+        }
     }
     .form-search {
         width: 94.5% !important;

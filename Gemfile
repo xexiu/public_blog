@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.7.1'
 
 group :development, :test do
-  gem 'sqlite3', '~> 1.3', '< 1.4'
+  gem 'sqlite3', '~> 1.4'
   gem 'byebug'
   gem 'web-console'
   gem 'spring'
@@ -18,6 +18,9 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+# Use Puma as the app server
+gem 'puma', '~> 4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
