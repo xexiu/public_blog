@@ -1,17 +1,17 @@
 class CommentsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
-  before_filter :get_parent
-  
+  before_action :get_parent
+
   def index
     @post = Post.friendly.find(params[:post_id])
     @comments = @post.comments.all
   end
-  
+
   def new
     @post = Post.friendly.find(params[:post_id])
     @comment = @parent.comments.create
   end
-  
+
   def show
     @post = Post.friendly.find(params[:post_id])
     @comment = @parent.comments.find(params[:id])
@@ -29,13 +29,13 @@ class CommentsController < ApplicationController
       flash[:danger] = "Invalid Captcha!"
     end
   end
-  
+
   def edit
     @post = Post.friendly.find(params[:post_id])
     @comment = Comment.find(params[:comment_id]) if params[:comment_id] # Reply
     @comment = Comment.find(params[:id]) if params[:id] # Comment
   end
-  
+
   def update
     @post = Post.friendly.find(params[:post_id])
     @comment = Comment.find(params[:comment_id]) if params[:comment_id] # Reply
@@ -66,13 +66,13 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:name, :body, :parent_id, :captcha, :captcha_key)
   end
-  
+
   def get_parent
     @parent = Post.friendly.find(params[:post_id]) if params[:post_id]
     @parent = Comment.find(params[:comment_id]) if params[:comment_id]
     redirect_to root_path unless defined?(@parent)
   end
-  
+
   # Confirms a logged-in user.
   def logged_in_user
     unless logged_in?

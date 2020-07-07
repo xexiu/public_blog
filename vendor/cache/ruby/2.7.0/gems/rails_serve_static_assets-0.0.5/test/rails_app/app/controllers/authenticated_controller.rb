@@ -1,7 +1,7 @@
 class AuthenticatedController < ApplicationController
-  if respond_to?(:before_filter)
+  if respond_to?(:before_action)
     class << self
-      alias :before_action :before_filter
+      alias :before_action :before_action
     end
   end
 
