@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.public_file_server.enabled = true
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
@@ -43,7 +43,7 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = true # Compile assets to Heroku
+  config.assets.compile = false # Compile assets to Heroku / Performance gain if set to false
 
   # Generate digests for assets URLs.
   config.assets.digest = true
