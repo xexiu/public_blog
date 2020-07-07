@@ -186,9 +186,6 @@ GEM
       loofah (~> 2.3)
     rails4-autocomplete (1.1.1)
       rails (>= 3.0)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
     rails_admin (2.0.2)
       activemodel-serializers-xml (>= 1.0)
       builder (~> 3.1)
@@ -201,8 +198,6 @@ GEM
       rails (>= 5.0, < 7)
       remotipart (~> 1.3)
       sassc-rails (>= 1.3, < 3)
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.5)
     railties (6.0.3.2)
       actionpack (= 6.0.3.2)
       activesupport (= 6.0.3.2)
@@ -289,7 +284,6 @@ DEPENDENCIES
   rack-zippy
   rails (~> 6.0.3)
   rails4-autocomplete
-  rails_12factor
   rails_admin
   redcarpet
   rouge
