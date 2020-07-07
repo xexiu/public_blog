@@ -66,13 +66,13 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to posts_path
   end
-  
+
   def upvote
     @post = Post.friendly.find(params[:id])
     if current_user
       respond_to do |format|
         unless current_user.voted_for? @post
-          format.html { redirect_to :back }
+          format.html { redirect_to @post }
           format.json { head :no_content }
           format.js { render :layout => false }
           @post.vote_total = @post.vote_total + 1
@@ -80,7 +80,7 @@ class PostsController < ApplicationController
           @post.upvote_by current_user
         else
           flash[:danger] = 'You allready voted this entry'
-          format.html { redirect_to :back }
+          format.html { redirect_to @post }
           format.json { head :no_content }
           format.js
         end
@@ -95,7 +95,7 @@ class PostsController < ApplicationController
     @post = Post.friendly.find(params[:id])
     respond_to do |format|
       unless current_user.voted_for? @post
-        format.html { redirect_to :back }
+        format.html { redirect_to @post }
         format.json { head :no_content }
         format.js { render :layout => false }
         @post.vote_total = @post.vote_total + 1
@@ -103,7 +103,7 @@ class PostsController < ApplicationController
         @post.downvote_by current_user
       else
         flash[:danger] = 'You allready voted this entry'
-        format.html { redirect_to :back }
+        format.html { redirect_to @post }
         format.json { head :no_content }
         format.js
       end
@@ -127,23 +127,23 @@ class PostsController < ApplicationController
     @posts_featured = Post.all.featured
     @posts_unfeatured = Post.all.unfeatured
   end
-  
+
   def void
     #@posts = Post.all.order('created_at DESC').paginate(page: params[:page], :per_page => 10)
     @posts_featured = Post.all.featured
     @posts_unfeatured = Post.all.unfeatured
   end
-  
+
   def approve
     @post = Post.find(params[:id])
     @post.update_attributes({status: "approved"})
-    redirect_to :back
+    redirect_to @post
   end
-  
+
   def unapprove
     @post = Post.find(params[:id])
     @post.update_attributes({status: "draft"})
-    redirect_to :back
+    redirect_to @post
   end
 
   private
@@ -151,7 +151,7 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body, :categories, :featured_post, :all_tags, :status)
   end
-  
+
   # Confirms a logged-in user.
     def logged_in_user
       unless logged_in?

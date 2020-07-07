@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
       redirect_to post_path(@comment.post)
       flash[:success] = "Comment successfully created!"
     else
-      redirect_to :back
+      redirect_to @post
       flash[:danger] = "Invalid Captcha!"
     end
   end

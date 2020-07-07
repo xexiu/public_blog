@@ -1,14 +1,14 @@
 RailsAdmin.config do |config|
-  ADMIN_EMAILS= ['ser@ser.com'] # Add more e-mails if you are working on a team: ['email1', 'email2']
+  ADMIN_EMAILS= ['sergiu.mironescu@gmail.com'] # Add more e-mails if you are working on a team: ['email1', 'email2']
   config.current_user_method { current_user } # auto-generated
   config.authenticate_with {} # leave it to authorize
   config.authorize_with do
-    is_admin= ADMIN_EMAILS.include?(current_user.email) 
+    is_admin= ADMIN_EMAILS.include?(current_user.email)
     if current_user.admin?
       rails_admin.dashboard_path
     else
       request.env["HTTP_REFERER"] = '/' # Needs to be added to work with redirect
-      redirect_to :back
+      redirect_to rails_admin.dashboard_path
     end
   end
 
