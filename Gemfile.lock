@@ -144,7 +144,7 @@ GEM
     multi_json (1.14.1)
     multipart-post (2.1.1)
     nested_form (0.3.2)
-    nio4r (2.5.2)
+    nio4r (2.5.8)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     nprogress-rails (0.2.0.2)
@@ -155,7 +155,7 @@ GEM
       activerecord (>= 3.0)
       i18n (>= 0.5.0)
       railties (>= 3.0.0)
-    puma (4.3.5)
+    puma (4.3.12)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-pjax (1.1.0)
@@ -280,7 +280,7 @@ DEPENDENCIES
   nprogress-rails
   pg
   public_activity
-  puma (~> 4.1)
+  puma (~> 4.3)
   rack-zippy
   rails (~> 6.0.3)
   rails4-autocomplete
